@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/iPowerSurge/Documents/SEII/GitHub Folder/Pet-Finder-App/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-ja/values-ja.xml",
+            "outputFile": "/Users/adrian/Google Drive/Documents/UTRGV Work/Spring 2019/Software Engineering II/MacOS/Pet-Finder-App/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-ja/values-ja.xml",
             "map": [
                 {
-                    "source": "/Users/iPowerSurge/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.1.0.aar/4320efaf4b87cef5b618ac2f53e05941/res/values-ja/values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "180",
-                        "endOffsets": "427"
-                    },
-                    "to": {
-                        "startLines": "10",
-                        "startColumns": "4",
-                        "startOffsets": "1181",
-                        "endColumns": "180",
-                        "endOffsets": "1357"
-                    }
-                },
-                {
-                    "source": "/Users/iPowerSurge/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/1e107268ab96186e614068ba980471ea/res/values-ja/values-ja.xml",
+                    "source": "/Users/adrian/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/781afc5a6d8beb397d45fd1c6711666e/res/values-ja/values-ja.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -38,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/Users/iPowerSurge/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/bc3009b7c1a586cdcdceb77d3f888118/res/values-ja/values.xml",
+                    "source": "/Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/b7e8c0bd9b47fcc2dd51ca464999a874/res/values-ja/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -52,6 +35,23 @@
                         "startOffsets": "105,211,377,499,607,796,918,1053,1362,1553,1656,1820,1941,2120,2270,2360,2449",
                         "endColumns": "105,165,121,107,188,121,134,127,190,102,163,120,178,149,89,88,99",
                         "endOffsets": "206,372,494,602,791,913,1048,1176,1548,1651,1815,1936,2115,2265,2355,2444,2544"
+                    }
+                },
+                {
+                    "source": "/Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-16.1.0.aar/25cbcc5a433c3171332b79f13ed9b51e/res/values-ja/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "180",
+                        "endOffsets": "427"
+                    },
+                    "to": {
+                        "startLines": "10",
+                        "startColumns": "4",
+                        "startOffsets": "1181",
+                        "endColumns": "180",
+                        "endOffsets": "1357"
                     }
                 }
             ]
