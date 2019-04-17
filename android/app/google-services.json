@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "489664047330",
+    "firebase_url": "https://findingbullseye.firebaseio.com",
+    "project_id": "findingbullseye",
+    "storage_bucket": "findingbullseye.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:489664047330:android:c4e62b7eec673b5e",
+        "android_client_info": {
+          "package_name": "com.example.animationexp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "489664047330-7utv5iftkksr54q0gajgjfgo844r1bng.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACHM031uHyz3XPM9jmflkjfhu0GAaTcrc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "489664047330-7utv5iftkksr54q0gajgjfgo844r1bng.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "489664047330-cjkr6tj06k1usn2jmbid2rojk9c9iuo0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "finding-bullseye.prototype"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
