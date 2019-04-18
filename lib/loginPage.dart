@@ -1,6 +1,9 @@
 import 'package:animation_exp/SwipeAnimation/index.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter_facebook_login/flutter_facebook_login.dart';
+import 'package:flutter_auth_buttons/flutter_auth_buttons.dart';
+import 'package:flutter_twitter_login/flutter_twitter_login.dart';
 
 class MyLoginPage extends StatelessWidget {
   var userCtrl = TextEditingController();
@@ -21,7 +24,11 @@ class MyLoginPage extends StatelessWidget {
           Column(
             children: <Widget>[
               Padding(padding: const EdgeInsets.only(top: 105.0)),
-              SizedBox(height: 75.0, child: Text("Finding BullsEye", style: TextStyle(fontSize: 35, fontWeight: FontWeight.w600))),
+              SizedBox(
+                  height: 75.0,
+                  child: Text("Finding BullsEye",
+                      style: TextStyle(
+                          fontSize: 35, fontWeight: FontWeight.w600))),
               Padding(padding: const EdgeInsets.only(top: 20.0)),
               Container(
                   width: 325,
@@ -53,60 +60,39 @@ class MyLoginPage extends StatelessWidget {
                   height: 50.0,
                   child: RaisedButton(
                     color: Colors.blueGrey,
-                    child:
-                        Text("Log In With Email", style: TextStyle(color: Colors.white)),
+                    child: Text("Log In With Email",
+                        style: TextStyle(color: Colors.white,fontSize: 18)),
                     onPressed: () {
                       loginStuff(context);
                     },
                   )),
               Padding(padding: const EdgeInsets.only(top: 55.0)),
-              ButtonTheme(
-                  minWidth: 325.0,
-                  height: 50.0,
-                  child: RaisedButton(
-                    color: Colors.blue[800],
-                    child:
-                        Text("Log In With Facebook", style: TextStyle(color: Colors.white)),
-                    onPressed: () {
-                      loginStuff(context);
-                    },
-                  )),
+              Container(
+                width: 325,
+                child: GoogleSignInButton(
+                  onPressed: (){
+
+                  },
+                ),
+              ),
               Padding(padding: const EdgeInsets.only(top: 6.0)),
-              ButtonTheme(
-                  minWidth: 325.0,
-                  height: 50.0,
-                  child: RaisedButton(
-                    color: Colors.lightBlue,
-                    child:
-                        Text("Log In With Twitter", style: TextStyle(color: Colors.white)),
-                    onPressed: () {
-                      loginStuff(context);
-                    },
-                  )),
+              Container(
+                width: 325,
+                child: FacebookSignInButton(
+                  onPressed: () {
+
+                  },
+                ),
+              ),
               Padding(padding: const EdgeInsets.only(top: 6.0)),
-              ButtonTheme(
-                  minWidth: 325.0,
-                  height: 50.0,
-                  child: RaisedButton(
-                    color: Colors.red,
-                    child:
-                        Text("Log In With Google", style: TextStyle(color: Colors.white)),
-                    onPressed: () {
-                      loginStuff(context);
-                    },
-                  )),
-                  Padding(padding: const EdgeInsets.only(top: 6.0)),
-              ButtonTheme(
-                  minWidth: 325.0,
-                  height: 50.0,
-                  child: RaisedButton(
-                    color: Colors.green,
-                    child:
-                        Text("Log In With Microsoft", style: TextStyle(color: Colors.white)),
-                    onPressed: () {
-                      loginStuff(context);
-                    },
-                  )),
+              Container(
+                width: 325,
+                child: TwitterSignInButton(
+                  onPressed: () {
+
+                  },
+                ),
+              ),
             ],
           ),
         ],
