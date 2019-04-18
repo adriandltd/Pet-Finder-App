@@ -3,30 +3,36 @@ import 'package:flutter/material.dart';
 import 'package:flutter_auth_buttons/flutter_auth_buttons.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'dart:async';
 
 class MyLoginPage extends StatelessWidget {
+  bool isUserSignedIn = false;
+
   var userCtrl = TextEditingController();
   var passCtrl = TextEditingController();
 
-  void loginStuff(context) async {
+  void pushtoHomePage(context) async {
     Navigator.push(
         context, MaterialPageRoute(builder: (context) => CardDemo()));
   }
 
-  GoogleSignIn _googleSignIn = GoogleSignIn(
-    scopes: [
-      'email',
-      'https://www.googleapis.com/auth/contacts.readonly',
-    ],
-  );
-
-  Future<void> _handleGoogleSignIn() async {
-    try {
-      await _googleSignIn.signIn();
-    } catch (error) {
-      print(error);
-    }
+  //Google Sign in and FireBase Authentication
+  final GoogleSignIn _googleSignIn = GoogleSignIn();
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+  Future<FirebaseUser> _handleGoogleAccountSignIn() async {
+    GoogleSignInAccount googleUser = await _googleSignIn.signIn();
+    GoogleSignInAuthentication googleAuth = await googleUser.authentication;
+    final AuthCredential credential = GoogleAuthProvider.getCredential(
+      accessToken: googleAuth.accessToken,
+      idToken: googleAuth.idToken,
+    );
+    final FirebaseUser user = await _auth.signInWithCredential(credential);
+    print("signed in " + user.email);
+    return user;
   }
+
+  //Facebook Sign in and FireBase Authentication
+  
 
   @override
   Widget build(BuildContext context) {
@@ -77,7 +83,7 @@ class MyLoginPage extends StatelessWidget {
                     child: Text("Log In With Email",
                         style: TextStyle(color: Colors.white, fontSize: 18)),
                     onPressed: () {
-                      loginStuff(context);
+                      pushtoHomePage(context);
                     },
                   )),
               Padding(padding: const EdgeInsets.only(top: 55.0)),
@@ -85,7 +91,8 @@ class MyLoginPage extends StatelessWidget {
                 width: 325,
                 child: GoogleSignInButton(
                   onPressed: () {
-                    _handleGoogleSignIn();
+                    _handleGoogleAccountSignIn().then((FirebaseUser user) => print(user)).catchError((e) => print(e));
+                    pushtoHomePage(context);
                   },
                 ),
               ),
