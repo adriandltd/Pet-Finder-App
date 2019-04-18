@@ -5,11 +5,15 @@ INJECTED from /Users/adrian/Google Drive/Documents/UTRGV Work/Spring 2019/Softwa
 INJECTED from /Users/adrian/Google Drive/Documents/UTRGV Work/Spring 2019/Software Engineering II/MacOS/Pet-Finder-App/android/app/src/main/AndroidManifest.xml:1:1-39:12
 INJECTED from /Users/adrian/Google Drive/Documents/UTRGV Work/Spring 2019/Software Engineering II/MacOS/Pet-Finder-App/android/app/src/main/AndroidManifest.xml:1:1-39:12
 MERGED from [:firebase_auth] /Users/adrian/Google Drive/Documents/UTRGV Work/Spring 2019/Software Engineering II/MacOS/Pet-Finder-App/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:google_sign_in] /Users/adrian/Google Drive/Documents/UTRGV Work/Spring 2019/Software Engineering II/MacOS/Pet-Finder-App/build/google_sign_in/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:firebase_core] /Users/adrian/Google Drive/Documents/UTRGV Work/Spring 2019/Software Engineering II/MacOS/Pet-Finder-App/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.firebase:firebase-core:16.0.4] /Users/adrian/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.4.aar/c4857bfb4ba35071bf6bb0b273842c92/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-auth:16.2.1] /Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-16.2.1.aar/ad7eabdf6eda3c23b00a41864f035936/AndroidManifest.xml:17:1-42:12
+MERGED from [com.google.android.gms:play-services-auth:16.0.1] /Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-16.0.1.aar/4781f9d6bbe535d3fabf9a77e00471d5/AndroidManifest.xml:17:1-39:12
 MERGED from [com.google.android.gms:play-services-flags:16.0.1] /Users/adrian/.gradle/caches/transforms-1/files-1.1/play-services-flags-16.0.1.aar/19fc6d95b41c6e6daeed96c3365470d2/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] /Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-interop-16.0.1.aar/5376aa8c9456530392e721b6d3b51bb9/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone:16.0.0] /Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-api-phone-16.0.0.aar/14f243c7997562a5440f8a88f1d05640/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] /Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-base-16.0.0.aar/e9da341b9bdde233a8e45c737b88d2eb/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.2] /Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-firebase-measurement-connector-impl-17.0.2.aar/18df17a2160d9b5c7807a3bdd10b0517/AndroidManifest.xml:17:1-34:12
 MERGED from [com.google.firebase:firebase-analytics:16.0.4] /Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-firebase-analytics-16.0.4.aar/9af0e0ed9d835de6e6b3ba47cbd6ba9b/AndroidManifest.xml:17:1-55:12
 MERGED from [com.google.android.gms:play-services-measurement-api:16.0.2] /Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-api-16.0.2.aar/cb9f8fd97129bc47cd9f5d011aaa1395/AndroidManifest.xml:17:1-25:12
@@ -68,6 +72,8 @@ INJECTED from /Users/adrian/Google Drive/Documents/UTRGV Work/Spring 2019/Softwa
 		ADDED from /Users/adrian/Google Drive/Documents/UTRGV Work/Spring 2019/Software Engineering II/MacOS/Pet-Finder-App/android/app/src/main/AndroidManifest.xml:1:11-69
 uses-permission#android.permission.INTERNET
 ADDED from /Users/adrian/Google Drive/Documents/UTRGV Work/Spring 2019/Software Engineering II/MacOS/Pet-Finder-App/android/app/src/main/AndroidManifest.xml:8:5-66
+MERGED from [:google_sign_in] /Users/adrian/Google Drive/Documents/UTRGV Work/Spring 2019/Software Engineering II/MacOS/Pet-Finder-App/build/google_sign_in/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-67
+MERGED from [:google_sign_in] /Users/adrian/Google Drive/Documents/UTRGV Work/Spring 2019/Software Engineering II/MacOS/Pet-Finder-App/build/google_sign_in/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-67
 MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.2] /Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-firebase-measurement-connector-impl-17.0.2.aar/18df17a2160d9b5c7807a3bdd10b0517/AndroidManifest.xml:22:5-67
 MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.2] /Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-firebase-measurement-connector-impl-17.0.2.aar/18df17a2160d9b5c7807a3bdd10b0517/AndroidManifest.xml:22:5-67
 MERGED from [com.google.firebase:firebase-analytics:16.0.4] /Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-firebase-analytics-16.0.4.aar/9af0e0ed9d835de6e6b3ba47cbd6ba9b/AndroidManifest.xml:23:5-67
@@ -84,6 +90,8 @@ MERGED from [com.google.firebase:firebase-core:16.0.4] /Users/adrian/.gradle/cac
 MERGED from [com.google.firebase:firebase-core:16.0.4] /Users/adrian/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.4.aar/c4857bfb4ba35071bf6bb0b273842c92/AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-auth:16.2.1] /Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-16.2.1.aar/ad7eabdf6eda3c23b00a41864f035936/AndroidManifest.xml:23:5-40:19
 MERGED from [com.google.firebase:firebase-auth:16.2.1] /Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-16.2.1.aar/ad7eabdf6eda3c23b00a41864f035936/AndroidManifest.xml:23:5-40:19
+MERGED from [com.google.android.gms:play-services-auth:16.0.1] /Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-16.0.1.aar/4781f9d6bbe535d3fabf9a77e00471d5/AndroidManifest.xml:22:5-37:19
+MERGED from [com.google.android.gms:play-services-auth:16.0.1] /Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-16.0.1.aar/4781f9d6bbe535d3fabf9a77e00471d5/AndroidManifest.xml:22:5-37:19
 MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] /Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-interop-16.0.1.aar/5376aa8c9456530392e721b6d3b51bb9/AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] /Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-interop-16.0.1.aar/5376aa8c9456530392e721b6d3b51bb9/AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.2] /Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-firebase-measurement-connector-impl-17.0.2.aar/18df17a2160d9b5c7807a3bdd10b0517/AndroidManifest.xml:26:5-32:19
@@ -162,16 +170,24 @@ INJECTED from /Users/adrian/Google Drive/Documents/UTRGV Work/Spring 2019/Softwa
 INJECTED from /Users/adrian/Google Drive/Documents/UTRGV Work/Spring 2019/Software Engineering II/MacOS/Pet-Finder-App/android/app/src/main/AndroidManifest.xml
 MERGED from [:firebase_auth] /Users/adrian/Google Drive/Documents/UTRGV Work/Spring 2019/Software Engineering II/MacOS/Pet-Finder-App/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:firebase_auth] /Users/adrian/Google Drive/Documents/UTRGV Work/Spring 2019/Software Engineering II/MacOS/Pet-Finder-App/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:google_sign_in] /Users/adrian/Google Drive/Documents/UTRGV Work/Spring 2019/Software Engineering II/MacOS/Pet-Finder-App/build/google_sign_in/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:google_sign_in] /Users/adrian/Google Drive/Documents/UTRGV Work/Spring 2019/Software Engineering II/MacOS/Pet-Finder-App/build/google_sign_in/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:firebase_core] /Users/adrian/Google Drive/Documents/UTRGV Work/Spring 2019/Software Engineering II/MacOS/Pet-Finder-App/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:firebase_core] /Users/adrian/Google Drive/Documents/UTRGV Work/Spring 2019/Software Engineering II/MacOS/Pet-Finder-App/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-core:16.0.4] /Users/adrian/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.4.aar/c4857bfb4ba35071bf6bb0b273842c92/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-core:16.0.4] /Users/adrian/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.4.aar/c4857bfb4ba35071bf6bb0b273842c92/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-auth:16.2.1] /Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-16.2.1.aar/ad7eabdf6eda3c23b00a41864f035936/AndroidManifest.xml:21:5-44
 MERGED from [com.google.firebase:firebase-auth:16.2.1] /Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-16.2.1.aar/ad7eabdf6eda3c23b00a41864f035936/AndroidManifest.xml:21:5-44
+MERGED from [com.google.android.gms:play-services-auth:16.0.1] /Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-16.0.1.aar/4781f9d6bbe535d3fabf9a77e00471d5/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:16.0.1] /Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-16.0.1.aar/4781f9d6bbe535d3fabf9a77e00471d5/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-flags:16.0.1] /Users/adrian/.gradle/caches/transforms-1/files-1.1/play-services-flags-16.0.1.aar/19fc6d95b41c6e6daeed96c3365470d2/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-flags:16.0.1] /Users/adrian/.gradle/caches/transforms-1/files-1.1/play-services-flags-16.0.1.aar/19fc6d95b41c6e6daeed96c3365470d2/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] /Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-interop-16.0.1.aar/5376aa8c9456530392e721b6d3b51bb9/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] /Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-interop-16.0.1.aar/5376aa8c9456530392e721b6d3b51bb9/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:16.0.0] /Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-api-phone-16.0.0.aar/14f243c7997562a5440f8a88f1d05640/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:16.0.0] /Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-api-phone-16.0.0.aar/14f243c7997562a5440f8a88f1d05640/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] /Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-base-16.0.0.aar/e9da341b9bdde233a8e45c737b88d2eb/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] /Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-base-16.0.0.aar/e9da341b9bdde233a8e45c737b88d2eb/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.2] /Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-firebase-measurement-connector-impl-17.0.2.aar/18df17a2160d9b5c7807a3bdd10b0517/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.2] /Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-firebase-measurement-connector-impl-17.0.2.aar/18df17a2160d9b5c7807a3bdd10b0517/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-analytics:16.0.4] /Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-firebase-analytics-16.0.4.aar/9af0e0ed9d835de6e6b3ba47cbd6ba9b/AndroidManifest.xml:20:5-44
@@ -292,6 +308,24 @@ ADDED from [com.google.firebase:firebase-auth:16.2.1] /Users/adrian/.gradle/cach
 		ADDED from [com.google.firebase:firebase-auth:16.2.1] /Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-16.2.1.aar/ad7eabdf6eda3c23b00a41864f035936/AndroidManifest.xml:38:17-82
 	android:name
 		ADDED from [com.google.firebase:firebase-auth:16.2.1] /Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-16.2.1.aar/ad7eabdf6eda3c23b00a41864f035936/AndroidManifest.xml:37:17-109
+activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
+ADDED from [com.google.android.gms:play-services-auth:16.0.1] /Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-16.0.1.aar/4781f9d6bbe535d3fabf9a77e00471d5/AndroidManifest.xml:23:9-27:75
+	android:excludeFromRecents
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-16.0.1.aar/4781f9d6bbe535d3fabf9a77e00471d5/AndroidManifest.xml:25:13-46
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-16.0.1.aar/4781f9d6bbe535d3fabf9a77e00471d5/AndroidManifest.xml:26:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-16.0.1.aar/4781f9d6bbe535d3fabf9a77e00471d5/AndroidManifest.xml:27:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-16.0.1.aar/4781f9d6bbe535d3fabf9a77e00471d5/AndroidManifest.xml:24:13-93
+service#com.google.android.gms.auth.api.signin.RevocationBoundService
+ADDED from [com.google.android.gms:play-services-auth:16.0.1] /Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-16.0.1.aar/4781f9d6bbe535d3fabf9a77e00471d5/AndroidManifest.xml:33:9-36:110
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-16.0.1.aar/4781f9d6bbe535d3fabf9a77e00471d5/AndroidManifest.xml:35:13-36
+	android:permission
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-16.0.1.aar/4781f9d6bbe535d3fabf9a77e00471d5/AndroidManifest.xml:36:13-107
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-16.0.1.aar/4781f9d6bbe535d3fabf9a77e00471d5/AndroidManifest.xml:34:13-89
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.google.firebase:firebase-measurement-connector-impl:17.0.2] /Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-firebase-measurement-connector-impl-17.0.2.aar/18df17a2160d9b5c7807a3bdd10b0517/AndroidManifest.xml:23:5-79
 MERGED from [com.google.firebase:firebase-analytics:16.0.4] /Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-firebase-analytics-16.0.4.aar/9af0e0ed9d835de6e6b3ba47cbd6ba9b/AndroidManifest.xml:24:5-79

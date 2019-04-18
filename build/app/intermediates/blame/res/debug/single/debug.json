@@ -108,6 +108,10 @@
         "source": "/Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/b7e8c0bd9b47fcc2dd51ca464999a874/res/drawable-xhdpi-v4/googleg_disabled_color_18.png"
     },
     {
+        "merged": "/Users/adrian/Google Drive/Documents/UTRGV Work/Spring 2019/Software Engineering II/MacOS/Pet-Finder-App/build/app/intermediates/res/merged/debug/drawable-watch-v20_common_google_signin_btn_text_light_normal.xml.flat",
+        "source": "/Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-16.0.1.aar/4781f9d6bbe535d3fabf9a77e00471d5/res/drawable-watch-v20/common_google_signin_btn_text_light_normal.xml"
+    },
+    {
         "merged": "/Users/adrian/Google Drive/Documents/UTRGV Work/Spring 2019/Software Engineering II/MacOS/Pet-Finder-App/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_normal_pressed.9.png.flat",
         "source": "/Users/adrian/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/781afc5a6d8beb397d45fd1c6711666e/res/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png"
     },
@@ -248,6 +252,10 @@
         "source": "/Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/b7e8c0bd9b47fcc2dd51ca464999a874/res/drawable-hdpi-v4/common_full_open_on_phone.png"
     },
     {
+        "merged": "/Users/adrian/Google Drive/Documents/UTRGV Work/Spring 2019/Software Engineering II/MacOS/Pet-Finder-App/build/app/intermediates/res/merged/debug/drawable-watch-v20_common_google_signin_btn_text_dark_normal.xml.flat",
+        "source": "/Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-16.0.1.aar/4781f9d6bbe535d3fabf9a77e00471d5/res/drawable-watch-v20/common_google_signin_btn_text_dark_normal.xml"
+    },
+    {
         "merged": "/Users/adrian/Google Drive/Documents/UTRGV Work/Spring 2019/Software Engineering II/MacOS/Pet-Finder-App/build/app/intermediates/res/merged/debug/drawable_common_google_signin_btn_icon_light_focused.xml.flat",
         "source": "/Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/b7e8c0bd9b47fcc2dd51ca464999a874/res/drawable/common_google_signin_btn_icon_light_focused.xml"
     },
@@ -294,6 +302,10 @@
     {
         "merged": "/Users/adrian/Google Drive/Documents/UTRGV Work/Spring 2019/Software Engineering II/MacOS/Pet-Finder-App/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_low_pressed.9.png.flat",
         "source": "/Users/adrian/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/781afc5a6d8beb397d45fd1c6711666e/res/drawable-mdpi-v4/notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "/Users/adrian/Google Drive/Documents/UTRGV Work/Spring 2019/Software Engineering II/MacOS/Pet-Finder-App/build/app/intermediates/res/merged/debug/drawable-watch-v20_common_google_signin_btn_text_disabled.xml.flat",
+        "source": "/Users/adrian/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-16.0.1.aar/4781f9d6bbe535d3fabf9a77e00471d5/res/drawable-watch-v20/common_google_signin_btn_text_disabled.xml"
     },
     {
         "merged": "/Users/adrian/Google Drive/Documents/UTRGV Work/Spring 2019/Software Engineering II/MacOS/Pet-Finder-App/build/app/intermediates/res/merged/debug/drawable_common_google_signin_btn_icon_dark_focused.xml.flat",

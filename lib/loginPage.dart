@@ -2,6 +2,7 @@ import 'package:animation_exp/SwipeAnimation/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_auth_buttons/flutter_auth_buttons.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class MyLoginPage extends StatelessWidget {
   var userCtrl = TextEditingController();
@@ -10,6 +11,21 @@ class MyLoginPage extends StatelessWidget {
   void loginStuff(context) async {
     Navigator.push(
         context, MaterialPageRoute(builder: (context) => CardDemo()));
+  }
+
+  GoogleSignIn _googleSignIn = GoogleSignIn(
+    scopes: [
+      'email',
+      'https://www.googleapis.com/auth/contacts.readonly',
+    ],
+  );
+
+  Future<void> _handleGoogleSignIn() async {
+    try {
+      await _googleSignIn.signIn();
+    } catch (error) {
+      print(error);
+    }
   }
 
   @override
@@ -22,7 +38,11 @@ class MyLoginPage extends StatelessWidget {
           Column(
             children: <Widget>[
               Padding(padding: const EdgeInsets.only(top: 105.0)),
-              SizedBox(height: 75.0, child: Text("Finding BullsEye", style: TextStyle(fontSize: 35, fontWeight: FontWeight.w600))),
+              SizedBox(
+                  height: 75.0,
+                  child: Text("Finding BullsEye",
+                      style: TextStyle(
+                          fontSize: 35, fontWeight: FontWeight.w600))),
               Padding(padding: const EdgeInsets.only(top: 20.0)),
               Container(
                   width: 325,
@@ -55,7 +75,7 @@ class MyLoginPage extends StatelessWidget {
                   child: RaisedButton(
                     color: Colors.blueGrey,
                     child: Text("Log In With Email",
-                        style: TextStyle(color: Colors.white,fontSize: 18)),
+                        style: TextStyle(color: Colors.white, fontSize: 18)),
                     onPressed: () {
                       loginStuff(context);
                     },
@@ -64,8 +84,8 @@ class MyLoginPage extends StatelessWidget {
               Container(
                 width: 325,
                 child: GoogleSignInButton(
-                  onPressed: (){
-
+                  onPressed: () {
+                    _handleGoogleSignIn();
                   },
                 ),
               ),
@@ -73,18 +93,14 @@ class MyLoginPage extends StatelessWidget {
               Container(
                 width: 325,
                 child: FacebookSignInButton(
-                  onPressed: () {
-
-                  },
+                  onPressed: () {},
                 ),
               ),
               Padding(padding: const EdgeInsets.only(top: 6.0)),
               Container(
                 width: 325,
                 child: TwitterSignInButton(
-                  onPressed: () {
-
-                  },
+                  onPressed: () {},
                 ),
               ),
             ],
