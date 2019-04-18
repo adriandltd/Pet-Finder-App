@@ -12,21 +12,27 @@ class MyLoginPage extends StatelessWidget {
   var passCtrl = TextEditingController();
 
   void pushtoHomePage(context) async {
+    if (isUserSignedIn == true)
+    {
     Navigator.push(
         context, MaterialPageRoute(builder: (context) => CardDemo()));
+    }
   }
 
   //Google Sign in and FireBase Authentication
   final GoogleSignIn _googleSignIn = GoogleSignIn();
   final FirebaseAuth _auth = FirebaseAuth.instance;
-  Future<FirebaseUser> _handleGoogleAccountSignIn() async {
+  Future<FirebaseUser> _handleGoogleAccountSignIn(context) async {
     GoogleSignInAccount googleUser = await _googleSignIn.signIn();
     GoogleSignInAuthentication googleAuth = await googleUser.authentication;
     final AuthCredential credential = GoogleAuthProvider.getCredential(
       accessToken: googleAuth.accessToken,
       idToken: googleAuth.idToken,
     );
-    final FirebaseUser user = await _auth.signInWithCredential(credential);
+    final FirebaseUser user = await _auth.signInWithCredential(credential).whenComplete((){
+      isUserSignedIn = true;
+      pushtoHomePage(context);
+    });
     print("signed in " + user.email);
     return user;
   }
@@ -91,8 +97,7 @@ class MyLoginPage extends StatelessWidget {
                 width: 325,
                 child: GoogleSignInButton(
                   onPressed: () {
-                    _handleGoogleAccountSignIn().then((FirebaseUser user) => print(user)).catchError((e) => print(e));
-                    pushtoHomePage(context);
+                    _handleGoogleAccountSignIn(context).then((FirebaseUser user) => print(user)).catchError((e) => print(e));
                   },
                 ),
               ),
