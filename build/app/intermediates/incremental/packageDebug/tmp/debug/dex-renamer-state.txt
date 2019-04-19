@@ -1,4 +1,4 @@
-#Thu Apr 18 16:03:01 CDT 2019
-base.0=/Users/adrian/Google Drive/Documents/UTRGV Work/Spring 2019/Software Engineering II/MacOS/Pet-Finder-App/build/app/intermediates/transforms/dexMerger/debug/0
+#Fri Apr 19 16:40:26 CDT 2019
+base.0=C\:\\Users\\istic\\Documents\\GitHub\\Pet-Finder-App\\build\\app\\intermediates\\transforms\\dexMerger\\debug\\0
 path.0=classes.dex
 renamed.0=classes.dex
