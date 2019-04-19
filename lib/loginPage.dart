@@ -11,9 +11,52 @@ class MyLoginPage extends StatelessWidget {
   var userCtrl = TextEditingController();
   var passCtrl = TextEditingController();
 
+
   void pushtoHomePage(context) async {
     Navigator.push(
         context, MaterialPageRoute(builder: (context) => CardDemo()));
+  }
+
+  //Email Sign Up and FireBase Authentication
+  void signUpWithEmail(context) async {
+    // marked async
+    FirebaseUser user;
+    try {
+      user = await _auth.createUserWithEmailAndPassword(
+        email: userCtrl.text,
+        password: passCtrl.text,
+      );
+    } catch (e) {
+      print(e.toString());
+    } finally {
+      if (user != null) {
+        pushtoHomePage(context);
+      } else {
+        // sign in unsuccessful
+        // ex: prompt the user to try again
+      }
+    }
+  }
+
+  //Email Sign In and FireBase Authentication
+  void signInWithEmail(context) async {
+    // marked async
+    FirebaseUser user;
+    try {
+      user = await _auth.signInWithEmailAndPassword(
+          email: userCtrl.text, 
+          password: passCtrl.text
+          );
+    } catch (e) {
+      print(e.toString());
+    } finally {
+      if (user != null) {
+       pushtoHomePage(context);
+      } else {
+        // sign in unsuccessful
+        // ex: prompt the user to try again
+      }
+    }
   }
 
   //Google Sign in and FireBase Authentication
@@ -83,10 +126,22 @@ class MyLoginPage extends StatelessWidget {
                     child: Text("Log In With Email",
                         style: TextStyle(color: Colors.white, fontSize: 18)),
                     onPressed: () {
-                      pushtoHomePage(context);
+                      signInWithEmail(context);
                     },
                   )),
-              Padding(padding: const EdgeInsets.only(top: 55.0)),
+              Padding(padding: const EdgeInsets.only(top: 5.0)),
+                ButtonTheme(
+                  minWidth: 325.0,
+                  height: 50.0,
+                  child: RaisedButton(
+                    color: Colors.blueGrey,
+                    child: Text("Sign Up With Email",
+                        style: TextStyle(color: Colors.white, fontSize: 18)),
+                    onPressed: () {
+                      signUpWithEmail(context);
+                    },
+                  )),
+              Padding(padding: const EdgeInsets.only(top: 20.0)),
               Container(
                 width: 325,
                 child: GoogleSignInButton(
