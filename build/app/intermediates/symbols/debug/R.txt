@@ -43,6 +43,10 @@ int color primary_text_default_material_dark 0x7f02000e
 int color ripple_material_light 0x7f02000f
 int color secondary_text_default_material_dark 0x7f020010
 int color secondary_text_default_material_light 0x7f020011
+int color tw__blue_default 0x7f020012
+int color tw__blue_pressed 0x7f020013
+int color tw__light_gray 0x7f020014
+int color tw__solid_white 0x7f020015
 int dimen compat_button_inset_horizontal_material 0x7f030000
 int dimen compat_button_inset_vertical_material 0x7f030001
 int dimen compat_button_padding_horizontal_material 0x7f030002
@@ -69,6 +73,12 @@ int dimen subtitle_corner_radius 0x7f030016
 int dimen subtitle_outline_width 0x7f030017
 int dimen subtitle_shadow_offset 0x7f030018
 int dimen subtitle_shadow_radius 0x7f030019
+int dimen tw__login_btn_drawable_padding 0x7f03001a
+int dimen tw__login_btn_height 0x7f03001b
+int dimen tw__login_btn_left_padding 0x7f03001c
+int dimen tw__login_btn_radius 0x7f03001d
+int dimen tw__login_btn_right_padding 0x7f03001e
+int dimen tw__login_btn_text_size 0x7f03001f
 int drawable common_full_open_on_phone 0x7f040000
 int drawable common_google_signin_btn_icon_dark 0x7f040001
 int drawable common_google_signin_btn_icon_dark_focused 0x7f040002
@@ -103,6 +113,11 @@ int drawable notification_template_icon_bg 0x7f04001e
 int drawable notification_template_icon_low_bg 0x7f04001f
 int drawable notification_tile_bg 0x7f040020
 int drawable notify_panel_notification_icon_bg 0x7f040021
+int drawable tw__ic_logo_default 0x7f040022
+int drawable tw__login_btn 0x7f040023
+int drawable tw__login_btn_default 0x7f040024
+int drawable tw__login_btn_disabled 0x7f040025
+int drawable tw__login_btn_pressed 0x7f040026
 int id action0 0x7f050000
 int id action_container 0x7f050001
 int id action_divider 0x7f050002
@@ -159,7 +174,9 @@ int id text2 0x7f050034
 int id time 0x7f050035
 int id title 0x7f050036
 int id top 0x7f050037
-int id wide 0x7f050038
+int id tw__spinner 0x7f050038
+int id tw__web_view 0x7f050039
+int id wide 0x7f05003a
 int integer cancel_button_image_alpha 0x7f060000
 int integer google_play_services_version 0x7f060001
 int integer status_bar_notification_info_maxnum 0x7f060002
@@ -178,6 +195,7 @@ int layout notification_template_media 0x7f07000b
 int layout notification_template_media_custom 0x7f07000c
 int layout notification_template_part_chronometer 0x7f07000d
 int layout notification_template_part_time 0x7f07000e
+int layout tw__activity_oauth 0x7f07000f
 int mipmap ic_launcher 0x7f080000
 int string common_google_play_services_enable_button 0x7f090000
 int string common_google_play_services_enable_text 0x7f090001
@@ -206,6 +224,7 @@ int string google_crash_reporting_api_key 0x7f090017
 int string google_storage_bucket 0x7f090018
 int string project_id 0x7f090019
 int string status_bar_notification_info_overflow 0x7f09001a
+int string tw__login_btn_txt 0x7f09001b
 int style LaunchTheme 0x7f0a0000
 int style TextAppearance_Compat_Notification 0x7f0a0001
 int style TextAppearance_Compat_Notification_Info 0x7f0a0002

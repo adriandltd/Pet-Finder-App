@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_auth_buttons/flutter_auth_buttons.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:flutter_twitter_login/flutter_twitter_login.dart';
 import 'dart:async';
 
 class MyLoginPage extends StatelessWidget {
@@ -75,7 +76,39 @@ class MyLoginPage extends StatelessWidget {
   }
 
   //Facebook Sign in and FireBase Authentication
+
   
+  //Twitter Sign in and FireBase Authentication
+
+
+ Future<FirebaseUser> _handleTwitterAccountSignIn() async {
+    var twitterLogin = new TwitterLogin(
+    consumerKey: 'eUxcPPGGLL59xb7Tx9IBotjjU',
+    consumerSecret: 'hhHWA0D0jDxMJKknHovz39LWDiC1vu3MeruSwdWZVUR3fGvDVW',
+  );
+
+    final TwitterLoginResult result = await twitterLogin.authorize();
+    final AuthCredential credential = TwitterAuthProvider.getCredential(
+      authToken: 'eUxcPPGGLL59xb7Tx9IBotjjU', authTokenSecret:'hhHWA0D0jDxMJKknHovz39LWDiC1vu3MeruSwdWZVUR3fGvDVW'
+    );
+
+    switch (result.status) {
+      case TwitterLoginStatus.loggedIn:
+        var session = result.session;
+        FirebaseUser user = await _auth.signInWithCredential(credential);
+        return user;
+        break;
+      case TwitterLoginStatus.cancelledByUser:
+        debugPrint(result.status.toString());
+        return null;
+        break;
+      case TwitterLoginStatus.error:
+        debugPrint(result.errorMessage.toString());
+        return null;
+        break;
+    }
+    return null;
+}
 
   @override
   Widget build(BuildContext context) {
@@ -162,8 +195,10 @@ class MyLoginPage extends StatelessWidget {
               Container(
                 width: 325,
                 child: TwitterSignInButton(
-                  onPressed: () {},
-                ),
+                  onPressed: () {
+                   _handleTwitterAccountSignIn().then((FirebaseUser user) => print(user)).catchError((e) => print(e));
+                  pushtoHomePage(context);
+                  }),
               ),
             ],
           ),

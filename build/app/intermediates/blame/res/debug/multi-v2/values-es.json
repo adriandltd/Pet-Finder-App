@@ -1,10 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/iPowerSurge/Documents/SEII/GitHub Folder/Pet-Finder-App/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-es/values-es.xml",
+            "outputFile": "C:\\Users\\istic\\Documents\\GitHub\\Pet-Finder-App\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-es\\values-es.xml",
             "map": [
                 {
-                    "source": "/Users/iPowerSurge/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/be9277ae2b3c0a850dd6878d6e83a5b9/res/values-es/values-es.xml",
+                    "source": "C:\\Users\\istic\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-basement-16.1.0.aar\\584639045ab475b4fdd28ea323539766\\res\\values-es\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "218",
+                        "endOffsets": "465"
+                    },
+                    "to": {
+                        "startLines": "10",
+                        "startColumns": "4",
+                        "startOffsets": "1299",
+                        "endColumns": "218",
+                        "endOffsets": "1513"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\istic\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.0.0.aar\\cd39f18633d044c1a0f7c00287bb7ace\\res\\values-es\\values-es.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -21,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "/Users/iPowerSurge/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/547ae432a6bc78222b99ddc199b7dcb4/res/values-es/values.xml",
+                    "source": "C:\\Users\\istic\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-base-16.0.1.aar\\f813d3c44007203ad407d247063cc147\\res\\values-es\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -38,20 +55,20 @@
                     }
                 },
                 {
-                    "source": "/Users/iPowerSurge/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-16.1.0.aar/26b2d419365528a57ff82c59046208ed/res/values-es/values.xml",
+                    "source": "C:\\Users\\istic\\.gradle\\caches\\transforms-1\\files-1.1\\twitter-core-3.1.1.aar\\63942520b0f73cb62f64fc15f1dd7f06\\res\\values-es\\values-es.xml",
                     "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "218",
-                        "endOffsets": "465"
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "71",
+                        "endOffsets": "122"
                     },
                     "to": {
-                        "startLines": "10",
+                        "startLines": "21",
                         "startColumns": "4",
-                        "startOffsets": "1299",
-                        "endColumns": "218",
-                        "endOffsets": "1513"
+                        "startOffsets": "3032",
+                        "endColumns": "71",
+                        "endOffsets": "3099"
                     }
                 }
             ]

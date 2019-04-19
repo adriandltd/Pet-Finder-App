@@ -342,6 +342,10 @@ public final class R {
     public static final int ripple_material_light=0x7f02000f;
     public static final int secondary_text_default_material_dark=0x7f020010;
     public static final int secondary_text_default_material_light=0x7f020011;
+    public static final int tw__blue_default=0x7f020012;
+    public static final int tw__blue_pressed=0x7f020013;
+    public static final int tw__light_gray=0x7f020014;
+    public static final int tw__solid_white=0x7f020015;
   }
   public static final class dimen {
     public static final int compat_button_inset_horizontal_material=0x7f030000;
@@ -370,6 +374,12 @@ public final class R {
     public static final int subtitle_outline_width=0x7f030017;
     public static final int subtitle_shadow_offset=0x7f030018;
     public static final int subtitle_shadow_radius=0x7f030019;
+    public static final int tw__login_btn_drawable_padding=0x7f03001a;
+    public static final int tw__login_btn_height=0x7f03001b;
+    public static final int tw__login_btn_left_padding=0x7f03001c;
+    public static final int tw__login_btn_radius=0x7f03001d;
+    public static final int tw__login_btn_right_padding=0x7f03001e;
+    public static final int tw__login_btn_text_size=0x7f03001f;
   }
   public static final class drawable {
     public static final int common_full_open_on_phone=0x7f040000;
@@ -406,6 +416,11 @@ public final class R {
     public static final int notification_template_icon_low_bg=0x7f04001f;
     public static final int notification_tile_bg=0x7f040020;
     public static final int notify_panel_notification_icon_bg=0x7f040021;
+    public static final int tw__ic_logo_default=0x7f040022;
+    public static final int tw__login_btn=0x7f040023;
+    public static final int tw__login_btn_default=0x7f040024;
+    public static final int tw__login_btn_disabled=0x7f040025;
+    public static final int tw__login_btn_pressed=0x7f040026;
   }
   public static final class id {
     public static final int action0=0x7f050000;
@@ -464,7 +479,9 @@ public final class R {
     public static final int time=0x7f050035;
     public static final int title=0x7f050036;
     public static final int top=0x7f050037;
-    public static final int wide=0x7f050038;
+    public static final int tw__spinner=0x7f050038;
+    public static final int tw__web_view=0x7f050039;
+    public static final int wide=0x7f05003a;
   }
   public static final class integer {
     public static final int cancel_button_image_alpha=0x7f060000;
@@ -487,6 +504,7 @@ public final class R {
     public static final int notification_template_media_custom=0x7f07000c;
     public static final int notification_template_part_chronometer=0x7f07000d;
     public static final int notification_template_part_time=0x7f07000e;
+    public static final int tw__activity_oauth=0x7f07000f;
   }
   public static final class mipmap {
     public static final int ic_launcher=0x7f080000;
@@ -519,6 +537,7 @@ public final class R {
     public static final int google_storage_bucket=0x7f090018;
     public static final int project_id=0x7f090019;
     public static final int status_bar_notification_info_overflow=0x7f09001a;
+    public static final int tw__login_btn_txt=0x7f09001b;
   }
   public static final class style {
     public static final int LaunchTheme=0x7f0a0000;
