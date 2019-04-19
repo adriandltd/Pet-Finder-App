@@ -4,6 +4,25 @@
             "outputFile": "C:\\Users\\istic\\Documents\\GitHub\\Pet-Finder-App\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
             "map": [
                 {
+                    "source": "C:\\Users\\istic\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\5df7d22d9945b7f294a08eaecdc7af22\\res\\values-watch-v20\\values-watch-v20.xml",
+                    "from": {
+                        "startLines": "2,5,8",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,214,385",
+                        "endLines": "4,7,10",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "209,380,553"
+                    },
+                    "to": {
+                        "startLines": "10,13,16",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "715,874,1045",
+                        "endLines": "12,15,18",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "869,1040,1213"
+                    }
+                },
+                {
                     "source": "C:\\Users\\istic\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-auth-16.0.1.aar\\8dd7488bb396d989d03f0d93fc96f84b\\res\\values-watch-v20\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11",

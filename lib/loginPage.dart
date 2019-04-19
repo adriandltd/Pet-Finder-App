@@ -4,6 +4,8 @@ import 'package:flutter_auth_buttons/flutter_auth_buttons.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:flutter_twitter_login/flutter_twitter_login.dart';
+import 'package:flutter_facebook_login/flutter_facebook_login.dart';
+
 import 'dart:async';
 
 class MyLoginPage extends StatelessWidget {
@@ -77,6 +79,21 @@ class MyLoginPage extends StatelessWidget {
 
   //Facebook Sign in and FireBase Authentication
 
+   Future<FirebaseUser> _handleFacebookAccountSignIn() async {
+    var facebookLogin = new FacebookLogin();
+    var result = await facebookLogin.logInWithReadPermissions(['email']);
+    final AuthCredential credential = FacebookAuthProvider.getCredential(
+      accessToken: '2072195696236109',
+    );
+    debugPrint(result.status.toString());
+
+    if (result.status == FacebookLoginStatus.loggedIn) {
+      FirebaseUser user =
+          await _auth.signInWithCredential(credential);
+      return user;
+    }
+    return null;
+}
   
   //Twitter Sign in and FireBase Authentication
 
@@ -188,7 +205,10 @@ class MyLoginPage extends StatelessWidget {
               Container(
                 width: 325,
                 child: FacebookSignInButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    _handleFacebookAccountSignIn();
+                    pushtoHomePage(context);
+                  },
                 ),
               ),
               Padding(padding: const EdgeInsets.only(top: 6.0)),

@@ -1,16 +1,18 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:1:1-39:12
-INJECTED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:1:1-39:12
-INJECTED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:1:1-39:12
-INJECTED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:1:1-39:12
+ADDED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:1:1-57:12
+INJECTED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:1:1-57:12
+INJECTED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:1:1-57:12
+INJECTED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:1:1-57:12
 MERGED from [:firebase_auth] C:\Users\istic\Documents\GitHub\Pet-Finder-App\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:flutter_twitter_login] C:\Users\istic\Documents\GitHub\Pet-Finder-App\build\flutter_twitter_login\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:flutter_facebook_login] C:\Users\istic\Documents\GitHub\Pet-Finder-App\build\flutter_facebook_login\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:google_sign_in] C:\Users\istic\Documents\GitHub\Pet-Finder-App\build\google_sign_in\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:firebase_core] C:\Users\istic\Documents\GitHub\Pet-Finder-App\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.firebase:firebase-core:16.0.4] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\firebase-core-16.0.4.aar\211b3ea9a3df09673231aaa1ca727e48\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-auth:16.2.1] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-firebase-auth-16.2.1.aar\135a9840e98f5c7a063feef5ccc7c264\AndroidManifest.xml:17:1-42:12
 MERGED from [com.twitter.sdk.android:twitter-core:3.1.1] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\twitter-core-3.1.1.aar\63942520b0f73cb62f64fc15f1dd7f06\AndroidManifest.xml:18:1-35:12
+MERGED from [com.facebook.android:facebook-login:4.39.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-facebook-login-4.39.0.aar\07713b217d8c0b200885d8976b9fa127\AndroidManifest.xml:21:1-31:12
 MERGED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-play-services-auth-16.0.1.aar\8dd7488bb396d989d03f0d93fc96f84b\AndroidManifest.xml:17:1-39:12
 MERGED from [com.google.android.gms:play-services-flags:16.0.1] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\play-services-flags-16.0.1.aar\be351c16ccb9d20122fd17dd7f18c3f0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-firebase-auth-interop-16.0.1.aar\4a28f1b42e8751c967c75c63828a240c\AndroidManifest.xml:2:1-10:12
@@ -29,12 +31,18 @@ MERGED from [com.google.android.gms:play-services-stats:16.0.1] C:\Users\istic\.
 MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-firebase-measurement-connector-17.0.1.aar\461800a5645625d05353d67cc598bd64\AndroidManifest.xml:17:1-25:12
 MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-play-services-ads-identifier-16.0.0.aar\2fcd55630119076995705cc3c33eb423\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-16.1.0.aar\584639045ab475b4fdd28ea323539766\AndroidManifest.xml:17:1-28:12
+MERGED from [com.facebook.android:facebook-common:4.39.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-facebook-common-4.39.0.aar\1d2e826a54067dc2b2d63bdec55e2521\AndroidManifest.xml:21:1-37:12
+MERGED from [com.facebook.android:facebook-core:4.39.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-facebook-core-4.39.0.aar\d232a6d3fcf7b29b7417eb0f4f695017\AndroidManifest.xml:21:1-53:12
+MERGED from [androidx.appcompat:appcompat:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\appcompat-1.0.0.aar\5df7d22d9945b7f294a08eaecdc7af22\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\legacy-support-v4-1.0.0.aar\f1dc88dc62e7f192b20fa6cbcb155eb4\AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.android.gms:play-services-measurement-base:16.0.3] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.3.aar\5510d5d3697b71b77a3d1fea19912dfd\AndroidManifest.xml:2:1-9:12
-MERGED from [androidx.media:media:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\media-1.0.0.aar\dbfc0a8abc35b90094e12f0ccd08e971\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\fragment-1.0.0.aar\34fc59298dda39fe265b05defa50e3b3\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.browser:browser:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\browser-1.0.0.aar\05446d389c7426c9bcd4d3d64c97a922\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\vectordrawable-animated-1.0.0.aar\6f8f230d105a752dce3166ece193e5dc\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\legacy-support-core-ui-1.0.0.aar\5f56fa16681e8892371a4b46cd9f1c6f\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\legacy-support-core-utils-1.0.0.aar\317331e9f395a592b5b1b9d12c52e4ec\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\cardview-1.0.0.aar\2a19a3c49d1d0920b3d927290b00f170\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\vectordrawable-1.0.0.aar\a95128d44f6973d2385454f60a1087d9\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media:media:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\media-1.0.0.aar\dbfc0a8abc35b90094e12f0ccd08e971\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\loader-1.0.0.aar\1dc5f24b7f0917ed36436d3ffa0ada05\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\viewpager-1.0.0.aar\88afaadf7e84669b0063e86af1d921d1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-1.0.0.aar\6e78741b2d839641837073b79c1ba3f9\AndroidManifest.xml:17:1-22:12
@@ -45,30 +53,31 @@ MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\isti
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-1.0.0.aar\5bc26b80818b82a7a60d2786449343e9\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\core-1.0.0.aar\cd39f18633d044c1a0f7c00287bb7ace\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.0.0.aar\889d31bb336b4b00eded47a53489a4a6\AndroidManifest.xml:17:1-25:12
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.0.0.aar\ec9526b577835cacf5fe40521d1237f8\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0.aar\3be06bf46a9aafd694c0f58f996ef16a\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\documentfile-1.0.0.aar\67553c8cc8fd8c7c9156fbf76edf9e7e\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-1.0.0.aar\f2da7fd60cf9036613b757afda911072\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\print-1.0.0.aar\269af118e54f8d0c448c86d7af064fb9\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\interpolator-1.0.0.aar\662cf8d2f09ca2f99d5bfacb5c3ec0a7\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0.aar\3be06bf46a9aafd694c0f58f996ef16a\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.0.0.aar\ec9526b577835cacf5fe40521d1237f8\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-2.0.0.aar\d1559f694a2a75b7154b9656db9398bb\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-2.0.0.aar\25ccf6befb9ba8c2c2c59ee764fa071d\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-core-2.0.0.aar\56719251c9242e3dd72b2a2cb8abd2d7\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\core-runtime-2.0.0.aar\133c8c64ad5dcf960917aab49e13c1b2\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:1:1-39:12
-INJECTED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:1:1-39:12
-INJECTED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:1:1-39:12
+MERGED from [com.google.android.gms:play-services-measurement-base:16.0.3] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.3.aar\5510d5d3697b71b77a3d1fea19912dfd\AndroidManifest.xml:2:1-9:12
+INJECTED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:1:1-57:12
+INJECTED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:1:1-57:12
+INJECTED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:1:1-57:12
 	package
 		ADDED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:2:5-39
 		INJECTED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:1:1-39:12
+		ADDED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:1:1-57:12
 		INJECTED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:1:1-39:12
+		ADDED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:1:1-57:12
 		INJECTED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:1:11-69
@@ -89,13 +98,15 @@ MERGED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\istic\.gradle\cac
 	android:name
 		ADDED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:8:22-64
 application
-ADDED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:15:5-38:19
+ADDED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:15:5-56:19
 MERGED from [com.google.firebase:firebase-core:16.0.4] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\firebase-core-16.0.4.aar\211b3ea9a3df09673231aaa1ca727e48\AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-core:16.0.4] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\firebase-core-16.0.4.aar\211b3ea9a3df09673231aaa1ca727e48\AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-auth:16.2.1] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-firebase-auth-16.2.1.aar\135a9840e98f5c7a063feef5ccc7c264\AndroidManifest.xml:23:5-40:19
 MERGED from [com.google.firebase:firebase-auth:16.2.1] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-firebase-auth-16.2.1.aar\135a9840e98f5c7a063feef5ccc7c264\AndroidManifest.xml:23:5-40:19
 MERGED from [com.twitter.sdk.android:twitter-core:3.1.1] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\twitter-core-3.1.1.aar\63942520b0f73cb62f64fc15f1dd7f06\AndroidManifest.xml:27:5-33:19
 MERGED from [com.twitter.sdk.android:twitter-core:3.1.1] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\twitter-core-3.1.1.aar\63942520b0f73cb62f64fc15f1dd7f06\AndroidManifest.xml:27:5-33:19
+MERGED from [com.facebook.android:facebook-login:4.39.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-facebook-login-4.39.0.aar\07713b217d8c0b200885d8976b9fa127\AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-login:4.39.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-facebook-login-4.39.0.aar\07713b217d8c0b200885d8976b9fa127\AndroidManifest.xml:28:5-29:19
 MERGED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-play-services-auth-16.0.1.aar\8dd7488bb396d989d03f0d93fc96f84b\AndroidManifest.xml:22:5-37:19
 MERGED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-play-services-auth-16.0.1.aar\8dd7488bb396d989d03f0d93fc96f84b\AndroidManifest.xml:22:5-37:19
 MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-firebase-auth-interop-16.0.1.aar\4a28f1b42e8751c967c75c63828a240c\AndroidManifest.xml:7:5-8:19
@@ -126,14 +137,20 @@ MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] C:\User
 MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-play-services-ads-identifier-16.0.0.aar\2fcd55630119076995705cc3c33eb423\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-16.1.0.aar\584639045ab475b4fdd28ea323539766\AndroidManifest.xml:22:5-26:19
 MERGED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-16.1.0.aar\584639045ab475b4fdd28ea323539766\AndroidManifest.xml:22:5-26:19
-MERGED from [com.google.android.gms:play-services-measurement-base:16.0.3] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.3.aar\5510d5d3697b71b77a3d1fea19912dfd\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-measurement-base:16.0.3] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.3.aar\5510d5d3697b71b77a3d1fea19912dfd\AndroidManifest.xml:7:5-20
+MERGED from [com.facebook.android:facebook-common:4.39.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-facebook-common-4.39.0.aar\1d2e826a54067dc2b2d63bdec55e2521\AndroidManifest.xml:28:5-35:19
+MERGED from [com.facebook.android:facebook-common:4.39.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-facebook-common-4.39.0.aar\1d2e826a54067dc2b2d63bdec55e2521\AndroidManifest.xml:28:5-35:19
+MERGED from [com.facebook.android:facebook-core:4.39.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-facebook-core-4.39.0.aar\d232a6d3fcf7b29b7417eb0f4f695017\AndroidManifest.xml:28:5-51:19
+MERGED from [com.facebook.android:facebook-core:4.39.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-facebook-core-4.39.0.aar\d232a6d3fcf7b29b7417eb0f4f695017\AndroidManifest.xml:28:5-51:19
 MERGED from [androidx.core:core:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\core-1.0.0.aar\cd39f18633d044c1a0f7c00287bb7ace\AndroidManifest.xml:22:5-89
 MERGED from [androidx.core:core:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\core-1.0.0.aar\cd39f18633d044c1a0f7c00287bb7ace\AndroidManifest.xml:22:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.0.0.aar\889d31bb336b4b00eded47a53489a4a6\AndroidManifest.xml:22:5-23:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.0.0.aar\889d31bb336b4b00eded47a53489a4a6\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-measurement-base:16.0.3] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.3.aar\5510d5d3697b71b77a3d1fea19912dfd\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement-base:16.0.3] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.3.aar\5510d5d3697b71b77a3d1fea19912dfd\AndroidManifest.xml:7:5-20
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\core-1.0.0.aar\cd39f18633d044c1a0f7c00287bb7ace\AndroidManifest.xml:22:18-86
+	android:supportsRtl
+		ADDED from [com.facebook.android:facebook-login:4.39.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-facebook-login-4.39.0.aar\07713b217d8c0b200885d8976b9fa127\AndroidManifest.xml:28:18-44
 	android:label
 		ADDED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:17:9-38
 	android:icon
@@ -170,6 +187,50 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:35:17-76
 	android:name
 		ADDED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:35:27-74
+meta-data#com.facebook.sdk.ApplicationId
+ADDED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:38:9-39:50
+	android:value
+		ADDED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:39:9-48
+	android:name
+		ADDED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:38:20-65
+activity#com.facebook.FacebookActivity
+ADDED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:41:5-44:44
+MERGED from [com.facebook.android:facebook-common:4.39.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-facebook-common-4.39.0.aar\1d2e826a54067dc2b2d63bdec55e2521\AndroidManifest.xml:29:9-32:66
+MERGED from [com.facebook.android:facebook-common:4.39.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-facebook-common-4.39.0.aar\1d2e826a54067dc2b2d63bdec55e2521\AndroidManifest.xml:29:9-32:66
+	android:label
+		ADDED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:44:9-41
+	android:configChanges
+		ADDED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:42:9-110
+	android:theme
+		ADDED from [com.facebook.android:facebook-common:4.39.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-facebook-common-4.39.0.aar\1d2e826a54067dc2b2d63bdec55e2521\AndroidManifest.xml:32:13-63
+	android:name
+		ADDED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:41:15-59
+activity#com.facebook.CustomTabActivity
+ADDED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:45:5-54:16
+MERGED from [com.facebook.android:facebook-common:4.39.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-facebook-common-4.39.0.aar\1d2e826a54067dc2b2d63bdec55e2521\AndroidManifest.xml:34:9-67
+MERGED from [com.facebook.android:facebook-common:4.39.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-facebook-common-4.39.0.aar\1d2e826a54067dc2b2d63bdec55e2521\AndroidManifest.xml:34:9-67
+	android:exported
+		ADDED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:47:9-32
+	android:name
+		ADDED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:46:9-54
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:@string/fb_login_protocol_scheme
+ADDED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:48:9-53:25
+action#android.intent.action.VIEW
+ADDED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:49:13-65
+	android:name
+		ADDED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:49:21-62
+category#android.intent.category.DEFAULT
+ADDED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:50:13-72
+	android:name
+		ADDED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:50:23-69
+category#android.intent.category.BROWSABLE
+ADDED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:51:13-74
+	android:name
+		ADDED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:51:23-71
+data
+ADDED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:52:13-71
+	android:scheme
+		ADDED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:52:19-68
 uses-sdk
 INJECTED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml
@@ -178,6 +239,8 @@ MERGED from [:firebase_auth] C:\Users\istic\Documents\GitHub\Pet-Finder-App\buil
 MERGED from [:firebase_auth] C:\Users\istic\Documents\GitHub\Pet-Finder-App\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:flutter_twitter_login] C:\Users\istic\Documents\GitHub\Pet-Finder-App\build\flutter_twitter_login\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:flutter_twitter_login] C:\Users\istic\Documents\GitHub\Pet-Finder-App\build\flutter_twitter_login\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:flutter_facebook_login] C:\Users\istic\Documents\GitHub\Pet-Finder-App\build\flutter_facebook_login\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:flutter_facebook_login] C:\Users\istic\Documents\GitHub\Pet-Finder-App\build\flutter_facebook_login\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:google_sign_in] C:\Users\istic\Documents\GitHub\Pet-Finder-App\build\google_sign_in\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:google_sign_in] C:\Users\istic\Documents\GitHub\Pet-Finder-App\build\google_sign_in\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:firebase_core] C:\Users\istic\Documents\GitHub\Pet-Finder-App\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
@@ -188,6 +251,8 @@ MERGED from [com.google.firebase:firebase-auth:16.2.1] C:\Users\istic\.gradle\ca
 MERGED from [com.google.firebase:firebase-auth:16.2.1] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-firebase-auth-16.2.1.aar\135a9840e98f5c7a063feef5ccc7c264\AndroidManifest.xml:21:5-44
 MERGED from [com.twitter.sdk.android:twitter-core:3.1.1] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\twitter-core-3.1.1.aar\63942520b0f73cb62f64fc15f1dd7f06\AndroidManifest.xml:23:5-44
 MERGED from [com.twitter.sdk.android:twitter-core:3.1.1] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\twitter-core-3.1.1.aar\63942520b0f73cb62f64fc15f1dd7f06\AndroidManifest.xml:23:5-44
+MERGED from [com.facebook.android:facebook-login:4.39.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-facebook-login-4.39.0.aar\07713b217d8c0b200885d8976b9fa127\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-login:4.39.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-facebook-login-4.39.0.aar\07713b217d8c0b200885d8976b9fa127\AndroidManifest.xml:24:5-26:41
 MERGED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-play-services-auth-16.0.1.aar\8dd7488bb396d989d03f0d93fc96f84b\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-play-services-auth-16.0.1.aar\8dd7488bb396d989d03f0d93fc96f84b\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-flags:16.0.1] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\play-services-flags-16.0.1.aar\be351c16ccb9d20122fd17dd7f18c3f0\AndroidManifest.xml:20:5-44
@@ -224,18 +289,30 @@ MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] C:\User
 MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-play-services-ads-identifier-16.0.0.aar\2fcd55630119076995705cc3c33eb423\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-16.1.0.aar\584639045ab475b4fdd28ea323539766\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-16.1.0.aar\584639045ab475b4fdd28ea323539766\AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.android:facebook-common:4.39.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-facebook-common-4.39.0.aar\1d2e826a54067dc2b2d63bdec55e2521\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-common:4.39.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-facebook-common-4.39.0.aar\1d2e826a54067dc2b2d63bdec55e2521\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-core:4.39.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-facebook-core-4.39.0.aar\d232a6d3fcf7b29b7417eb0f4f695017\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-core:4.39.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-facebook-core-4.39.0.aar\d232a6d3fcf7b29b7417eb0f4f695017\AndroidManifest.xml:24:5-26:41
+MERGED from [androidx.appcompat:appcompat:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\appcompat-1.0.0.aar\5df7d22d9945b7f294a08eaecdc7af22\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\appcompat-1.0.0.aar\5df7d22d9945b7f294a08eaecdc7af22\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\legacy-support-v4-1.0.0.aar\f1dc88dc62e7f192b20fa6cbcb155eb4\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\legacy-support-v4-1.0.0.aar\f1dc88dc62e7f192b20fa6cbcb155eb4\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-base:16.0.3] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.3.aar\5510d5d3697b71b77a3d1fea19912dfd\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-measurement-base:16.0.3] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.3.aar\5510d5d3697b71b77a3d1fea19912dfd\AndroidManifest.xml:5:5-44
-MERGED from [androidx.media:media:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\media-1.0.0.aar\dbfc0a8abc35b90094e12f0ccd08e971\AndroidManifest.xml:20:5-44
-MERGED from [androidx.media:media:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\media-1.0.0.aar\dbfc0a8abc35b90094e12f0ccd08e971\AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\fragment-1.0.0.aar\34fc59298dda39fe265b05defa50e3b3\AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\fragment-1.0.0.aar\34fc59298dda39fe265b05defa50e3b3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.browser:browser:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\browser-1.0.0.aar\05446d389c7426c9bcd4d3d64c97a922\AndroidManifest.xml:20:5-44
+MERGED from [androidx.browser:browser:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\browser-1.0.0.aar\05446d389c7426c9bcd4d3d64c97a922\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\vectordrawable-animated-1.0.0.aar\6f8f230d105a752dce3166ece193e5dc\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\vectordrawable-animated-1.0.0.aar\6f8f230d105a752dce3166ece193e5dc\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\legacy-support-core-ui-1.0.0.aar\5f56fa16681e8892371a4b46cd9f1c6f\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\legacy-support-core-ui-1.0.0.aar\5f56fa16681e8892371a4b46cd9f1c6f\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\legacy-support-core-utils-1.0.0.aar\317331e9f395a592b5b1b9d12c52e4ec\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\legacy-support-core-utils-1.0.0.aar\317331e9f395a592b5b1b9d12c52e4ec\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\cardview-1.0.0.aar\2a19a3c49d1d0920b3d927290b00f170\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\cardview-1.0.0.aar\2a19a3c49d1d0920b3d927290b00f170\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\vectordrawable-1.0.0.aar\a95128d44f6973d2385454f60a1087d9\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\vectordrawable-1.0.0.aar\a95128d44f6973d2385454f60a1087d9\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\media-1.0.0.aar\dbfc0a8abc35b90094e12f0ccd08e971\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\media-1.0.0.aar\dbfc0a8abc35b90094e12f0ccd08e971\AndroidManifest.xml:20:5-44
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\loader-1.0.0.aar\1dc5f24b7f0917ed36436d3ffa0ada05\AndroidManifest.xml:20:5-44
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\loader-1.0.0.aar\1dc5f24b7f0917ed36436d3ffa0ada05\AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\viewpager-1.0.0.aar\88afaadf7e84669b0063e86af1d921d1\AndroidManifest.xml:20:5-44
@@ -256,8 +333,8 @@ MERGED from [androidx.core:core:1.0.0] C:\Users\istic\.gradle\caches\transforms-
 MERGED from [androidx.core:core:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\core-1.0.0.aar\cd39f18633d044c1a0f7c00287bb7ace\AndroidManifest.xml:20:5-44
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.0.0.aar\889d31bb336b4b00eded47a53489a4a6\AndroidManifest.xml:20:5-44
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.0.0.aar\889d31bb336b4b00eded47a53489a4a6\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.0.0.aar\ec9526b577835cacf5fe40521d1237f8\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.0.0.aar\ec9526b577835cacf5fe40521d1237f8\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0.aar\3be06bf46a9aafd694c0f58f996ef16a\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0.aar\3be06bf46a9aafd694c0f58f996ef16a\AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\documentfile-1.0.0.aar\67553c8cc8fd8c7c9156fbf76edf9e7e\AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\documentfile-1.0.0.aar\67553c8cc8fd8c7c9156fbf76edf9e7e\AndroidManifest.xml:20:5-44
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-1.0.0.aar\f2da7fd60cf9036613b757afda911072\AndroidManifest.xml:20:5-44
@@ -266,8 +343,8 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\istic\.gradle\caches\transform
 MERGED from [androidx.print:print:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\print-1.0.0.aar\269af118e54f8d0c448c86d7af064fb9\AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\interpolator-1.0.0.aar\662cf8d2f09ca2f99d5bfacb5c3ec0a7\AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\interpolator-1.0.0.aar\662cf8d2f09ca2f99d5bfacb5c3ec0a7\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0.aar\3be06bf46a9aafd694c0f58f996ef16a\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0.aar\3be06bf46a9aafd694c0f58f996ef16a\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.0.0.aar\ec9526b577835cacf5fe40521d1237f8\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.0.0.aar\ec9526b577835cacf5fe40521d1237f8\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-2.0.0.aar\d1559f694a2a75b7154b9656db9398bb\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-2.0.0.aar\d1559f694a2a75b7154b9656db9398bb\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-2.0.0.aar\25ccf6befb9ba8c2c2c59ee764fa071d\AndroidManifest.xml:20:5-44
@@ -276,6 +353,8 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\istic\.g
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-core-2.0.0.aar\56719251c9242e3dd72b2a2cb8abd2d7\AndroidManifest.xml:20:5-44
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\core-runtime-2.0.0.aar\133c8c64ad5dcf960917aab49e13c1b2\AndroidManifest.xml:20:5-44
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\core-runtime-2.0.0.aar\133c8c64ad5dcf960917aab49e13c1b2\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:16.0.3] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.3.aar\5510d5d3697b71b77a3d1fea19912dfd\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:16.0.3] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.3.aar\5510d5d3697b71b77a3d1fea19912dfd\AndroidManifest.xml:5:5-44
 INJECTED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\istic\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
@@ -484,3 +563,27 @@ ADDED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\istic
 		ADDED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-16.1.0.aar\584639045ab475b4fdd28ea323539766\AndroidManifest.xml:25:13-66
 	android:name
 		ADDED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-16.1.0.aar\584639045ab475b4fdd28ea323539766\AndroidManifest.xml:24:13-58
+activity#com.facebook.CustomTabMainActivity
+ADDED from [com.facebook.android:facebook-common:4.39.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-facebook-common-4.39.0.aar\1d2e826a54067dc2b2d63bdec55e2521\AndroidManifest.xml:33:9-71
+	android:name
+		ADDED from [com.facebook.android:facebook-common:4.39.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-facebook-common-4.39.0.aar\1d2e826a54067dc2b2d63bdec55e2521\AndroidManifest.xml:33:19-68
+provider#com.facebook.internal.FacebookInitProvider
+ADDED from [com.facebook.android:facebook-core:4.39.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-facebook-core-4.39.0.aar\d232a6d3fcf7b29b7417eb0f4f695017\AndroidManifest.xml:39:9-42:40
+	android:authorities
+		ADDED from [com.facebook.android:facebook-core:4.39.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-facebook-core-4.39.0.aar\d232a6d3fcf7b29b7417eb0f4f695017\AndroidManifest.xml:41:13-72
+	android:exported
+		ADDED from [com.facebook.android:facebook-core:4.39.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-facebook-core-4.39.0.aar\d232a6d3fcf7b29b7417eb0f4f695017\AndroidManifest.xml:42:13-37
+	android:name
+		ADDED from [com.facebook.android:facebook-core:4.39.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-facebook-core-4.39.0.aar\d232a6d3fcf7b29b7417eb0f4f695017\AndroidManifest.xml:40:13-70
+receiver#com.facebook.CurrentAccessTokenExpirationBroadcastReceiver
+ADDED from [com.facebook.android:facebook-core:4.39.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-facebook-core-4.39.0.aar\d232a6d3fcf7b29b7417eb0f4f695017\AndroidManifest.xml:44:9-50:20
+	android:exported
+		ADDED from [com.facebook.android:facebook-core:4.39.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-facebook-core-4.39.0.aar\d232a6d3fcf7b29b7417eb0f4f695017\AndroidManifest.xml:46:13-37
+	android:name
+		ADDED from [com.facebook.android:facebook-core:4.39.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-facebook-core-4.39.0.aar\d232a6d3fcf7b29b7417eb0f4f695017\AndroidManifest.xml:45:13-86
+intent-filter#action:name:com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED
+ADDED from [com.facebook.android:facebook-core:4.39.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-facebook-core-4.39.0.aar\d232a6d3fcf7b29b7417eb0f4f695017\AndroidManifest.xml:47:13-49:29
+action#com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED
+ADDED from [com.facebook.android:facebook-core:4.39.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-facebook-core-4.39.0.aar\d232a6d3fcf7b29b7417eb0f4f695017\AndroidManifest.xml:48:17-95
+	android:name
+		ADDED from [com.facebook.android:facebook-core:4.39.0] C:\Users\istic\.gradle\caches\transforms-1\files-1.1\jetified-facebook-core-4.39.0.aar\d232a6d3fcf7b29b7417eb0f4f695017\AndroidManifest.xml:48:25-92
