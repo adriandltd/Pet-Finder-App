@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Fri Apr 19 16:40:27 CDT 2019
+#Fri Apr 19 17:05:33 CDT 2019
 17.baseType=DIRECTORY
 4.path=flutter_assets/fonts/MaterialIcons-Regular.ttf
 25.base=C\:\\Users\\istic\\Documents\\GitHub\\Pet-Finder-App\\build\\app\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out

@@ -21,6 +21,50 @@ class MyLoginPage extends StatelessWidget {
     }
   }
 
+   //Email Sign Up and FireBase Authentication
+  void signUpWithEmail(context) async {
+    // marked async
+    FirebaseUser user;
+    try {
+      user = await _auth.createUserWithEmailAndPassword(
+        email: userCtrl.text,
+        password: passCtrl.text,
+      );
+    } catch (e) {
+      print(e.toString());
+    } finally {
+      if (user != null) {
+        pushtoHomePage(context);
+      } else {
+        // sign in unsuccessful
+        // ex: prompt the user to try again
+      }
+    }
+  }
+
+  //Email Sign In and FireBase Authentication
+  void signInWithEmail(context) async {
+    // marked async
+    FirebaseUser user;
+    try {
+      user = await _auth.signInWithEmailAndPassword(
+          email: userCtrl.text, 
+          password: passCtrl.text
+          );
+    } catch (e) {
+      print(e.toString());
+    } finally {
+      if (user != null) {
+       isUserSignedIn = true;
+       pushtoHomePage(context);
+      } else {
+        // sign in unsuccessful
+        // ex: prompt the user to try again
+      }
+    }
+  }
+
+
   //Google Sign in and FireBase Authentication
   final GoogleSignIn _googleSignIn = GoogleSignIn();
   final FirebaseAuth _auth = FirebaseAuth.instance;
@@ -51,6 +95,7 @@ class MyLoginPage extends StatelessWidget {
     if (result.status == FacebookLoginStatus.loggedIn) {
       FirebaseUser user =
           await _auth.signInWithCredential(credential);
+      isUserSignedIn = true;
       return user;
     }
     return null;
@@ -74,6 +119,7 @@ class MyLoginPage extends StatelessWidget {
       case TwitterLoginStatus.loggedIn:
         var session = result.session;
         FirebaseUser user = await _auth.signInWithCredential(credential);
+        isUserSignedIn = true;
         return user;
         break;
       case TwitterLoginStatus.cancelledByUser:
@@ -137,10 +183,23 @@ class MyLoginPage extends StatelessWidget {
                     child: Text("Log In With Email",
                         style: TextStyle(color: Colors.white, fontSize: 18)),
                     onPressed: () {
-                      pushtoHomePage(context);
+                      signInWithEmail(context);
                     },
                   )),
-              Padding(padding: const EdgeInsets.only(top: 55.0)),
+                Padding(padding: const EdgeInsets.only(top: 5.0)),
+                ButtonTheme(
+                  minWidth: 325.0,
+                  height: 50.0,
+                  child: RaisedButton(
+                    color: Colors.blueGrey,
+                    child: Text("Sign Up With Email",
+                        style: TextStyle(color: Colors.white, fontSize: 18)),
+                    onPressed: () {
+                      signUpWithEmail(context);
+                    }
+                  )
+                  ),
+              Padding(padding: const EdgeInsets.only(top: 20.0)),
               Container(
                 width: 325,
                 child: GoogleSignInButton(
