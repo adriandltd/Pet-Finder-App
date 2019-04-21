@@ -158,7 +158,7 @@ class MyLoginPage extends StatelessWidget {
                     textCapitalization: TextCapitalization.none,
                     autocorrect: false,
                   )),
-              Padding(padding: const EdgeInsets.only(top: 15.0)),
+              Padding(padding: const EdgeInsets.only(top: 20.0)),
               Container(
                   width: 325,
                   child: TextField(

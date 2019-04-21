@@ -8,7 +8,15 @@ import 'package:flutter_facebook_login/flutter_facebook_login.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'dart:async';
 
-class MySignUpPage extends StatelessWidget {
+class MySignUpPage extends StatefulWidget {
+  MySignUpPage();
+  @override
+  _MySignUpPage createState(){
+    return new _MySignUpPage();
+  }
+  
+}
+class _MySignUpPage extends State<MySignUpPage> {
   var userCtrl = TextEditingController();
   var passCtrl = TextEditingController();
   var userCtrl2 = TextEditingController();
@@ -38,7 +46,6 @@ class MySignUpPage extends StatelessWidget {
       } else {
         // sign in unsuccessful
         // ex: prompt the user to try again
-        
       }
     }
     }
