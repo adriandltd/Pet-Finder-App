@@ -1,4 +1,5 @@
 import 'package:animation_exp/SwipeAnimation/index.dart';
+import 'package:animation_exp/signupPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_auth_buttons/flutter_auth_buttons.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -14,14 +15,13 @@ class MyLoginPage extends StatelessWidget {
   var passCtrl = TextEditingController();
 
   void pushtoHomePage(context) async {
-    if (isUserSignedIn == true)
-    {
-    Navigator.push(
-        context, MaterialPageRoute(builder: (context) => CardDemo()));
+    if (isUserSignedIn == true) {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => CardDemo()));
     }
   }
 
-   //Email Sign Up and FireBase Authentication
+  //Email Sign Up and FireBase Authentication
   void signUpWithEmail(context) async {
     // marked async
     FirebaseUser user;
@@ -48,22 +48,19 @@ class MyLoginPage extends StatelessWidget {
     FirebaseUser user;
     try {
       user = await _auth.signInWithEmailAndPassword(
-          email: userCtrl.text, 
-          password: passCtrl.text
-          );
+          email: userCtrl.text, password: passCtrl.text);
     } catch (e) {
       print(e.toString());
     } finally {
       if (user != null) {
-       isUserSignedIn = true;
-       pushtoHomePage(context);
+        isUserSignedIn = true;
+        pushtoHomePage(context);
       } else {
         // sign in unsuccessful
         // ex: prompt the user to try again
       }
     }
   }
-
 
   //Google Sign in and FireBase Authentication
   final GoogleSignIn _googleSignIn = GoogleSignIn();
@@ -75,7 +72,8 @@ class MyLoginPage extends StatelessWidget {
       accessToken: googleAuth.accessToken,
       idToken: googleAuth.idToken,
     );
-    final FirebaseUser user = await _auth.signInWithCredential(credential).whenComplete((){
+    final FirebaseUser user =
+        await _auth.signInWithCredential(credential).whenComplete(() {
       isUserSignedIn = true;
       pushtoHomePage(context);
     });
@@ -84,7 +82,7 @@ class MyLoginPage extends StatelessWidget {
   }
 
   //Facebook Sign in and FireBase Authentication
-   Future<FirebaseUser> _handleFacebookAccountSignIn() async {
+  Future<FirebaseUser> _handleFacebookAccountSignIn() async {
     var facebookLogin = new FacebookLogin();
     var result = await facebookLogin.logInWithReadPermissions(['email']);
     final AuthCredential credential = FacebookAuthProvider.getCredential(
@@ -93,27 +91,25 @@ class MyLoginPage extends StatelessWidget {
     debugPrint(result.status.toString());
 
     if (result.status == FacebookLoginStatus.loggedIn) {
-      FirebaseUser user =
-          await _auth.signInWithCredential(credential);
+      FirebaseUser user = await _auth.signInWithCredential(credential);
       isUserSignedIn = true;
       return user;
     }
     return null;
-}
+  }
 
 //Twitter Sign in and FireBase Authentication
 
-
- Future<FirebaseUser> _handleTwitterAccountSignIn() async {
+  Future<FirebaseUser> _handleTwitterAccountSignIn() async {
     var twitterLogin = new TwitterLogin(
-    consumerKey: 'eUxcPPGGLL59xb7Tx9IBotjjU',
-    consumerSecret: 'hhHWA0D0jDxMJKknHovz39LWDiC1vu3MeruSwdWZVUR3fGvDVW',
-  );
+      consumerKey: 'eUxcPPGGLL59xb7Tx9IBotjjU',
+      consumerSecret: 'hhHWA0D0jDxMJKknHovz39LWDiC1vu3MeruSwdWZVUR3fGvDVW',
+    );
 
     final TwitterLoginResult result = await twitterLogin.authorize();
     final AuthCredential credential = TwitterAuthProvider.getCredential(
-      authToken: 'eUxcPPGGLL59xb7Tx9IBotjjU', authTokenSecret:'hhHWA0D0jDxMJKknHovz39LWDiC1vu3MeruSwdWZVUR3fGvDVW'
-    );
+        authToken: 'eUxcPPGGLL59xb7Tx9IBotjjU',
+        authTokenSecret: 'hhHWA0D0jDxMJKknHovz39LWDiC1vu3MeruSwdWZVUR3fGvDVW');
 
     switch (result.status) {
       case TwitterLoginStatus.loggedIn:
@@ -132,7 +128,7 @@ class MyLoginPage extends StatelessWidget {
         break;
     }
     return null;
-}
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -186,25 +182,28 @@ class MyLoginPage extends StatelessWidget {
                       signInWithEmail(context);
                     },
                   )),
-                Padding(padding: const EdgeInsets.only(top: 5.0)),
-                ButtonTheme(
+              Padding(padding: const EdgeInsets.only(top: 5.0)),
+              ButtonTheme(
                   minWidth: 325.0,
                   height: 50.0,
                   child: RaisedButton(
-                    color: Colors.blueGrey,
-                    child: Text("Sign Up With Email",
-                        style: TextStyle(color: Colors.white, fontSize: 18)),
-                    onPressed: () {
-                      signUpWithEmail(context);
-                    }
-                  )
-                  ),
+                      color: Colors.blueGrey,
+                      child: Text("Sign Up With Email",
+                          style: TextStyle(color: Colors.white, fontSize: 18)),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => MySignUpPage()));
+                      })),
               Padding(padding: const EdgeInsets.only(top: 20.0)),
               Container(
                 width: 325,
                 child: GoogleSignInButton(
                   onPressed: () {
-                    _handleGoogleAccountSignIn(context).then((FirebaseUser user) => print(user)).catchError((e) => print(e));
+                    _handleGoogleAccountSignIn(context)
+                        .then((FirebaseUser user) => print(user))
+                        .catchError((e) => print(e));
                   },
                 ),
               ),
@@ -213,7 +212,7 @@ class MyLoginPage extends StatelessWidget {
                 width: 325,
                 child: FacebookSignInButton(
                   onPressed: () {
-                      _handleFacebookAccountSignIn();
+                    _handleFacebookAccountSignIn();
                     pushtoHomePage(context);
                   },
                 ),
@@ -223,8 +222,10 @@ class MyLoginPage extends StatelessWidget {
                 width: 325,
                 child: TwitterSignInButton(
                   onPressed: () {
-                    _handleTwitterAccountSignIn().then((FirebaseUser user) => print(user)).catchError((e) => print(e));
-                  pushtoHomePage(context);
+                    _handleTwitterAccountSignIn()
+                        .then((FirebaseUser user) => print(user))
+                        .catchError((e) => print(e));
+                    pushtoHomePage(context);
                   },
                 ),
               ),
