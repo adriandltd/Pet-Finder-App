@@ -25,8 +25,6 @@ class _MyLoginPage extends State<MyLoginPage> {
   var userCtrl = TextEditingController();
   var passCtrl = TextEditingController();
 
-  
-
   void pushtoHomePage(context) async {
     if (isUserSignedIn == true) {
       Navigator.of(context, rootNavigator: true).push(
@@ -49,15 +47,43 @@ class _MyLoginPage extends State<MyLoginPage> {
     } finally {
       if (user != null) {
         isUserSignedIn = true;
-        new Future.delayed(new Duration(seconds: 3), () {
-      setState(() {
-        _loading = false;
-      });
-    });
+        new Future.delayed(new Duration(seconds: 4), () {
+          setState(() {
+            _loading = true;
+          });
+        });
         pushtoHomePage(context);
       } else {
         // sign in unsuccessful
         // ex: prompt the user to try again
+        setState(() {
+          _loading = false;
+        });
+        showDialog<void>(
+            context: context,
+            builder: (BuildContext context) {
+              return AlertDialog(
+                titlePadding: EdgeInsets.only(top: 35, left: 10, right: 10),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(15.0))),
+                title: const Text(
+                  'Incorrect Credentials.',
+                  style: TextStyle(fontSize: 24),
+                  textAlign: TextAlign.center,
+                ),
+                actions: <Widget>[
+                  FlatButton(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                    color: Colors.orangeAccent[700],
+                    child: Text('Ok', style: TextStyle(color: Colors.white)),
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    },
+                  ),
+                ],
+              );
+            });
       }
     }
   }
@@ -276,7 +302,15 @@ class _MyLoginPage extends State<MyLoginPage> {
         child: Scaffold(
           backgroundColor: Color(0x00000000),
           resizeToAvoidBottomPadding: false,
-          body: ModalProgressHUD(child: _buildWidget(), inAsyncCall: _loading, color: Colors.orangeAccent, dismissible: true, progressIndicator: CircularProgressIndicator(valueColor: new AlwaysStoppedAnimation<Color>(Colors.deepOrangeAccent)),),
+          body: ModalProgressHUD(
+            child: _buildWidget(),
+            inAsyncCall: _loading,
+            color: Colors.orangeAccent,
+            dismissible: true,
+            progressIndicator: CircularProgressIndicator(
+                valueColor:
+                    new AlwaysStoppedAnimation<Color>(Colors.deepOrangeAccent)),
+          ),
         ));
   }
 }

@@ -1,6 +1,7 @@
 import 'package:findmax/loginPage.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:modal_progress_hud/modal_progress_hud.dart';
 
 class MySignUpPage extends StatefulWidget {
   MySignUpPage();
@@ -16,6 +17,8 @@ class _MySignUpPage extends State<MySignUpPage> {
   var userCtrl2 = TextEditingController();
   var passCtrl2 = TextEditingController();
 
+  bool _loading = false;
+
   void pushtoLoginPage(context) async {
     Navigator.push(
         context, MaterialPageRoute(builder: (context) => MyLoginPage()));
@@ -26,6 +29,7 @@ class _MySignUpPage extends State<MySignUpPage> {
     // marked async
     FirebaseUser user;
     FirebaseAuth _auth = FirebaseAuth.instance;
+    bool accountexists = false;
     if (passCtrl.text == passCtrl2.text &&
         userCtrl.text == userCtrl2.text &&
         passCtrl.text.length > 5 &&
@@ -36,9 +40,79 @@ class _MySignUpPage extends State<MySignUpPage> {
           password: passCtrl.text,
         );
       } catch (e) {
+        if(e.toString().contains("ERROR_EMAIL_ALREADY_IN_USE")){
+          accountexists= true;
+        }
         print(e.toString());
       } finally {
-        pushtoLoginPage(context);
+        if (accountexists == false) {
+          setState(() {
+            _loading = true;
+          });
+          showDialog<void>(
+              context: context,
+              builder: (BuildContext context) {
+                return AlertDialog(
+                  titlePadding: EdgeInsets.only(top: 35, left: 10, right: 10),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(15.0))),
+                  title: const Text(
+                    'Sucessfully Registered!',
+                    style: TextStyle(fontSize: 24),
+                    textAlign: TextAlign.center,
+                  ),
+                  actions: <Widget>[
+                    FlatButton(
+                      shape: RoundedRectangleBorder(
+                          borderRadius:
+                              BorderRadius.all(Radius.circular(20.0))),
+                      color: Colors.orangeAccent[700],
+                      child: Text('Ok', style: TextStyle(color: Colors.white)),
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                        setState(() {
+                          _loading = false;
+                        });
+                        pushtoLoginPage(context);
+                      },
+                    ),
+                  ],
+                );
+              });
+        } else {
+          setState(() {
+            _loading = true;
+          });
+          showDialog<void>(
+              context: context,
+              builder: (BuildContext context) {
+                return AlertDialog(
+                  titlePadding: EdgeInsets.only(top: 35, left: 10, right: 10),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(15.0))),
+                  title: const Text(
+                    'Email already taken.',
+                    style: TextStyle(fontSize: 24),
+                    textAlign: TextAlign.center,
+                  ),
+                  actions: <Widget>[
+                    FlatButton(
+                      shape: RoundedRectangleBorder(
+                          borderRadius:
+                              BorderRadius.all(Radius.circular(20.0))),
+                      color: Colors.orangeAccent[700],
+                      child: Text('Ok', style: TextStyle(color: Colors.white)),
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                        setState(() {
+                          _loading = false;
+                        });
+                      },
+                    ),
+                  ],
+                );
+              });
+        }
       }
     } else if (passCtrl.text.length < 6 || passCtrl2.text.length < 6) {
       print("password too short");
@@ -46,9 +120,9 @@ class _MySignUpPage extends State<MySignUpPage> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            titlePadding: EdgeInsets.only(top: 35,left: 10,right: 10),
+            titlePadding: EdgeInsets.only(top: 35, left: 10, right: 10),
             shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(15.0))),
+                borderRadius: BorderRadius.all(Radius.circular(15.0))),
             title: const Text(
               'Password must be at least 6 characters long.',
               style: TextStyle(fontSize: 28),
@@ -74,7 +148,7 @@ class _MySignUpPage extends State<MySignUpPage> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            titlePadding: EdgeInsets.only(top: 35,left: 10,right: 10),
+            titlePadding: EdgeInsets.only(top: 35, left: 10, right: 10),
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(15.0))),
             title: const Text(
@@ -103,6 +177,136 @@ class _MySignUpPage extends State<MySignUpPage> {
   FocusNode textThirdFocusNode = FocusNode();
   FocusNode textFourthFocusNode = FocusNode();
 
+  Widget _buildWidget() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        Column(
+          children: <Widget>[
+            Padding(padding: const EdgeInsets.only(top: 20.0)),
+            SizedBox(
+                height: 200,
+                child: Image.asset('assets/findmaxcatchphrase.png', scale: 1)),
+            SizedBox(
+                height: 75.0,
+                child: Text("Account Creation",
+                    style: TextStyle(
+                        shadows: <Shadow>[
+                          Shadow(
+                            offset: Offset(1.0, 1.0),
+                            blurRadius: 3.0,
+                            color: Color.fromARGB(255, 0, 0, 0),
+                          ),
+                        ],
+                        color: Colors.white,
+                        fontSize: 35,
+                        fontWeight: FontWeight.w600,
+                        fontFamily: 'Myriad'))),
+            Padding(padding: const EdgeInsets.only(top: 10.0)),
+            Container(
+                width: 325,
+                child: TextFormField(
+                  autofocus: false,
+                  keyboardType: TextInputType.emailAddress,
+                  textInputAction: TextInputAction.next,
+                  controller: userCtrl,
+                  decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Colors.white,
+                      hintText: "Email",
+                      contentPadding: EdgeInsets.all(15),
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(40)),
+                      focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(40))),
+                  textCapitalization: TextCapitalization.none,
+                  autocorrect: false,
+                  onFieldSubmitted: (userCtrl) {
+                    FocusScope.of(context).requestFocus(textSecondFocusNode);
+                  },
+                )),
+            Padding(padding: const EdgeInsets.only(top: 20.0)),
+            Container(
+                width: 325,
+                child: TextFormField(
+                  autofocus: false,
+                  textInputAction: TextInputAction.next,
+                  keyboardType: TextInputType.emailAddress,
+                  controller: userCtrl2,
+                  decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Colors.white,
+                      hintText: "Confirm Email",
+                      contentPadding: EdgeInsets.all(15),
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(40)),
+                      focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(40))),
+                  textCapitalization: TextCapitalization.none,
+                  autocorrect: false,
+                  onFieldSubmitted: (userCtrl2) {
+                    FocusScope.of(context).requestFocus(textThirdFocusNode);
+                  },
+                  focusNode: textSecondFocusNode,
+                )),
+            Padding(padding: const EdgeInsets.only(top: 20.0)),
+            Container(
+                width: 325,
+                child: TextFormField(
+                  textInputAction: TextInputAction.next,
+                  controller: passCtrl,
+                  obscureText: true,
+                  decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Colors.white,
+                      hintText: "Password",
+                      contentPadding: EdgeInsets.all(15),
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(40)),
+                      focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(40))),
+                  onFieldSubmitted: (passCtrl) {
+                    FocusScope.of(context).requestFocus(textFourthFocusNode);
+                  },
+                  focusNode: textThirdFocusNode,
+                )),
+            Padding(padding: const EdgeInsets.only(top: 20.0)),
+            Container(
+                width: 325,
+                child: TextFormField(
+                  textInputAction: TextInputAction.done,
+                  controller: passCtrl2,
+                  obscureText: true,
+                  decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Colors.white,
+                      hintText: "Confirm Password",
+                      contentPadding: EdgeInsets.all(15),
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(40)),
+                      focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(40))),
+                  focusNode: textFourthFocusNode,
+                )),
+            Padding(padding: const EdgeInsets.only(top: 50.0)),
+            ButtonTheme(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                minWidth: 275.0,
+                height: 45.0,
+                child: RaisedButton(
+                    color: Color.fromRGBO(255, 128, 43, 1),
+                    child: Text("Sign Up",
+                        style: TextStyle(color: Colors.white, fontSize: 18)),
+                    onPressed: () {
+                      signUpWithEmail(context);
+                    })),
+          ],
+        ),
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -110,7 +314,7 @@ class _MySignUpPage extends State<MySignUpPage> {
           gradient: RadialGradient(
             radius: 0.9,
             center: Alignment.center,
-            stops: [.33,.66,.99],
+            stops: [.33, .66, .99],
             colors: [
               // Color.fromRGBO(255, 180, 109, 1),
               // Color.fromRGBO(255, 150, 70, 1),
@@ -124,132 +328,14 @@ class _MySignUpPage extends State<MySignUpPage> {
         child: Scaffold(
           backgroundColor: Color(0x00000000),
           resizeToAvoidBottomPadding: false,
-          body: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Column(
-                children: <Widget>[
-                  Padding(padding: const EdgeInsets.only(top: 10.0)),
-                  SizedBox(height: 150,child: Image.asset('assets/findmaxcatchphrase.png', scale:1)),
-                  SizedBox(
-                      height: 75.0,
-                      child: Text("Create an Account",
-                          style: TextStyle(
-                              shadows: <Shadow>[
-                                Shadow(
-                                  offset: Offset(1.0, 1.0),
-                                  blurRadius: 3.0,
-                                  color: Color.fromARGB(255, 0, 0, 0),
-                                ),
-                              ],
-                              color: Colors.white,
-                              fontSize: 35,
-                              fontWeight: FontWeight.w600,fontFamily: 'Myriad'))),
-                  Container(
-                      width: 325,
-                      child: TextFormField(
-                        autofocus: false,
-                        keyboardType: TextInputType.emailAddress,
-                        textInputAction: TextInputAction.next,
-                        controller: userCtrl,
-                        decoration: InputDecoration(
-                            filled: true,
-                            fillColor: Colors.white,
-                            hintText: "Email",
-                            contentPadding: EdgeInsets.all(15),
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(40)),
-                            focusedBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(40))),
-                        textCapitalization: TextCapitalization.none,
-                        autocorrect: false,
-                        onFieldSubmitted: (userCtrl) {
-                          FocusScope.of(context)
-                              .requestFocus(textSecondFocusNode);
-                        },
-                      )),
-                  Padding(padding: const EdgeInsets.only(top: 20.0)),
-                  Container(
-                      width: 325,
-                      child: TextFormField(
-                        autofocus: false,
-                        keyboardType: TextInputType.emailAddress,
-                        controller: userCtrl2,
-                        decoration: InputDecoration(
-                            filled: true,
-                            fillColor: Colors.white,
-                            hintText: "Confirm Email",
-                            contentPadding: EdgeInsets.all(15),
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(40)),
-                            focusedBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(40))),
-                        textCapitalization: TextCapitalization.none,
-                        autocorrect: false,
-                        onFieldSubmitted: (userCtrl2) {
-                          FocusScope.of(context)
-                              .requestFocus(textThirdFocusNode);
-                        },
-                        focusNode: textSecondFocusNode,
-                      )),
-                  Padding(padding: const EdgeInsets.only(top: 20.0)),
-                  Container(
-                      width: 325,
-                      child: TextFormField(
-                        textInputAction: TextInputAction.next,
-                        controller: passCtrl,
-                        obscureText: true,
-                        decoration: InputDecoration(
-                            filled: true,
-                            fillColor: Colors.white,
-                            hintText: "Password",
-                            contentPadding: EdgeInsets.all(15),
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(40)),
-                            focusedBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(40))),
-                        onFieldSubmitted: (passCtrl) {
-                          FocusScope.of(context)
-                              .requestFocus(textFourthFocusNode);
-                        },
-                        focusNode: textThirdFocusNode,
-                      )),
-                  Padding(padding: const EdgeInsets.only(top: 20.0)),
-                  Container(
-                      width: 325,
-                      child: TextFormField(
-                        textInputAction: TextInputAction.done,
-                        controller: passCtrl2,
-                        obscureText: true,
-                        decoration: InputDecoration(
-                            filled: true,
-                            fillColor: Colors.white,
-                            hintText: "Confirm Password",
-                            contentPadding: EdgeInsets.all(15),
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(40)),
-                            focusedBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(40))),
-                        focusNode: textFourthFocusNode,
-                      )),
-                  Padding(padding: const EdgeInsets.only(top: 50.0)),
-                  ButtonTheme(
-                      shape: RoundedRectangleBorder(
-                          borderRadius:
-                              BorderRadius.all(Radius.circular(20.0))),
-                      minWidth: 275.0,
-                      height: 45.0,
-                      child: RaisedButton(
-                          color: Color.fromRGBO(255, 128, 43, 1),
-                          child: Text("Sign Up",
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 18)),
-                          onPressed: () {
-                            signUpWithEmail(context);
-                          })),
-                ],
-              ),
-            ],
+          body: ModalProgressHUD(
+            child: _buildWidget(),
+            inAsyncCall: _loading,
+            color: Colors.orangeAccent,
+            dismissible: true,
+            progressIndicator: CircularProgressIndicator(
+                valueColor:
+                    new AlwaysStoppedAnimation<Color>(Colors.deepOrangeAccent)),
           ),
         ));
   }
