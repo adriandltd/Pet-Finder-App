@@ -26,7 +26,10 @@ class _MySignUpPage extends State<MySignUpPage> {
     // marked async
     FirebaseUser user;
     FirebaseAuth _auth = FirebaseAuth.instance;
-    if (passCtrl.text == passCtrl2.text && userCtrl.text == userCtrl2.text && passCtrl.text.length > 5 && passCtrl2.text.length > 5) {
+    if (passCtrl.text == passCtrl2.text &&
+        userCtrl.text == userCtrl2.text &&
+        passCtrl.text.length > 5 &&
+        passCtrl2.text.length > 5) {
       try {
         user = await _auth.createUserWithEmailAndPassword(
           email: userCtrl.text,
@@ -37,8 +40,7 @@ class _MySignUpPage extends State<MySignUpPage> {
       } finally {
         pushtoLoginPage(context);
       }
-    } 
-    else if (passCtrl.text.length < 6 || passCtrl2.text.length < 6) {
+    } else if (passCtrl.text.length < 6 || passCtrl2.text.length < 6) {
       print("password too short");
       return showDialog<void>(
         context: context,
@@ -48,13 +50,17 @@ class _MySignUpPage extends State<MySignUpPage> {
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(15.0))),
             contentPadding: EdgeInsets.only(top: 25.0, left: 15),
-            title: const Text('Password must be at least 6 characters long.',style: TextStyle(fontSize: 24),textAlign: TextAlign.center,),
+            title: const Text(
+              'Password must be at least 6 characters long.',
+              style: TextStyle(fontSize: 24),
+              textAlign: TextAlign.center,
+            ),
             actions: <Widget>[
               FlatButton(
                 shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(20.0))),
-                color: Colors.deepPurpleAccent[700] ,
-                child: Text('Ok',style: TextStyle(color: Colors.white)),
+                    borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                color: Colors.deepPurpleAccent[700],
+                child: Text('Ok', style: TextStyle(color: Colors.white)),
                 onPressed: () {
                   Navigator.of(context).pop();
                 },
@@ -63,8 +69,7 @@ class _MySignUpPage extends State<MySignUpPage> {
           );
         },
       );
-    }
-    else {
+    } else {
       print("email/password invalid");
       return showDialog<void>(
         context: context,
@@ -72,15 +77,18 @@ class _MySignUpPage extends State<MySignUpPage> {
           return AlertDialog(
             titlePadding: EdgeInsets.only(top: 35),
             shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(15.0))),
-            title: const Text('Email/Password Does Not Match.',style: TextStyle(fontSize: 24),textAlign: TextAlign.center,),
+                borderRadius: BorderRadius.all(Radius.circular(15.0))),
+            title: const Text(
+              'Email/Password Does Not Match.',
+              style: TextStyle(fontSize: 24),
+              textAlign: TextAlign.center,
+            ),
             actions: <Widget>[
               FlatButton(
-                
                 shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(20.0))),
-                color: Colors.deepPurpleAccent[700] ,
-                child: Text('Ok',style: TextStyle(color: Colors.white)),
+                    borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                color: Colors.deepPurpleAccent[700],
+                child: Text('Ok', style: TextStyle(color: Colors.white)),
                 onPressed: () {
                   Navigator.of(context).pop();
                 },
@@ -98,104 +106,149 @@ class _MySignUpPage extends State<MySignUpPage> {
 
   @override
   Widget build(BuildContext context) {
-    var scaffold = Scaffold(
-      resizeToAvoidBottomPadding: false,
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Column(
-            children: <Widget>[
-              Padding(padding: const EdgeInsets.only(top: 120.0)),
-              SizedBox(
-                  height: 75.0,
-                  child: Text("Sign Up",
-                      style: TextStyle(
-                          fontSize: 35, fontWeight: FontWeight.w600))),
-              Container(
-                  width: 325,
-                  child: TextFormField(
-                    keyboardType: TextInputType.emailAddress,
-                    textInputAction: TextInputAction.next,
-                    controller: userCtrl,
-                    decoration: InputDecoration(
-                        hintText: "Email",
-                        contentPadding: EdgeInsets.all(15),
-                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(40)),
-                        focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(40))),
-                    textCapitalization: TextCapitalization.none,
-                    autocorrect: false,
-                    autofocus: true,
-                    onFieldSubmitted: (userCtrl) {
-                      FocusScope.of(context).requestFocus(textSecondFocusNode);
-                    },
-                  )),
-              Padding(padding: const EdgeInsets.only(top: 20.0)),
-              Container(
-                  width: 325,
-                  child: TextFormField(
-                    keyboardType: TextInputType.emailAddress,
-                    controller: userCtrl2,
-                    decoration: InputDecoration(
-                        hintText: "Confirm Email",
-                        contentPadding: EdgeInsets.all(15),
-                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(40)),
-                        focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(40))),
-                    textCapitalization: TextCapitalization.none,
-                    autocorrect: false,
-                    onFieldSubmitted: (userCtrl2) {
-                      FocusScope.of(context).requestFocus(textThirdFocusNode);
-                    },
-                    focusNode: textSecondFocusNode,
-                  )),
-              Padding(padding: const EdgeInsets.only(top: 20.0)),
-              Container(
-                  width: 325,
-                  child: TextFormField(
-                    textInputAction: TextInputAction.next,
-                    controller: passCtrl,
-                    obscureText: true,
-                    decoration: InputDecoration(
-                        hintText: "Password",
-                        contentPadding: EdgeInsets.all(15),
-                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(40)),
-                        focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(40))),
-                    onFieldSubmitted: (passCtrl) {
-                      FocusScope.of(context).requestFocus(textFourthFocusNode);
-                    },
-                    focusNode: textThirdFocusNode,
-                  )),
-              Padding(padding: const EdgeInsets.only(top: 20.0)),
-              Container(
-                  width: 325,
-                  child: TextFormField(
-                    textInputAction: TextInputAction.done,
-                    controller: passCtrl2,
-                    obscureText: true,
-                    decoration: InputDecoration(
-                        hintText: "Confirm Password",
-                        contentPadding: EdgeInsets.all(15),
-                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(40)),
-                        focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(40))),
-                    focusNode: textFourthFocusNode,
-                  )),
-              Padding(padding: const EdgeInsets.only(top: 50.0)),
-              ButtonTheme(
-                shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(20.0))),
-                  minWidth: 275.0,
-                  height: 45.0,
-                  child: RaisedButton(
-                      color: Colors.deepPurpleAccent[700],
-                      child: Text("Sign Up",
-                          style: TextStyle(color: Colors.white, fontSize: 18)),
-                      onPressed: () {
-                        signUpWithEmail(context);
-                      })),
+    return Container(
+        decoration: BoxDecoration(
+          gradient: RadialGradient(
+            radius: 0.80,
+            center: Alignment.center,
+            stops: [0.2, 0.4, 0.6, 0.8, 0.9],
+            colors: [
+              Colors.purple[300],
+              Colors.purple[400],
+              Colors.purple[500],
+              Colors.purple[700],
+              Colors.purple[800],
             ],
           ),
-        ],
-      ),
-    );
-    return scaffold;
+        ),
+        child: Scaffold(
+          backgroundColor: Color(0x00000000),
+          resizeToAvoidBottomPadding: false,
+          body: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Column(
+                children: <Widget>[
+                  Padding(padding: const EdgeInsets.only(top: 120.0)),
+                  SizedBox(
+                      height: 75.0,
+                      child: Text("Sign Up",
+                          style: TextStyle(
+                              shadows: <Shadow>[
+                                Shadow(
+                                  offset: Offset(2.0, 0.0),
+                                  blurRadius: 3.0,
+                                  color: Color.fromARGB(255, 0, 0, 0),
+                                ),
+                              ],
+                              color: Colors.white,
+                              fontSize: 35,
+                              fontWeight: FontWeight.w600))),
+                  Container(
+                      width: 325,
+                      child: TextFormField(
+                        keyboardType: TextInputType.emailAddress,
+                        textInputAction: TextInputAction.next,
+                        controller: userCtrl,
+                        decoration: InputDecoration(
+                            filled: true,
+                            fillColor: Colors.white,
+                            hintText: "Email",
+                            contentPadding: EdgeInsets.all(15),
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(40)),
+                            focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(40))),
+                        textCapitalization: TextCapitalization.none,
+                        autocorrect: false,
+                        autofocus: true,
+                        onFieldSubmitted: (userCtrl) {
+                          FocusScope.of(context)
+                              .requestFocus(textSecondFocusNode);
+                        },
+                      )),
+                  Padding(padding: const EdgeInsets.only(top: 20.0)),
+                  Container(
+                      width: 325,
+                      child: TextFormField(
+                        keyboardType: TextInputType.emailAddress,
+                        controller: userCtrl2,
+                        decoration: InputDecoration(
+                            filled: true,
+                            fillColor: Colors.white,
+                            hintText: "Confirm Email",
+                            contentPadding: EdgeInsets.all(15),
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(40)),
+                            focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(40))),
+                        textCapitalization: TextCapitalization.none,
+                        autocorrect: false,
+                        onFieldSubmitted: (userCtrl2) {
+                          FocusScope.of(context)
+                              .requestFocus(textThirdFocusNode);
+                        },
+                        focusNode: textSecondFocusNode,
+                      )),
+                  Padding(padding: const EdgeInsets.only(top: 20.0)),
+                  Container(
+                      width: 325,
+                      child: TextFormField(
+                        textInputAction: TextInputAction.next,
+                        controller: passCtrl,
+                        obscureText: true,
+                        decoration: InputDecoration(
+                            filled: true,
+                            fillColor: Colors.white,
+                            hintText: "Password",
+                            contentPadding: EdgeInsets.all(15),
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(40)),
+                            focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(40))),
+                        onFieldSubmitted: (passCtrl) {
+                          FocusScope.of(context)
+                              .requestFocus(textFourthFocusNode);
+                        },
+                        focusNode: textThirdFocusNode,
+                      )),
+                  Padding(padding: const EdgeInsets.only(top: 20.0)),
+                  Container(
+                      width: 325,
+                      child: TextFormField(
+                        textInputAction: TextInputAction.done,
+                        controller: passCtrl2,
+                        obscureText: true,
+                        decoration: InputDecoration(
+                            filled: true,
+                            fillColor: Colors.white,
+                            hintText: "Confirm Password",
+                            contentPadding: EdgeInsets.all(15),
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(40)),
+                            focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(40))),
+                        focusNode: textFourthFocusNode,
+                      )),
+                  Padding(padding: const EdgeInsets.only(top: 50.0)),
+                  ButtonTheme(
+                      shape: RoundedRectangleBorder(
+                          borderRadius:
+                              BorderRadius.all(Radius.circular(20.0))),
+                      minWidth: 275.0,
+                      height: 45.0,
+                      child: RaisedButton(
+                          color: Colors.deepPurpleAccent[700],
+                          child: Text("Sign Up",
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 18)),
+                          onPressed: () {
+                            signUpWithEmail(context);
+                          })),
+                ],
+              ),
+            ],
+          ),
+        ));
   }
 }

@@ -133,133 +133,149 @@ class MyLoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          stops: [0.1,0.2,0.25,0.5,0.75,0.8,0.9],
-          colors: [
-            Colors.purple[300],
-            Colors.purple[400],
-            Colors.purple[600],
-            Colors.purple[700],
-            Colors.purple[600],
-            Colors.purple[400],
-            Colors.purple[300],
-          ],
+        decoration: BoxDecoration(
+          gradient: RadialGradient(
+            radius: 0.80,
+            center: Alignment.center,
+            stops: [0.2, 0.4, 0.6, 0.8, 0.9],
+            colors: [
+              Colors.purple[300],
+              Colors.purple[400],
+              Colors.purple[500],
+              Colors.purple[700],
+              Colors.purple[800],
+            ],
+          ),
         ),
-      ),
-      child: Scaffold(
-      backgroundColor: Color(0x00000000),
-      resizeToAvoidBottomPadding: false,
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Column(
+        child: Scaffold(
+          backgroundColor: Color(0x00000000),
+          resizeToAvoidBottomPadding: false,
+          body: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Padding(padding: const EdgeInsets.only(top: 105.0)),
-              SizedBox(
-                  height: 75.0,
-                  child: Text("Finding BullsEye",
-                      style: TextStyle(color: Colors.white,
-                          fontSize: 35, fontWeight: FontWeight.w600))),
-              Padding(padding: const EdgeInsets.only(top: 20.0)),
-              Container(
-                  width: 325,
-                  child: TextField(
-                    controller: userCtrl,
-                    decoration: InputDecoration(
-                        filled: true,
-                        fillColor: Colors.white,
-                        hintText: "Email",
-                        contentPadding: EdgeInsets.fromLTRB(25,15,15,15),
-                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(40)),
-                        focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(40))),
-                    textCapitalization: TextCapitalization.none,
-                    autocorrect: false,
-                  )),
-              Padding(padding: const EdgeInsets.only(top: 15.0)),
-              Container(
-                  width: 325,
-                  child: TextField(
-                      controller: passCtrl,
-                      obscureText: true,
-                      decoration: InputDecoration(
-                          filled: true,
-                          fillColor: Colors.white,
-                          hintText: "Password",
-                          contentPadding: EdgeInsets.fromLTRB(25,15,15,15),
-                          border: OutlineInputBorder(borderRadius: BorderRadius.circular(40)),
-                          focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(40))))),
-              Padding(padding: const EdgeInsets.only(top: 10.0)),
-              ButtonTheme(
-                  minWidth: 275.0,
-                  height: 45.0,
-                  child: RaisedButton(
-                    shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(20.0))),
-                    color: Colors.orangeAccent[700],
-                    child: Text("Log In",
-                        style: TextStyle(color: Colors.white, fontSize: 18)),
-                    onPressed: () {
-                      signInWithEmail(context);
-                    },
-                  )),
-              Padding(padding: const EdgeInsets.only(top:10.0)),
-              ButtonTheme(
-                shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(20.0))),
-                  minWidth: 275.0,
-                  height: 45.0,
-                  child: RaisedButton(
-                      color: Colors.deepPurpleAccent[700],
-                      child: Text("Sign Up",
-                          style: TextStyle(color: Colors.white, fontSize: 18)),
+              Column(
+                children: <Widget>[
+                  Padding(padding: const EdgeInsets.only(top: 105.0)),
+                  SizedBox(
+                      height: 75.0,
+                      child: Text("Finding BullsEye",
+                          style: TextStyle(
+                              shadows: <Shadow>[
+                                Shadow(
+                                  offset: Offset(2.0, 0.0),
+                                  blurRadius: 3.0,
+                                  color: Color.fromARGB(255, 0, 0, 0),
+                                ),
+                              ],
+                              color: Colors.white,
+                              fontSize: 35,
+                              fontWeight: FontWeight.w600))),
+                  Padding(padding: const EdgeInsets.only(top: 20.0)),
+                  Container(
+                      width: 325,
+                      child: TextField(
+                        controller: userCtrl,
+                        decoration: InputDecoration(
+                            filled: true,
+                            fillColor: Colors.white,
+                            hintText: "Email",
+                            contentPadding: EdgeInsets.fromLTRB(25, 15, 15, 15),
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(40)),
+                            focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(40))),
+                        textCapitalization: TextCapitalization.none,
+                        autocorrect: false,
+                      )),
+                  Padding(padding: const EdgeInsets.only(top: 15.0)),
+                  Container(
+                      width: 325,
+                      child: TextField(
+                          controller: passCtrl,
+                          obscureText: true,
+                          decoration: InputDecoration(
+                              filled: true,
+                              fillColor: Colors.white,
+                              hintText: "Password",
+                              contentPadding:
+                                  EdgeInsets.fromLTRB(25, 15, 15, 15),
+                              border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(40)),
+                              focusedBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(40))))),
+                  Padding(padding: const EdgeInsets.only(top: 10.0)),
+                  ButtonTheme(
+                      minWidth: 275.0,
+                      height: 45.0,
+                      child: RaisedButton(
+                        shape: RoundedRectangleBorder(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(20.0))),
+                        color: Colors.orangeAccent[700],
+                        child: Text("Log In",
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 18)),
+                        onPressed: () {
+                          signInWithEmail(context);
+                        },
+                      )),
+                  Padding(padding: const EdgeInsets.only(top: 10.0)),
+                  ButtonTheme(
+                      shape: RoundedRectangleBorder(
+                          borderRadius:
+                              BorderRadius.all(Radius.circular(20.0))),
+                      minWidth: 275.0,
+                      height: 45.0,
+                      child: RaisedButton(
+                          color: Colors.deepPurpleAccent[700],
+                          child: Text("Sign Up",
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 18)),
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => MySignUpPage()));
+                          })),
+                  Padding(padding: const EdgeInsets.only(top: 30.0)),
+                  Container(
+                    width: 305,
+                    child: GoogleSignInButton(
                       onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => MySignUpPage()));
-                      })),
-              Padding(padding: const EdgeInsets.only(top: 30.0)),
-              Container(
-                width: 305,
-                child: GoogleSignInButton(
-                  onPressed: () {
-                    _handleGoogleAccountSignIn(context)
-                        .then((FirebaseUser user) => print(user))
-                        .catchError((e) => print(e));
-                  },
-                ),
-              ),
-              Padding(padding: const EdgeInsets.only(top: 6.0)),
-              Container(
-                width: 305,
-                child: Container(
-                  child: FacebookSignInButton(
-                    onPressed: () {
-                      _handleFacebookAccountSignIn();
-                      pushtoHomePage(context);
-                    },
+                        _handleGoogleAccountSignIn(context)
+                            .then((FirebaseUser user) => print(user))
+                            .catchError((e) => print(e));
+                      },
+                    ),
                   ),
-                ),
-              ),
-              Padding(padding: const EdgeInsets.only(top: 6.0)),
-              Container(
-                width: 305,
-                child: TwitterSignInButton(
-                  onPressed: () {
-                    _handleTwitterAccountSignIn()
-                        .then((FirebaseUser user) => print(user))
-                        .catchError((e) => print(e));
-                    pushtoHomePage(context);
-                  },
-                ),
+                  Padding(padding: const EdgeInsets.only(top: 6.0)),
+                  Container(
+                    width: 305,
+                    child: Container(
+                      child: FacebookSignInButton(
+                        onPressed: () {
+                          _handleFacebookAccountSignIn();
+                          pushtoHomePage(context);
+                        },
+                      ),
+                    ),
+                  ),
+                  Padding(padding: const EdgeInsets.only(top: 6.0)),
+                  Container(
+                    width: 305,
+                    child: TwitterSignInButton(
+                      onPressed: () {
+                        _handleTwitterAccountSignIn()
+                            .then((FirebaseUser user) => print(user))
+                            .catchError((e) => print(e));
+                        pushtoHomePage(context);
+                      },
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
-        ],
-      ),
-    ));
+        ));
   }
 }
