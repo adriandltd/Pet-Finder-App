@@ -1,21 +1,15 @@
-import 'package:animation_exp/SwipeAnimation/index.dart';
 import 'package:animation_exp/loginPage.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_auth_buttons/flutter_auth_buttons.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter_twitter_login/flutter_twitter_login.dart';
-import 'package:flutter_facebook_login/flutter_facebook_login.dart';
-import 'package:google_sign_in/google_sign_in.dart';
-import 'dart:async';
 
 class MySignUpPage extends StatefulWidget {
   MySignUpPage();
   @override
-  _MySignUpPage createState(){
+  _MySignUpPage createState() {
     return new _MySignUpPage();
   }
-  
 }
+
 class _MySignUpPage extends State<MySignUpPage> {
   var userCtrl = TextEditingController();
   var passCtrl = TextEditingController();
@@ -26,31 +20,67 @@ class _MySignUpPage extends State<MySignUpPage> {
     Navigator.push(
         context, MaterialPageRoute(builder: (context) => MyLoginPage()));
   }
-  
+
   //Email Sign Up and FireBase Authentication
   void signUpWithEmail(context) async {
     // marked async
     FirebaseUser user;
     FirebaseAuth _auth = FirebaseAuth.instance;
-    if(passCtrl == passCtrl2 && userCtrl == userCtrl2){
-    try {
-      user = await _auth.createUserWithEmailAndPassword(
-        email: userCtrl.text,
-        password: passCtrl.text,
-      );
-    } catch (e) {
-      print(e.toString());
-    } finally {
-      if (user != null) {
+    if (passCtrl.text == passCtrl2.text && userCtrl.text == userCtrl2.text && passCtrl.text.length > 5 && passCtrl2.text.length > 5) {
+      try {
+        user = await _auth.createUserWithEmailAndPassword(
+          email: userCtrl.text,
+          password: passCtrl.text,
+        );
+      } catch (e) {
+        print(e.toString());
+      } finally {
         pushtoLoginPage(context);
-      } else {
-        // sign in unsuccessful
-        // ex: prompt the user to try again
       }
+    } 
+    else if (passCtrl.text.length < 6 || passCtrl2.text.length < 6) {
+      print("password too short");
+      return showDialog<void>(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(6.0))),
+            contentPadding: EdgeInsets.only(top: 25.0, left: 15),
+            content: const Text('Password must be at least 6 characters long'),
+            actions: <Widget>[
+              FlatButton(
+                child: Text('Ok'),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              ),
+            ],
+          );
+        },
+      );
     }
-    }
-    else{
-      AlertDialog(title: Text("Email/Password do not match"),);
+    else {
+      print("email/password invalid");
+      return showDialog<void>(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(6.0))),
+            contentPadding: EdgeInsets.only(top: 25.0, left: 15),
+            title: const Text('Email/Password Does Not Match'),
+            actions: <Widget>[
+              FlatButton(
+                child: Text('Ok'),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              ),
+            ],
+          );
+        },
+      );
     }
   }
 
@@ -87,7 +117,7 @@ class _MySignUpPage extends State<MySignUpPage> {
                     textCapitalization: TextCapitalization.none,
                     autocorrect: false,
                     autofocus: true,
-                    onFieldSubmitted: (userCtrl){
+                    onFieldSubmitted: (userCtrl) {
                       FocusScope.of(context).requestFocus(textSecondFocusNode);
                     },
                   )),
@@ -104,7 +134,7 @@ class _MySignUpPage extends State<MySignUpPage> {
                         focusedBorder: OutlineInputBorder()),
                     textCapitalization: TextCapitalization.none,
                     autocorrect: false,
-                     onFieldSubmitted: (userCtrl2){
+                    onFieldSubmitted: (userCtrl2) {
                       FocusScope.of(context).requestFocus(textThirdFocusNode);
                     },
                     focusNode: textSecondFocusNode,
@@ -113,37 +143,33 @@ class _MySignUpPage extends State<MySignUpPage> {
               Container(
                   width: 325,
                   child: TextFormField(
-                      textInputAction: TextInputAction.next,
-                      controller: passCtrl,
-                      obscureText: true,
-                      decoration: InputDecoration(
-                          hintText: "Password",
-                          contentPadding: EdgeInsets.all(15),
-                          border: OutlineInputBorder(),
-                          focusedBorder: OutlineInputBorder()
-                          ),
-                    onFieldSubmitted: (passCtrl){
+                    textInputAction: TextInputAction.next,
+                    controller: passCtrl,
+                    obscureText: true,
+                    decoration: InputDecoration(
+                        hintText: "Password",
+                        contentPadding: EdgeInsets.all(15),
+                        border: OutlineInputBorder(),
+                        focusedBorder: OutlineInputBorder()),
+                    onFieldSubmitted: (passCtrl) {
                       FocusScope.of(context).requestFocus(textFourthFocusNode);
                     },
                     focusNode: textThirdFocusNode,
-                          )
-                          ),
+                  )),
               Padding(padding: const EdgeInsets.only(top: 20.0)),
               Container(
                   width: 325,
                   child: TextFormField(
-                      textInputAction: TextInputAction.done,
-                      controller: passCtrl2,
-                      obscureText: true,
-                      decoration: InputDecoration(
-                          hintText: "Confirm Password",
-                          contentPadding: EdgeInsets.all(15),
-                          border: OutlineInputBorder(),
-                          focusedBorder: OutlineInputBorder()
-                          ),
+                    textInputAction: TextInputAction.done,
+                    controller: passCtrl2,
+                    obscureText: true,
+                    decoration: InputDecoration(
+                        hintText: "Confirm Password",
+                        contentPadding: EdgeInsets.all(15),
+                        border: OutlineInputBorder(),
+                        focusedBorder: OutlineInputBorder()),
                     focusNode: textFourthFocusNode,
-                          )
-                          ),
+                  )),
               Padding(padding: const EdgeInsets.only(top: 40.0)),
               ButtonTheme(
                   minWidth: 325.0,
