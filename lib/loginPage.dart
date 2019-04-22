@@ -8,12 +8,24 @@ import 'package:flutter_twitter_login/flutter_twitter_login.dart';
 import 'package:flutter_facebook_login/flutter_facebook_login.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'dart:async';
+import 'package:modal_progress_hud/modal_progress_hud.dart';
 
-class MyLoginPage extends StatelessWidget {
+class MyLoginPage extends StatefulWidget {
+  MyLoginPage();
+  @override
+  _MyLoginPage createState() {
+    return new _MyLoginPage();
+  }
+}
+
+class _MyLoginPage extends State<MyLoginPage> {
   bool isUserSignedIn = false;
+  bool _loading = false;
 
   var userCtrl = TextEditingController();
   var passCtrl = TextEditingController();
+
+  
 
   void pushtoHomePage(context) async {
     if (isUserSignedIn == true) {
@@ -37,6 +49,11 @@ class MyLoginPage extends StatelessWidget {
     } finally {
       if (user != null) {
         isUserSignedIn = true;
+        new Future.delayed(new Duration(seconds: 3), () {
+      setState(() {
+        _loading = false;
+      });
+    });
         pushtoHomePage(context);
       } else {
         // sign in unsuccessful
@@ -113,6 +130,131 @@ class MyLoginPage extends StatelessWidget {
     return null;
   }
 
+  Widget _buildWidget() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        Column(
+          children: <Widget>[
+            SizedBox(
+                height: 285,
+                child: Image.asset('assets/findmaxcatchphrase.png', scale: 1)),
+            Container(
+                width: 325,
+                child: TextField(
+                  controller: userCtrl,
+                  decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Colors.white,
+                      hintText: "Email",
+                      hintStyle: TextStyle(
+                        fontFamily: 'Myriad',
+                      ),
+                      contentPadding: EdgeInsets.fromLTRB(25, 15, 15, 15),
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(40)),
+                      focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(40))),
+                  textCapitalization: TextCapitalization.none,
+                  autocorrect: false,
+                )),
+            Padding(padding: const EdgeInsets.only(top: 15.0)),
+            Container(
+                width: 325,
+                child: TextField(
+                    controller: passCtrl,
+                    obscureText: true,
+                    decoration: InputDecoration(
+                        filled: true,
+                        fillColor: Colors.white,
+                        hintText: "Password",
+                        contentPadding: EdgeInsets.fromLTRB(25, 15, 15, 15),
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(40)),
+                        focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(40))))),
+            Padding(padding: const EdgeInsets.only(top: 10.0)),
+            ButtonTheme(
+                minWidth: 275.0,
+                height: 45.0,
+                child: RaisedButton(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                  color: Color.fromRGBO(255, 194, 30, 1),
+                  child: Text("Log In",
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w700)),
+                  onPressed: () {
+                    setState(() {
+                      _loading = true;
+                    });
+                    signInWithEmail(context);
+                  },
+                )),
+            Padding(padding: const EdgeInsets.only(top: 1.0)),
+            ButtonTheme(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                minWidth: 200.0,
+                height: 25.0,
+                child: RaisedButton(
+                    color: Colors.grey[400],
+                    child: Text("Create an account?",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400)),
+                    onPressed: () {
+                      Navigator.of(context, rootNavigator: true).push(
+                        CupertinoPageRoute<bool>(
+                          fullscreenDialog: true,
+                          builder: (BuildContext context) => MySignUpPage(),
+                        ),
+                      );
+                    })),
+            Padding(padding: const EdgeInsets.only(top: 30.0)),
+            Container(
+              width: 280,
+              child: GoogleSignInButton(
+                onPressed: () {
+                  _handleGoogleAccountSignIn(context)
+                      .then((FirebaseUser user) => print(user))
+                      .catchError((e) => print(e));
+                },
+              ),
+            ),
+            Padding(padding: const EdgeInsets.only(top: 3.0)),
+            Container(
+              width: 280,
+              child: Container(
+                child: FacebookSignInButton(
+                  onPressed: () {
+                    _handleFacebookAccountSignIn();
+                    pushtoHomePage(context);
+                  },
+                ),
+              ),
+            ),
+            Padding(padding: const EdgeInsets.only(top: 3.0)),
+            Container(
+              width: 280,
+              child: TwitterSignInButton(
+                onPressed: () {
+                  _handleTwitterAccountSignIn()
+                      .then((FirebaseUser user) => print(user))
+                      .catchError((e) => print(e));
+                  pushtoHomePage(context);
+                },
+              ),
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -134,130 +276,7 @@ class MyLoginPage extends StatelessWidget {
         child: Scaffold(
           backgroundColor: Color(0x00000000),
           resizeToAvoidBottomPadding: false,
-          body: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Column(
-                children: <Widget>[
-                  SizedBox(
-                      height: 285,
-                      child: Image.asset('assets/findmaxcatchphrase.png',
-                          scale: 1)),
-                  Container(
-                      width: 325,
-                      child: TextField(
-                        controller: userCtrl,
-                        decoration: InputDecoration(
-                            filled: true,
-                            fillColor: Colors.white,
-                            hintText: "Email",
-                            hintStyle: TextStyle(
-                              fontFamily: 'Myriad',
-                            ),
-                            contentPadding: EdgeInsets.fromLTRB(25, 15, 15, 15),
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(40)),
-                            focusedBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(40))),
-                        textCapitalization: TextCapitalization.none,
-                        autocorrect: false,
-                      )),
-                  Padding(padding: const EdgeInsets.only(top: 15.0)),
-                  Container(
-                      width: 325,
-                      child: TextField(
-                          controller: passCtrl,
-                          obscureText: true,
-                          decoration: InputDecoration(
-                              filled: true,
-                              fillColor: Colors.white,
-                              hintText: "Password",
-                              contentPadding:
-                                  EdgeInsets.fromLTRB(25, 15, 15, 15),
-                              border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(40)),
-                              focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(40))))),
-                  Padding(padding: const EdgeInsets.only(top: 10.0)),
-                  ButtonTheme(
-                      minWidth: 275.0,
-                      height: 45.0,
-                      child: RaisedButton(
-                        shape: RoundedRectangleBorder(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(20.0))),
-                        color: Color.fromRGBO(255, 194, 30, 1),
-                        child: Text("Log In",
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 18,
-                                fontWeight: FontWeight.w700)),
-                        onPressed: () {
-                          signInWithEmail(context);
-                        },
-                      )),
-                  Padding(padding: const EdgeInsets.only(top: 1.0)),
-                  ButtonTheme(
-                      shape: RoundedRectangleBorder(
-                          borderRadius:
-                              BorderRadius.all(Radius.circular(20.0))),
-                      minWidth: 200.0,
-                      height: 25.0,
-                      child: RaisedButton(
-                          color: Colors.grey[400],
-                          child: Text("Create an account?",
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400)),
-                          onPressed: () {
-                            Navigator.of(context, rootNavigator: true).push(
-                              CupertinoPageRoute<bool>(
-                                fullscreenDialog: true,
-                                builder: (BuildContext context) =>
-                                    MySignUpPage(),
-                              ),
-                            );
-                          })),
-                  Padding(padding: const EdgeInsets.only(top: 30.0)),
-                  Container(
-                    width: 280,
-                    child: GoogleSignInButton(
-                      onPressed: () {
-                        _handleGoogleAccountSignIn(context)
-                            .then((FirebaseUser user) => print(user))
-                            .catchError((e) => print(e));
-                      },
-                    ),
-                  ),
-                  Padding(padding: const EdgeInsets.only(top: 3.0)),
-                  Container(
-                    width: 280,
-                    child: Container(
-                      child: FacebookSignInButton(
-                        onPressed: () {
-                          _handleFacebookAccountSignIn();
-                          pushtoHomePage(context);
-                        },
-                      ),
-                    ),
-                  ),
-                  Padding(padding: const EdgeInsets.only(top: 3.0)),
-                  Container(
-                    width: 280,
-                    child: TwitterSignInButton(
-                      onPressed: () {
-                        _handleTwitterAccountSignIn()
-                            .then((FirebaseUser user) => print(user))
-                            .catchError((e) => print(e));
-                        pushtoHomePage(context);
-                      },
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
+          body: ModalProgressHUD(child: _buildWidget(), inAsyncCall: _loading, color: Colors.orangeAccent, dismissible: true, progressIndicator: CircularProgressIndicator(valueColor: new AlwaysStoppedAnimation<Color>(Colors.deepOrangeAccent)),),
         ));
   }
 }
