@@ -1,5 +1,6 @@
 import 'package:findmax/SwipeAnimation/index.dart';
 import 'package:findmax/signupPage.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_auth_buttons/flutter_auth_buttons.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -16,8 +17,11 @@ class MyLoginPage extends StatelessWidget {
 
   void pushtoHomePage(context) async {
     if (isUserSignedIn == true) {
-      Navigator.push(
-          context, MaterialPageRoute(builder: (context) => CardDemo()));
+      Navigator.of(context, rootNavigator: true).push(
+        CupertinoPageRoute<bool>(
+          builder: (BuildContext context) => CardDemo(),
+        ),
+      );
     }
   }
 
@@ -116,7 +120,7 @@ class MyLoginPage extends StatelessWidget {
           gradient: RadialGradient(
             radius: 0.80,
             center: Alignment.center,
-            stops: [.33,.66,.99],
+            stops: [.33, .66, .99],
             colors: [
               // Color.fromRGBO(255, 212, 109, 1),
               // Color.fromRGBO(255, 200, 70, 1),
@@ -135,7 +139,10 @@ class MyLoginPage extends StatelessWidget {
             children: <Widget>[
               Column(
                 children: <Widget>[
-                  SizedBox(height: 285, child: Image.asset('assets/findmaxcatchphrase.png', scale:1)),
+                  SizedBox(
+                      height: 285,
+                      child: Image.asset('assets/findmaxcatchphrase.png',
+                          scale: 1)),
                   Container(
                       width: 325,
                       child: TextField(
@@ -144,7 +151,9 @@ class MyLoginPage extends StatelessWidget {
                             filled: true,
                             fillColor: Colors.white,
                             hintText: "Email",
-                            hintStyle: TextStyle(fontFamily: 'Myriad',),
+                            hintStyle: TextStyle(
+                              fontFamily: 'Myriad',
+                            ),
                             contentPadding: EdgeInsets.fromLTRB(25, 15, 15, 15),
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(40)),
@@ -179,8 +188,10 @@ class MyLoginPage extends StatelessWidget {
                                 BorderRadius.all(Radius.circular(20.0))),
                         color: Color.fromRGBO(255, 194, 30, 1),
                         child: Text("Log In",
-                            style:
-                                TextStyle(color: Colors.black, fontSize: 18, fontWeight: FontWeight.w700)),
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w700)),
                         onPressed: () {
                           signInWithEmail(context);
                         },
@@ -195,13 +206,18 @@ class MyLoginPage extends StatelessWidget {
                       child: RaisedButton(
                           color: Colors.grey[400],
                           child: Text("Create an account?",
-                              style:
-                                  TextStyle(color: Colors.black, fontSize: 14,fontWeight: FontWeight.w400)),
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w400)),
                           onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => MySignUpPage()));
+                            Navigator.of(context, rootNavigator: true).push(
+                              CupertinoPageRoute<bool>(
+                                fullscreenDialog: true,
+                                builder: (BuildContext context) =>
+                                    MySignUpPage(),
+                              ),
+                            );
                           })),
                   Padding(padding: const EdgeInsets.only(top: 30.0)),
                   Container(

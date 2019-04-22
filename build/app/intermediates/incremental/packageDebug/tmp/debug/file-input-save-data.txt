@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Apr 22 01:00:30 CDT 2019
+#Mon Apr 22 13:30:06 CDT 2019
 5.base=C\:\\Users\\Adrian\\Documents\\GitHub\\Pet-Finder-App\\build\\app\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out
 22.path=flutter_assets/isolate_snapshot_data
 32.set=ASSET
@@ -40,7 +40,7 @@
 8.baseType=DIRECTORY
 6.base=C\:\\Users\\Adrian\\Documents\\GitHub\\Pet-Finder-App\\build\\app\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out
 4.set=ASSET
-23.path=flutter_assets/LICENSE
+23.path=flutter_assets/fonts/MYRIADPROSEMIBOLD.OTF
 33.path=flutter_assets/fonts/MYRIADPROCOND.OTF
 17.path=flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
 31.set=NATIVE_RESOURCE
@@ -78,7 +78,7 @@ count=38
 30.path=flutter_assets/assets/avatars/avatar-1.jpg
 7.base=C\:\\Users\\Adrian\\Documents\\GitHub\\Pet-Finder-App\\build\\app\\intermediates\\transforms\\mergeJniLibs\\debug\\0
 19.set=NATIVE_RESOURCE
-24.path=flutter_assets/fonts/MYRIADPROSEMIBOLD.OTF
+24.path=flutter_assets/LICENSE
 34.path=flutter_assets/AssetManifest.json
 3.set=ASSET
 18.path=flutter_assets/assets/img5.jpg

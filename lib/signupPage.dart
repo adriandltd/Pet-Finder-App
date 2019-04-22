@@ -108,7 +108,7 @@ class _MySignUpPage extends State<MySignUpPage> {
     return Container(
         decoration: BoxDecoration(
           gradient: RadialGradient(
-            radius: 0.80,
+            radius: 0.9,
             center: Alignment.center,
             stops: [.33,.66,.99],
             colors: [
@@ -148,6 +148,7 @@ class _MySignUpPage extends State<MySignUpPage> {
                   Container(
                       width: 325,
                       child: TextFormField(
+                        autofocus: false,
                         keyboardType: TextInputType.emailAddress,
                         textInputAction: TextInputAction.next,
                         controller: userCtrl,
@@ -162,7 +163,6 @@ class _MySignUpPage extends State<MySignUpPage> {
                                 borderRadius: BorderRadius.circular(40))),
                         textCapitalization: TextCapitalization.none,
                         autocorrect: false,
-                        autofocus: true,
                         onFieldSubmitted: (userCtrl) {
                           FocusScope.of(context)
                               .requestFocus(textSecondFocusNode);
@@ -172,6 +172,7 @@ class _MySignUpPage extends State<MySignUpPage> {
                   Container(
                       width: 325,
                       child: TextFormField(
+                        autofocus: false,
                         keyboardType: TextInputType.emailAddress,
                         controller: userCtrl2,
                         decoration: InputDecoration(
