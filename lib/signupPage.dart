@@ -44,13 +44,17 @@ class _MySignUpPage extends State<MySignUpPage> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
+            titlePadding: EdgeInsets.only(top: 35),
             shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(6.0))),
+                borderRadius: BorderRadius.all(Radius.circular(15.0))),
             contentPadding: EdgeInsets.only(top: 25.0, left: 15),
-            content: const Text('Password must be at least 6 characters long'),
+            title: const Text('Password must be at least 6 characters long.',style: TextStyle(fontSize: 24),textAlign: TextAlign.center,),
             actions: <Widget>[
               FlatButton(
-                child: Text('Ok'),
+                shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                color: Colors.deepPurpleAccent[700] ,
+                child: Text('Ok',style: TextStyle(color: Colors.white)),
                 onPressed: () {
                   Navigator.of(context).pop();
                 },
@@ -66,13 +70,17 @@ class _MySignUpPage extends State<MySignUpPage> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
+            titlePadding: EdgeInsets.only(top: 35),
             shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(6.0))),
-            contentPadding: EdgeInsets.only(top: 25.0, left: 15),
-            title: const Text('Email/Password Does Not Match'),
+            borderRadius: BorderRadius.all(Radius.circular(15.0))),
+            title: const Text('Email/Password Does Not Match.',style: TextStyle(fontSize: 24),textAlign: TextAlign.center,),
             actions: <Widget>[
               FlatButton(
-                child: Text('Ok'),
+                
+                shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                color: Colors.deepPurpleAccent[700] ,
+                child: Text('Ok',style: TextStyle(color: Colors.white)),
                 onPressed: () {
                   Navigator.of(context).pop();
                 },
@@ -100,7 +108,7 @@ class _MySignUpPage extends State<MySignUpPage> {
               Padding(padding: const EdgeInsets.only(top: 120.0)),
               SizedBox(
                   height: 75.0,
-                  child: Text("Sign Up With Email",
+                  child: Text("Sign Up",
                       style: TextStyle(
                           fontSize: 35, fontWeight: FontWeight.w600))),
               Container(
@@ -112,8 +120,8 @@ class _MySignUpPage extends State<MySignUpPage> {
                     decoration: InputDecoration(
                         hintText: "Email",
                         contentPadding: EdgeInsets.all(15),
-                        border: OutlineInputBorder(),
-                        focusedBorder: OutlineInputBorder()),
+                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(40)),
+                        focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(40))),
                     textCapitalization: TextCapitalization.none,
                     autocorrect: false,
                     autofocus: true,
@@ -130,8 +138,8 @@ class _MySignUpPage extends State<MySignUpPage> {
                     decoration: InputDecoration(
                         hintText: "Confirm Email",
                         contentPadding: EdgeInsets.all(15),
-                        border: OutlineInputBorder(),
-                        focusedBorder: OutlineInputBorder()),
+                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(40)),
+                        focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(40))),
                     textCapitalization: TextCapitalization.none,
                     autocorrect: false,
                     onFieldSubmitted: (userCtrl2) {
@@ -149,8 +157,8 @@ class _MySignUpPage extends State<MySignUpPage> {
                     decoration: InputDecoration(
                         hintText: "Password",
                         contentPadding: EdgeInsets.all(15),
-                        border: OutlineInputBorder(),
-                        focusedBorder: OutlineInputBorder()),
+                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(40)),
+                        focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(40))),
                     onFieldSubmitted: (passCtrl) {
                       FocusScope.of(context).requestFocus(textFourthFocusNode);
                     },
@@ -166,16 +174,18 @@ class _MySignUpPage extends State<MySignUpPage> {
                     decoration: InputDecoration(
                         hintText: "Confirm Password",
                         contentPadding: EdgeInsets.all(15),
-                        border: OutlineInputBorder(),
-                        focusedBorder: OutlineInputBorder()),
+                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(40)),
+                        focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(40))),
                     focusNode: textFourthFocusNode,
                   )),
-              Padding(padding: const EdgeInsets.only(top: 40.0)),
+              Padding(padding: const EdgeInsets.only(top: 50.0)),
               ButtonTheme(
-                  minWidth: 325.0,
-                  height: 50.0,
+                shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                  minWidth: 275.0,
+                  height: 45.0,
                   child: RaisedButton(
-                      color: Colors.blueGrey,
+                      color: Colors.deepPurpleAccent[700],
                       child: Text("Sign Up",
                           style: TextStyle(color: Colors.white, fontSize: 18)),
                       onPressed: () {
