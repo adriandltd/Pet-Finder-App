@@ -1,20 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\istic\\Documents\\GitHub\\Pet-Finder-App\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
+            "outputFile": "C:\\Users\\Adrian\\Documents\\GitHub\\Pet-Finder-App\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\istic\\.gradle\\caches\\transforms-1\\files-1.1\\twitter-core-3.1.1.aar\\63942520b0f73cb62f64fc15f1dd7f06\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6",
-                        "startColumns": "4,4,4,4,4",
-                        "startOffsets": "55,116,168,226,285",
-                        "endColumns": "60,51,57,58,54",
-                        "endOffsets": "111,163,221,280,335"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\istic\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\5df7d22d9945b7f294a08eaecdc7af22\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+                    "source": "C:\\Users\\Adrian\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\dc25e14fab92a3b9f145f9d5967b913a\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -30,6 +20,16 @@
                         "endLines": "11",
                         "endColumns": "13",
                         "endOffsets": "612"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Adrian\\.gradle\\caches\\transforms-1\\files-1.1\\twitter-core-3.1.1.aar\\4abf713d57b19b06c076116829130ec5\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,116,168,226,285",
+                        "endColumns": "60,51,57,58,54",
+                        "endOffsets": "111,163,221,280,335"
                     }
                 }
             ]

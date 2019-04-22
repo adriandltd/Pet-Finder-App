@@ -132,7 +132,24 @@ class MyLoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var scaffold = Scaffold(
+    return Container(
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          stops: [0.1,0.2,0.4,0.6,0.8,0.9],
+          colors: [
+            Colors.purple[300],
+            Colors.purple[400],
+            Colors.purple[700],
+            Colors.orange[700],
+            Colors.orange[400],
+            Colors.orange[300],
+          ],
+        ),
+      ),
+      child: Scaffold(
+      backgroundColor: Color(0x00000000),
       resizeToAvoidBottomPadding: false,
       body: Row(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -143,7 +160,7 @@ class MyLoginPage extends StatelessWidget {
               SizedBox(
                   height: 75.0,
                   child: Text("Finding BullsEye",
-                      style: TextStyle(
+                      style: TextStyle(color: Colors.white,
                           fontSize: 35, fontWeight: FontWeight.w600))),
               Padding(padding: const EdgeInsets.only(top: 20.0)),
               Container(
@@ -151,44 +168,51 @@ class MyLoginPage extends StatelessWidget {
                   child: TextField(
                     controller: userCtrl,
                     decoration: InputDecoration(
+                        filled: true,
+                        fillColor: Colors.white,
                         hintText: "Email",
-                        contentPadding: EdgeInsets.all(15),
-                        border: OutlineInputBorder(),
-                        focusedBorder: OutlineInputBorder()),
+                        contentPadding: EdgeInsets.fromLTRB(25,15,15,15),
+                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(40)),
+                        focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(40))),
                     textCapitalization: TextCapitalization.none,
                     autocorrect: false,
                   )),
-              Padding(padding: const EdgeInsets.only(top: 20.0)),
+              Padding(padding: const EdgeInsets.only(top: 15.0)),
               Container(
                   width: 325,
                   child: TextField(
-                      keyboardType: TextInputType.number,
                       controller: passCtrl,
                       obscureText: true,
                       decoration: InputDecoration(
+                          filled: true,
+                          fillColor: Colors.white,
                           hintText: "Password",
-                          contentPadding: EdgeInsets.all(15),
-                          border: OutlineInputBorder(),
-                          focusedBorder: OutlineInputBorder()))),
+                          contentPadding: EdgeInsets.fromLTRB(25,15,15,15),
+                          border: OutlineInputBorder(borderRadius: BorderRadius.circular(40)),
+                          focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(40))))),
               Padding(padding: const EdgeInsets.only(top: 10.0)),
               ButtonTheme(
-                  minWidth: 325.0,
-                  height: 50.0,
+                  minWidth: 275.0,
+                  height: 45.0,
                   child: RaisedButton(
-                    color: Colors.blueGrey,
-                    child: Text("Log In With Email",
+                    shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                    color: Colors.orangeAccent[700],
+                    child: Text("Log In",
                         style: TextStyle(color: Colors.white, fontSize: 18)),
                     onPressed: () {
                       signInWithEmail(context);
                     },
                   )),
-              Padding(padding: const EdgeInsets.only(top: 5.0)),
+              Padding(padding: const EdgeInsets.only(top:10.0)),
               ButtonTheme(
-                  minWidth: 325.0,
-                  height: 50.0,
+                shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                  minWidth: 275.0,
+                  height: 45.0,
                   child: RaisedButton(
-                      color: Colors.blueGrey,
-                      child: Text("Sign Up With Email",
+                      color: Colors.deepPurpleAccent[700],
+                      child: Text("Sign Up",
                           style: TextStyle(color: Colors.white, fontSize: 18)),
                       onPressed: () {
                         Navigator.push(
@@ -196,9 +220,9 @@ class MyLoginPage extends StatelessWidget {
                             MaterialPageRoute(
                                 builder: (context) => MySignUpPage()));
                       })),
-              Padding(padding: const EdgeInsets.only(top: 20.0)),
+              Padding(padding: const EdgeInsets.only(top: 30.0)),
               Container(
-                width: 325,
+                width: 305,
                 child: GoogleSignInButton(
                   onPressed: () {
                     _handleGoogleAccountSignIn(context)
@@ -209,17 +233,19 @@ class MyLoginPage extends StatelessWidget {
               ),
               Padding(padding: const EdgeInsets.only(top: 6.0)),
               Container(
-                width: 325,
-                child: FacebookSignInButton(
-                  onPressed: () {
-                    _handleFacebookAccountSignIn();
-                    pushtoHomePage(context);
-                  },
+                width: 305,
+                child: Container(
+                  child: FacebookSignInButton(
+                    onPressed: () {
+                      _handleFacebookAccountSignIn();
+                      pushtoHomePage(context);
+                    },
+                  ),
                 ),
               ),
               Padding(padding: const EdgeInsets.only(top: 6.0)),
               Container(
-                width: 325,
+                width: 305,
                 child: TwitterSignInButton(
                   onPressed: () {
                     _handleTwitterAccountSignIn()
@@ -233,7 +259,6 @@ class MyLoginPage extends StatelessWidget {
           ),
         ],
       ),
-    );
-    return scaffold;
+    ));
   }
 }
