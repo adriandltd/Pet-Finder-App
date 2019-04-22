@@ -111,13 +111,14 @@ class _MySignUpPage extends State<MySignUpPage> {
           gradient: RadialGradient(
             radius: 0.80,
             center: Alignment.center,
-            stops: [0.2, 0.4, 0.6, 0.8, 0.9],
+            stops: [.33,.66,.99],
             colors: [
-              Colors.purple[300],
-              Colors.purple[400],
-              Colors.purple[500],
-              Colors.purple[700],
-              Colors.purple[800],
+              // Color.fromRGBO(255, 180, 109, 1),
+              // Color.fromRGBO(255, 150, 70, 1),
+              // Color.fromRGBO(255, 128, 43, 1),
+              Color.fromRGBO(255, 212, 109, 1),
+              Color.fromRGBO(255, 200, 70, 1),
+              Color.fromRGBO(255, 194, 43, 1),
             ],
           ),
         ),
@@ -129,21 +130,22 @@ class _MySignUpPage extends State<MySignUpPage> {
             children: <Widget>[
               Column(
                 children: <Widget>[
-                  Padding(padding: const EdgeInsets.only(top: 120.0)),
+                  Padding(padding: const EdgeInsets.only(top: 10.0)),
+                  SizedBox(height: 150,child: Image.asset('assets/findmaxcatchphrase.png', scale:1)),
                   SizedBox(
                       height: 75.0,
-                      child: Text("Sign Up",
+                      child: Text("Create an Account",
                           style: TextStyle(
                               shadows: <Shadow>[
                                 Shadow(
-                                  offset: Offset(2.0, 0.0),
+                                  offset: Offset(1.0, 1.0),
                                   blurRadius: 3.0,
                                   color: Color.fromARGB(255, 0, 0, 0),
                                 ),
                               ],
                               color: Colors.white,
                               fontSize: 35,
-                              fontWeight: FontWeight.w600))),
+                              fontWeight: FontWeight.w600,fontFamily: 'Myriad'))),
                   Container(
                       width: 325,
                       child: TextFormField(
@@ -238,7 +240,7 @@ class _MySignUpPage extends State<MySignUpPage> {
                       minWidth: 275.0,
                       height: 45.0,
                       child: RaisedButton(
-                          color: Colors.deepPurpleAccent[700],
+                          color: Color.fromRGBO(255, 128, 43, 1),
                           child: Text("Sign Up",
                               style:
                                   TextStyle(color: Colors.white, fontSize: 18)),

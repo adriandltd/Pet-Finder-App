@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Adrian\\Documents\\GitHub\\Pet-Finder-App\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ar\\values-ar.xml",
+            "outputFile": "C:\\Users\\istic\\Documents\\GitHub\\Pet-Finder-App\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ar\\values-ar.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Adrian\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-facebook-login-4.39.0.aar\\2055e2844159b0eace326ad913dd61a4\\res\\values-ar\\values-ar.xml",
+                    "source": "C:\\Users\\istic\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-facebook-login-4.39.0.aar\\07713b217d8c0b200885d8976b9fa127\\res\\values-ar\\values-ar.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Adrian\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-basement-16.1.0.aar\\682465c99039efe968701a408000cadf\\res\\values-ar\\values.xml",
+                    "source": "C:\\Users\\istic\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-basement-16.1.0.aar\\584639045ab475b4fdd28ea323539766\\res\\values-ar\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -38,24 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Adrian\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-base-16.0.1.aar\\a41c4aee9479dbbdcc761d5c0ebd6bf9\\res\\values-ar\\values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "245,347,523,643,746,943,1069,1206,1333,1529,1631,1812,1932,2130,2302,2392,2484",
-                        "endColumns": "101,175,119,102,196,125,136,126,195,101,180,119,197,171,89,91,108",
-                        "endOffsets": "346,522,642,745,942,1068,1205,1332,1528,1630,1811,1931,2129,2301,2391,2483,2592"
-                    },
-                    "to": {
-                        "startLines": "52,53,54,55,56,57,58,59,61,62,63,64,65,66,67,68,69",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "5272,5378,5554,5678,5785,5982,6112,6253,6573,6769,6875,7056,7180,7378,7554,7648,7744",
-                        "endColumns": "105,175,123,106,196,129,140,130,195,105,180,123,197,175,93,95,112",
-                        "endOffsets": "5373,5549,5673,5780,5977,6107,6248,6379,6764,6870,7051,7175,7373,7549,7643,7739,7852"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Adrian\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.0.0.aar\\209ad369940efa7c936e074920ed3f11\\res\\values-ar\\values-ar.xml",
+                    "source": "C:\\Users\\istic\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.0.0.aar\\cd39f18633d044c1a0f7c00287bb7ace\\res\\values-ar\\values-ar.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -72,7 +55,24 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Adrian\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\dc25e14fab92a3b9f145f9d5967b913a\\res\\values-ar\\values-ar.xml",
+                    "source": "C:\\Users\\istic\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-base-16.0.1.aar\\f813d3c44007203ad407d247063cc147\\res\\values-ar\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "245,347,523,643,746,943,1069,1206,1333,1529,1631,1812,1932,2130,2302,2392,2484",
+                        "endColumns": "101,175,119,102,196,125,136,126,195,101,180,119,197,171,89,91,108",
+                        "endOffsets": "346,522,642,745,942,1068,1205,1332,1528,1630,1811,1931,2129,2301,2391,2483,2592"
+                    },
+                    "to": {
+                        "startLines": "52,53,54,55,56,57,58,59,61,62,63,64,65,66,67,68,69",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "5272,5378,5554,5678,5785,5982,6112,6253,6573,6769,6875,7056,7180,7378,7554,7648,7744",
+                        "endColumns": "105,175,123,106,196,129,140,130,195,105,180,123,197,175,93,95,112",
+                        "endOffsets": "5373,5549,5673,5780,5977,6107,6248,6379,6764,6870,7051,7175,7373,7549,7643,7739,7852"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\istic\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\5df7d22d9945b7f294a08eaecdc7af22\\res\\values-ar\\values-ar.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -89,7 +89,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Adrian\\.gradle\\caches\\transforms-1\\files-1.1\\twitter-core-3.1.1.aar\\4abf713d57b19b06c076116829130ec5\\res\\values-ar\\values-ar.xml",
+                    "source": "C:\\Users\\istic\\.gradle\\caches\\transforms-1\\files-1.1\\twitter-core-3.1.1.aar\\63942520b0f73cb62f64fc15f1dd7f06\\res\\values-ar\\values-ar.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       // showPerformanceOverlay: true,
       theme: new ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.blue, fontFamily: 'Myriad'
       ),
       home: new MyLoginPage(),
     );

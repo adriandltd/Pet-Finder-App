@@ -137,13 +137,14 @@ class MyLoginPage extends StatelessWidget {
           gradient: RadialGradient(
             radius: 0.80,
             center: Alignment.center,
-            stops: [0.2, 0.4, 0.6, 0.8, 0.9],
+            stops: [.33,.66,.99],
             colors: [
-              Colors.purple[300],
-              Colors.purple[400],
-              Colors.purple[500],
-              Colors.purple[700],
-              Colors.purple[800],
+              // Color.fromRGBO(255, 212, 109, 1),
+              // Color.fromRGBO(255, 200, 70, 1),
+              // Color.fromRGBO(255, 194, 43, 1),
+              Color.fromRGBO(255, 180, 109, 1),
+              Color.fromRGBO(255, 150, 70, 1),
+              Color.fromRGBO(255, 128, 43, 1),
             ],
           ),
         ),
@@ -155,22 +156,7 @@ class MyLoginPage extends StatelessWidget {
             children: <Widget>[
               Column(
                 children: <Widget>[
-                  Padding(padding: const EdgeInsets.only(top: 105.0)),
-                  SizedBox(
-                      height: 75.0,
-                      child: Text("Finding BullsEye",
-                          style: TextStyle(
-                              shadows: <Shadow>[
-                                Shadow(
-                                  offset: Offset(2.0, 0.0),
-                                  blurRadius: 3.0,
-                                  color: Color.fromARGB(255, 0, 0, 0),
-                                ),
-                              ],
-                              color: Colors.white,
-                              fontSize: 35,
-                              fontWeight: FontWeight.w600))),
-                  Padding(padding: const EdgeInsets.only(top: 20.0)),
+                  SizedBox(height: 350,child: Image.asset('assets/findmaxcatchphrase.png', scale:1)),
                   Container(
                       width: 325,
                       child: TextField(
@@ -211,26 +197,26 @@ class MyLoginPage extends StatelessWidget {
                         shape: RoundedRectangleBorder(
                             borderRadius:
                                 BorderRadius.all(Radius.circular(20.0))),
-                        color: Colors.orangeAccent[700],
+                        color: Color.fromRGBO(255, 194, 30, 1),
                         child: Text("Log In",
                             style:
-                                TextStyle(color: Colors.white, fontSize: 18)),
+                                TextStyle(color: Colors.black, fontSize: 18, fontWeight: FontWeight.w700)),
                         onPressed: () {
                           signInWithEmail(context);
                         },
                       )),
-                  Padding(padding: const EdgeInsets.only(top: 10.0)),
+                  Padding(padding: const EdgeInsets.only(top: 1.0)),
                   ButtonTheme(
                       shape: RoundedRectangleBorder(
                           borderRadius:
                               BorderRadius.all(Radius.circular(20.0))),
-                      minWidth: 275.0,
-                      height: 45.0,
+                      minWidth: 200.0,
+                      height: 25.0,
                       child: RaisedButton(
-                          color: Colors.deepPurpleAccent[700],
-                          child: Text("Sign Up",
+                          color: Colors.grey[400],
+                          child: Text("Create an account?",
                               style:
-                                  TextStyle(color: Colors.white, fontSize: 18)),
+                                  TextStyle(color: Colors.black, fontSize: 14,fontWeight: FontWeight.w400)),
                           onPressed: () {
                             Navigator.push(
                                 context,
@@ -239,7 +225,7 @@ class MyLoginPage extends StatelessWidget {
                           })),
                   Padding(padding: const EdgeInsets.only(top: 30.0)),
                   Container(
-                    width: 305,
+                    width: 280,
                     child: GoogleSignInButton(
                       onPressed: () {
                         _handleGoogleAccountSignIn(context)
@@ -248,9 +234,9 @@ class MyLoginPage extends StatelessWidget {
                       },
                     ),
                   ),
-                  Padding(padding: const EdgeInsets.only(top: 6.0)),
+                  Padding(padding: const EdgeInsets.only(top: 3.0)),
                   Container(
-                    width: 305,
+                    width: 280,
                     child: Container(
                       child: FacebookSignInButton(
                         onPressed: () {
@@ -260,9 +246,9 @@ class MyLoginPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Padding(padding: const EdgeInsets.only(top: 6.0)),
+                  Padding(padding: const EdgeInsets.only(top: 3.0)),
                   Container(
-                    width: 305,
+                    width: 280,
                     child: TwitterSignInButton(
                       onPressed: () {
                         _handleTwitterAccountSignIn()
