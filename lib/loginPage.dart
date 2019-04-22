@@ -1,5 +1,5 @@
-import 'package:animation_exp/SwipeAnimation/index.dart';
-import 'package:animation_exp/signupPage.dart';
+import 'package:findmax/SwipeAnimation/index.dart';
+import 'package:findmax/signupPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_auth_buttons/flutter_auth_buttons.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -165,6 +165,7 @@ class MyLoginPage extends StatelessWidget {
                             filled: true,
                             fillColor: Colors.white,
                             hintText: "Email",
+                            hintStyle: TextStyle(fontFamily: 'Myriad',),
                             contentPadding: EdgeInsets.fromLTRB(25, 15, 15, 15),
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(40)),

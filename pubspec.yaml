@@ -1,5 +1,5 @@
-name: animation_exp
-description: A new Flutter project.
+name: findmax
+description: Assists in the tracking and locating of lost pets.
 
 dependencies:
   flutter:
@@ -63,16 +63,16 @@ flutter:
   fonts:
     - family: Myriad
       fonts:
-        - asset: fonts/MYRIADPRO.BOLD-OTF
-        - asset: fonts/MYRIADPRO.BOLDCOND-OTF
-        - asset: fonts/MYRIADPRO.BOLDCONDIT-OTF
-        - asset: fonts/MYRIADPRO.BOLDIT-OTF
-        - asset: fonts/MYRIADPRO.COND-OTF
-        - asset: fonts/MYRIADPRO.CONDIT-OTF
-        - asset: fonts/MyriadPro-Light-OTF
-        - asset: fonts/MYRIADPRO.REGULAR-OTF
-        - asset: fonts/MYRIADPRO.SEMIBOLD-OTF
-        - asset: fonts/MYRIADPRO.SEMIBOLDIT-OTF
+        - asset: fonts/MYRIADPROBOLD.OTF
+        - asset: fonts/MYRIADPROBOLDCOND.OTF
+        - asset: fonts/MYRIADPROBOLDCONDIT.OTF
+        - asset: fonts/MYRIADPROBOLDIT.OTF
+        - asset: fonts/MYRIADPROCOND.OTF
+        - asset: fonts/MYRIADPROCONDIT.OTF
+        - asset: fonts/MyriadProLight.OTF
+        - asset: fonts/MYRIADPROREGULAR.OTF
+        - asset: fonts/MYRIADPROSEMIBOLD.OTF
+        - asset: fonts/MYRIADPROSEMIBOLDIT.OTF
         
   #
   # For details regarding fonts from package dependencies, 

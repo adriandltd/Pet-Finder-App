@@ -1,6 +1,6 @@
-import 'package:animation_exp/SwipeAnimation/data.dart';
+import 'package:findmax/SwipeAnimation/data.dart';
 import 'package:flutter/material.dart';
-import 'package:animation_exp/SwipeAnimation/styles.dart';
+import 'package:findmax/SwipeAnimation/styles.dart';
 import 'package:flutter/scheduler.dart';
 
 class DetailPage extends StatefulWidget {

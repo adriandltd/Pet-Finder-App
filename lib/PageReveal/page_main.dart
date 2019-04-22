@@ -1,9 +1,9 @@
 import 'dart:async';
 
-import 'package:animation_exp/PageReveal/page_dragger.dart';
-import 'package:animation_exp/PageReveal/page_indicator.dart';
-import 'package:animation_exp/PageReveal/page_reveal.dart';
-import 'package:animation_exp/PageReveal/pages.dart';
+import 'package:findmax/PageReveal/page_dragger.dart';
+import 'package:findmax/PageReveal/page_indicator.dart';
+import 'package:findmax/PageReveal/page_reveal.dart';
+import 'package:findmax/PageReveal/pages.dart';
 import 'package:flutter/material.dart';
 
 class PageMain extends StatefulWidget {

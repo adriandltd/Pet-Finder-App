@@ -1,7 +1,7 @@
 import 'dart:async';
-import 'package:animation_exp/SwipeAnimation/data.dart';
-import 'package:animation_exp/SwipeAnimation/dummyCard.dart';
-import 'package:animation_exp/SwipeAnimation/activeCard.dart';
+import 'package:findmax/SwipeAnimation/data.dart';
+import 'package:findmax/SwipeAnimation/dummyCard.dart';
+import 'package:findmax/SwipeAnimation/activeCard.dart';
 
 //import 'package:animation_exp/PageReveal/page_main.dart';
 import 'package:flutter/material.dart';

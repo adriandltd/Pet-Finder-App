@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:animation_exp/PageReveal/pages.dart';
+import 'package:findmax/PageReveal/pages.dart';
 import 'package:flutter/material.dart';
 
 class PagerIndicator extends StatelessWidget {

@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:ui';
 
-import 'package:animation_exp/PageReveal/page_indicator.dart';
+import 'package:findmax/PageReveal/page_indicator.dart';
 import 'package:flutter/material.dart';
 
 class PageDragger extends StatefulWidget {

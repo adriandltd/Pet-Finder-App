@@ -1,4 +1,4 @@
-import 'package:animation_exp/loginPage.dart';
+import 'package:findmax/loginPage.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
