@@ -46,20 +46,19 @@ class _MySignUpPage extends State<MySignUpPage> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            titlePadding: EdgeInsets.only(top: 35),
+            titlePadding: EdgeInsets.only(top: 35,left: 10,right: 10),
             shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(15.0))),
-            contentPadding: EdgeInsets.only(top: 25.0, left: 15),
+            borderRadius: BorderRadius.all(Radius.circular(15.0))),
             title: const Text(
               'Password must be at least 6 characters long.',
-              style: TextStyle(fontSize: 24),
+              style: TextStyle(fontSize: 28),
               textAlign: TextAlign.center,
             ),
             actions: <Widget>[
               FlatButton(
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(Radius.circular(20.0))),
-                color: Colors.deepPurpleAccent[700],
+                color: Colors.orangeAccent[700],
                 child: Text('Ok', style: TextStyle(color: Colors.white)),
                 onPressed: () {
                   Navigator.of(context).pop();
@@ -75,7 +74,7 @@ class _MySignUpPage extends State<MySignUpPage> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            titlePadding: EdgeInsets.only(top: 35),
+            titlePadding: EdgeInsets.only(top: 35,left: 10,right: 10),
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(15.0))),
             title: const Text(
@@ -87,7 +86,7 @@ class _MySignUpPage extends State<MySignUpPage> {
               FlatButton(
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(Radius.circular(20.0))),
-                color: Colors.deepPurpleAccent[700],
+                color: Colors.orangeAccent[700],
                 child: Text('Ok', style: TextStyle(color: Colors.white)),
                 onPressed: () {
                   Navigator.of(context).pop();

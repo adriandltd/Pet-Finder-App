@@ -21,27 +21,6 @@ class MyLoginPage extends StatelessWidget {
     }
   }
 
-  //Email Sign Up and FireBase Authentication
-  void signUpWithEmail(context) async {
-    // marked async
-    FirebaseUser user;
-    try {
-      user = await _auth.createUserWithEmailAndPassword(
-        email: userCtrl.text,
-        password: passCtrl.text,
-      );
-    } catch (e) {
-      print(e.toString());
-    } finally {
-      if (user != null) {
-        pushtoHomePage(context);
-      } else {
-        // sign in unsuccessful
-        // ex: prompt the user to try again
-      }
-    }
-  }
-
   //Email Sign In and FireBase Authentication
   void signInWithEmail(context) async {
     // marked async
@@ -156,7 +135,7 @@ class MyLoginPage extends StatelessWidget {
             children: <Widget>[
               Column(
                 children: <Widget>[
-                  SizedBox(height: 350,child: Image.asset('assets/findmaxcatchphrase.png', scale:1)),
+                  SizedBox(height: 285, child: Image.asset('assets/findmaxcatchphrase.png', scale:1)),
                   Container(
                       width: 325,
                       child: TextField(
