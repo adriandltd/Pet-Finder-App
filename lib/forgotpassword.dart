@@ -49,7 +49,6 @@ class _ForgotPasswordPage extends State<ForgotPasswordPage> {
             Container(
                 width: 325,
                 child: TextFormField(
-                  autofocus: true,
                   keyboardType: TextInputType.emailAddress,
                   textInputAction: TextInputAction.next,
                   controller: userCtrl,
