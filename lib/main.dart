@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark.copyWith(
       statusBarColor:
-          Colors.deepOrangeAccent, //or set color with: Color(0xFF0000FF)
+          Color.fromRGBO(255, 128, 43, 1), //or set color with: Color(0xFF0000FF)
     ));
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,

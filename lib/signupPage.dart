@@ -317,13 +317,13 @@ class _MySignUpPage extends State<MySignUpPage> {
           ),
         ),
         child: Scaffold(
-          appBar: AppBar(leading: IconButton(icon: Icon(Icons.arrow_back_ios), onPressed:(){Navigator.pop(context);}), elevation: 2, centerTitle: true,backgroundColor: Colors.orangeAccent, title:Text("Account Creation",
+          appBar: AppBar(leading: IconButton(icon: Icon(Icons.arrow_back_ios), onPressed:(){Navigator.pop(context);}), elevation: 3, centerTitle: true,backgroundColor: Color.fromRGBO(255, 128, 43, 1), title:Text("Account Creation",
                       style: TextStyle(
                           shadows: <Shadow>[
                             Shadow(
-                              offset: Offset(1.0, 1.0),
-                              blurRadius: 3.0,
-                              color: Color.fromARGB(255, 0, 0, 0),
+                              offset: Offset(0.25, 0.25),
+                              blurRadius: 12.0,
+                              color: Color.fromARGB(185, 0, 0, 0),
                             ),
                           ],
                           color: Colors.white,

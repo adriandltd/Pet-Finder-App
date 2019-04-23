@@ -26,26 +26,11 @@ class _ForgotPasswordPage extends State<ForgotPasswordPage> {
       children: <Widget>[
         Column(
           children: <Widget>[
-            Padding(padding: const EdgeInsets.only(top: 20.0)),
+            Padding(padding: const EdgeInsets.only(bottom: 60.0)),
             SizedBox(
-                height: 200,
+                height: 130,
                 child: Image.asset('assets/findmaxcatchphrase.png', scale: 1)),
-            SizedBox(
-                height: 75.0,
-                child: Text("Password Reset",
-                    style: TextStyle(
-                        shadows: <Shadow>[
-                          Shadow(
-                            offset: Offset(1.0, 1.0),
-                            blurRadius: 3.0,
-                            color: Color.fromARGB(255, 0, 0, 0),
-                          ),
-                        ],
-                        color: Colors.white,
-                        fontSize: 35,
-                        fontWeight: FontWeight.w600,
-                        fontFamily: 'Myriad'))),
-            Padding(padding: const EdgeInsets.only(top: 10.0)),
+            Padding(padding: const EdgeInsets.only(top: 40.0)),
             Container(
                 width: 325,
                 child: TextFormField(
@@ -134,6 +119,19 @@ class _ForgotPasswordPage extends State<ForgotPasswordPage> {
           ),
         ),
         child: Scaffold(
+          appBar: AppBar(leading: IconButton(icon: Icon(Icons.arrow_back_ios), onPressed:(){Navigator.pop(context);}), elevation: 3, centerTitle: true,backgroundColor: Color.fromRGBO(255, 128, 43, 1), title:Text("Password Reset",
+                      style: TextStyle(
+                          shadows: <Shadow>[
+                            Shadow(
+                              offset: Offset(0.25, 0.25),
+                              blurRadius: 12.0,
+                              color: Color.fromARGB(185, 0, 0, 0),
+                            ),
+                          ],
+                          color: Colors.white,
+                          fontSize: 35,
+                          fontWeight: FontWeight.w600,
+                          fontFamily: 'Myriad'))),
           backgroundColor: Color(0x00000000),
           resizeToAvoidBottomPadding: false,
           body: ModalProgressHUD(
@@ -143,7 +141,7 @@ class _ForgotPasswordPage extends State<ForgotPasswordPage> {
             dismissible: true,
             progressIndicator: CircularProgressIndicator(
                 valueColor:
-                    new AlwaysStoppedAnimation<Color>(Colors.deepOrangeAccent)),
+                    AlwaysStoppedAnimation<Color>(Colors.deepOrangeAccent)),
           ),
         ));
   }
