@@ -3,15 +3,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/scheduler.dart' show timeDilation;
 
-void main(){
+void main() {
   timeDilation = 1.5;
   runApp(new MyApp());
-  }
+}
 
 class MyApp extends StatelessWidget {
-  
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark.copyWith(
+      statusBarColor:
+          Colors.deepOrangeAccent, //or set color with: Color(0xFF0000FF)
+    ));
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,

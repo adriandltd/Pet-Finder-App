@@ -163,9 +163,11 @@ class _MyLoginPage extends State<MyLoginPage> {
       children: <Widget>[
         Column(
           children: <Widget>[
+             Padding(padding: const EdgeInsets.only(top: 85.0)),
             SizedBox(
-                height: 285,
+                height: 130,
                 child: Image.asset('assets/findmaxcatchphrase.png', scale: 1)),
+                 Padding(padding: const EdgeInsets.only(top: 35.0)),
             Container(
                 width: 325,
                 child: TextField(
@@ -185,7 +187,7 @@ class _MyLoginPage extends State<MyLoginPage> {
                   textCapitalization: TextCapitalization.none,
                   autocorrect: false,
                 )),
-            Padding(padding: const EdgeInsets.only(top: 15.0)),
+            Padding(padding: const EdgeInsets.only(top: 10.0)),
             Container(
                 width: 325,
                 child: TextField(
