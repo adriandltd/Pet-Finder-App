@@ -212,7 +212,7 @@ class _MyLoginPage extends State<MyLoginPage> {
                   color: Color.fromRGBO(255, 194, 30, 1),
                   child: Text("Log In",
                       style: TextStyle(
-                          color: Colors.black,
+                          color: Colors.blueGrey[900],
                           fontSize: 18,
                           fontWeight: FontWeight.w700)),
                   onPressed: () {
@@ -231,7 +231,7 @@ class _MyLoginPage extends State<MyLoginPage> {
                     minWidth: 100.0,
                     height: 25.0,
                     child: RaisedButton(
-                        color: Colors.blueGrey[800],
+                        color: Colors.blueGrey[700],
                         child: Text("Forgot Password?",
                             style: TextStyle(
                                 color: Colors.white,
@@ -252,10 +252,10 @@ class _MyLoginPage extends State<MyLoginPage> {
                     minWidth: 100.0,
                     height: 25.0,
                     child: RaisedButton(
-                        color: Colors.grey[400],
+                        color: Colors.blueGrey[700],
                         child: Text("Create an account?",
                             style: TextStyle(
-                                color: Colors.black,
+                                color: Colors.white,
                                 fontSize: 14,
                                 fontWeight: FontWeight.w400)),
                         onPressed: () {
