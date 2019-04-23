@@ -1,4 +1,5 @@
 import 'package:findmax/SwipeAnimation/index.dart';
+import 'package:findmax/forgotpassword.dart';
 import 'package:findmax/signupPage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -220,26 +221,51 @@ class _MyLoginPage extends State<MyLoginPage> {
                   },
                 )),
             Padding(padding: const EdgeInsets.only(top: 1.0)),
-            ButtonTheme(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(20.0))),
-                minWidth: 200.0,
-                height: 25.0,
-                child: RaisedButton(
-                    color: Colors.grey[400],
-                    child: Text("Create an account?",
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 14,
-                            fontWeight: FontWeight.w400)),
-                    onPressed: () {
-                      Navigator.of(context, rootNavigator: true).push(
-                        CupertinoPageRoute<bool>(
-                          fullscreenDialog: true,
-                          builder: (BuildContext context) => MySignUpPage(),
-                        ),
-                      );
-                    })),
+            Row(
+              children: <Widget>[
+                ButtonTheme(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                    minWidth: 100.0,
+                    height: 25.0,
+                    child: RaisedButton(
+                        color: Colors.blueGrey[800],
+                        child: Text("Forgot Password?",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w400)),
+                        onPressed: () {
+                          Navigator.of(context, rootNavigator: true).push(
+                            CupertinoPageRoute<bool>(
+                              fullscreenDialog: true,
+                              builder: (BuildContext context) => ForgotPasswordPage(),
+                            ),
+                          );
+                        })),
+                        Padding(padding: const EdgeInsets.only(left: 20.0)),
+                ButtonTheme(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                    minWidth: 100.0,
+                    height: 25.0,
+                    child: RaisedButton(
+                        color: Colors.grey[400],
+                        child: Text("Create an account?",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w400)),
+                        onPressed: () {
+                          Navigator.of(context, rootNavigator: true).push(
+                            CupertinoPageRoute<bool>(
+                              fullscreenDialog: true,
+                              builder: (BuildContext context) => MySignUpPage(),
+                            ),
+                          );
+                        })),
+              ],
+            ),
             Padding(padding: const EdgeInsets.only(top: 30.0)),
             Container(
               width: 280,
