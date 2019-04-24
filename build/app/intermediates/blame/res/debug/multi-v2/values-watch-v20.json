@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Adrian\\Documents\\GitHub\\Pet-Finder-App\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
+            "outputFile": "/Users/iPowerSurge/Documents/SEII/GitHub Folder/Pet-Finder-App/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v20/values-watch-v20.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Adrian\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-auth-16.0.1.aar\\413a0193c3e7702c3f8b9e2538c4f7b0\\res\\values-watch-v20\\values.xml",
+                    "source": "/Users/iPowerSurge/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-16.0.1.aar/256e5b8f1f8ff6e15f8d1137eaa90795/res/values-watch-v20/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11",
                         "startColumns": "0,0,0,0,0,0,0,0",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Adrian\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\f917285c639b7732e002eaf6f6e2a95c\\res\\values-watch-v20\\values-watch-v20.xml",
+                    "source": "/Users/iPowerSurge/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0.aar/4af29b46915c347ecc28c5515218b352/res/values-watch-v20/values-watch-v20.xml",
                     "from": {
                         "startLines": "2,5,8",
                         "startColumns": "4,4,4",

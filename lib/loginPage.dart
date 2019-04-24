@@ -111,16 +111,16 @@ class _MyLoginPage extends State<MyLoginPage> {
   //Facebook Sign in and FireBase Authentication
   Future<FirebaseUser> _handleFacebookAccountSignIn() async {
     var facebookLogin = new FacebookLogin();
-    var result = await facebookLogin.logInWithReadPermissions(['email']);
-    final AuthCredential credential = FacebookAuthProvider.getCredential(
-      accessToken: '2072195696236109',
-    );
+    var result = await facebookLogin.logInWithReadPermissions(['email', 'public_profile']);
+    FacebookAccessToken myToken = result.accessToken;
+
+    AuthCredential credential= FacebookAuthProvider.getCredential(accessToken: myToken.token);
     debugPrint(result.status.toString());
 
     if (result.status == FacebookLoginStatus.loggedIn) {
-      FirebaseUser user = await _auth.signInWithCredential(credential);
-      isUserSignedIn = true;
-      return user;
+      FirebaseUser firebaseUser = await FirebaseAuth.instance.signInWithCredential(credential);
+      pushtoHomePage(context);
+      return firebaseUser;
     }
     return null;
   }
@@ -128,21 +128,22 @@ class _MyLoginPage extends State<MyLoginPage> {
 //Twitter Sign in and FireBase Authentication
 
   Future<FirebaseUser> _handleTwitterAccountSignIn() async {
-    var twitterLogin = new TwitterLogin(
+    final TwitterLogin twitterLogin = new TwitterLogin(
       consumerKey: 'eUxcPPGGLL59xb7Tx9IBotjjU',
       consumerSecret: 'hhHWA0D0jDxMJKknHovz39LWDiC1vu3MeruSwdWZVUR3fGvDVW',
     );
 
-    final TwitterLoginResult result = await twitterLogin.authorize();
-    final AuthCredential credential = TwitterAuthProvider.getCredential(
-        authToken: 'eUxcPPGGLL59xb7Tx9IBotjjU',
-        authTokenSecret: 'hhHWA0D0jDxMJKknHovz39LWDiC1vu3MeruSwdWZVUR3fGvDVW');
+    TwitterLoginResult result = await twitterLogin.authorize();
+    TwitterSession currentSession = result.session;
+    TwitterLoginStatus status = result.status;
 
+    final AuthCredential credential = TwitterAuthProvider.getCredential(
+        authToken: currentSession.token, authTokenSecret: currentSession.secret);
+
+    
     switch (result.status) {
       case TwitterLoginStatus.loggedIn:
-        var session = result.session;
-        FirebaseUser user = await _auth.signInWithCredential(credential);
-        isUserSignedIn = true;
+        FirebaseUser user = await FirebaseAuth.instance.signInWithCredential(credential);
         return user;
         break;
       case TwitterLoginStatus.cancelledByUser:
