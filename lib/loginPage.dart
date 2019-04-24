@@ -322,7 +322,7 @@ class _MyLoginPage extends State<MyLoginPage> {
               // Color.fromRGBO(255, 212, 109, 1),
               // Color.fromRGBO(255, 200, 70, 1),
               // Color.fromRGBO(255, 194, 43, 1),
-              Color.fromRGBO(255, 180, 109, 1),
+              Color.fromRGBO(255, 180, 109, 1), //Oranges
               Color.fromRGBO(255, 150, 70, 1),
               Color.fromRGBO(255, 128, 43, 1),
             ],
