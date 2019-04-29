@@ -5,6 +5,7 @@ INJECTED from C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\android\app\src\ma
 INJECTED from C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:1:1-57:12
 INJECTED from C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:1:1-57:12
 MERGED from [:firebase_auth] C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:shared_preferences] C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\build\shared_preferences\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:flutter_twitter_login] C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\build\flutter_twitter_login\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:flutter_facebook_login] C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\build\flutter_facebook_login\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:google_sign_in] C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\build\google_sign_in\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-9:12
@@ -237,6 +238,8 @@ INJECTED from C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\android\app\src\ma
 INJECTED from C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml
 MERGED from [:firebase_auth] C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:firebase_auth] C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences] C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\build\shared_preferences\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences] C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\build\shared_preferences\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:flutter_twitter_login] C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\build\flutter_twitter_login\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:flutter_twitter_login] C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\build\flutter_twitter_login\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:flutter_facebook_login] C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\build\flutter_facebook_login\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44

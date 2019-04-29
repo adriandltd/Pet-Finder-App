@@ -2,8 +2,10 @@ import 'package:findmax/loginPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/scheduler.dart' show timeDilation;
+import 'package:preferences/preferences.dart';
 
-void main() {
+Future main() async {
+  await PrefService.init(prefix: 'pref_');
   timeDilation = 1.5;
   runApp(new MyApp());
 }

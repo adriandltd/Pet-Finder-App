@@ -2,17 +2,19 @@ import 'dart:async';
 import 'package:findmax/SwipeAnimation/data.dart';
 import 'package:findmax/SwipeAnimation/dummyCard.dart';
 import 'package:findmax/SwipeAnimation/activeCard.dart';
+import 'package:findmax/settings.dart';
+import 'package:flutter/cupertino.dart';
 
 //import 'package:animation_exp/PageReveal/page_main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart' show timeDilation;
 
-class CardDemo extends StatefulWidget {
+class HomeScreen extends StatefulWidget {
   @override
-  CardDemoState createState() => new CardDemoState();
+  HomeScreenState createState() => new HomeScreenState();
 }
 
-class CardDemoState extends State<CardDemo> with TickerProviderStateMixin {
+class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   AnimationController _buttonController;
   Animation<double> rotate;
   Animation<double> right;
@@ -158,7 +160,11 @@ class CardDemoState extends State<CardDemo> with TickerProviderStateMixin {
                 },
                 child: new Container(
                     child: IconButton(icon: Icon(Icons.settings), iconSize: 30 ,onPressed: (){
-              
+              Navigator.of(context, rootNavigator: true).push(
+        CupertinoPageRoute<bool>(
+          builder: (BuildContext context) => SettingsPage(),
+        ),
+      );
               },),),
               ),
             ],
