@@ -62,8 +62,7 @@ class _ForgotPasswordPage extends State<ForgotPasswordPage> {
                         style: TextStyle(color: Colors.white, fontSize: 18)),
                     onPressed: () {
                       sendPasswordResetEmail(userCtrl.text);
-                      
-                      if (userCtrl.text.contains('@') || userCtrl.text.isNotEmpty) {
+                      if (userCtrl.text.contains('@') && userCtrl.text.isNotEmpty) {
                         showDialog<void>(
                             context: context,
                             builder: (BuildContext context) {

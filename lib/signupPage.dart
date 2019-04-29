@@ -130,7 +130,7 @@ class _MySignUpPage extends State<MySignUpPage> {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(15.0))),
                   title: const Text(
-                    'Please provid-e a valid email.',
+                    'Please provide a valid email.',
                     style: TextStyle(fontSize: 24),
                     textAlign: TextAlign.center,
                   ),
