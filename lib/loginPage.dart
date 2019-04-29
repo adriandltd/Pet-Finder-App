@@ -41,7 +41,7 @@ class _MyLoginPage extends State<MyLoginPage> {
   void checkCredentials()async{
     FirebaseUser user = await FirebaseAuth.instance.currentUser();
     if(user.displayName == null){
-      print("Please update dislpay name.");
+      print("Please update display name.");
     }
   }
 
