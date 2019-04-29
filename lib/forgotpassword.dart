@@ -62,7 +62,8 @@ class _ForgotPasswordPage extends State<ForgotPasswordPage> {
                         style: TextStyle(color: Colors.white, fontSize: 18)),
                     onPressed: () {
                       sendPasswordResetEmail(userCtrl.text);
-                      if (userCtrl.text.isNotEmpty) {
+                      
+                      if (userCtrl.text.contains('@') || userCtrl.text.isNotEmpty) {
                         showDialog<void>(
                             context: context,
                             builder: (BuildContext context) {
@@ -74,6 +75,37 @@ class _ForgotPasswordPage extends State<ForgotPasswordPage> {
                                         Radius.circular(15.0))),
                                 title: const Text(
                                   'Password reset link has been sent to the submitted email.',
+                                  style: TextStyle(fontSize: 28),
+                                  textAlign: TextAlign.center,
+                                ),
+                                actions: <Widget>[
+                                  FlatButton(
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(20.0))),
+                                    color: Colors.orangeAccent[700],
+                                    child: Text('Ok',
+                                        style: TextStyle(color: Colors.white)),
+                                    onPressed: () {
+                                      Navigator.of(context).pop();
+                                    },
+                                  ),
+                                ],
+                              );
+                            });
+                      }
+                      else {
+                        showDialog<void>(
+                            context: context,
+                            builder: (BuildContext context) {
+                              return AlertDialog(
+                                titlePadding: EdgeInsets.only(
+                                    top: 35, left: 10, right: 10),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.all(
+                                        Radius.circular(15.0))),
+                                title: const Text(
+                                  'Please provide a valid email.',
                                   style: TextStyle(fontSize: 28),
                                   textAlign: TextAlign.center,
                                 ),

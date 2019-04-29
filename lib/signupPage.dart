@@ -31,6 +31,7 @@ class _MySignUpPage extends State<MySignUpPage> {
     FirebaseUser user;
     FirebaseAuth _auth = FirebaseAuth.instance;
     bool accountexists = false;
+    bool validemail = true;
     if (passCtrl.text == passCtrl2.text &&
         userCtrl.text == userCtrl2.text &&
         passCtrl.text.length > 5 &&
@@ -44,9 +45,12 @@ class _MySignUpPage extends State<MySignUpPage> {
         if (e.toString().contains("ERROR_EMAIL_ALREADY_IN_USE")) {
           accountexists = true;
         }
+        if (e.toString().contains("ERROR_INVALID_EMAIL") || e.toString().contains("Given String is empty or null")) {
+          validemail = false;
+        }
         print(e.toString());
       } finally {
-        if (accountexists == false) {
+        if ((accountexists == false) && (validemail == true)) {
           setState(() {
             _loading = true;
           });
@@ -80,7 +84,7 @@ class _MySignUpPage extends State<MySignUpPage> {
                   ],
                 );
               });
-        } else {
+        } else if (accountexists == true){
           setState(() {
             _loading = true;
           });
@@ -114,8 +118,101 @@ class _MySignUpPage extends State<MySignUpPage> {
                 );
               });
         }
+        else if (!(userCtrl.text.contains('@')) || !(userCtrl2.text.contains('@')) || !validemail || userCtrl.text.isEmpty){
+          setState(() {
+            _loading = true;
+          });
+          showDialog<void>(
+              context: context,
+              builder: (BuildContext context) {
+                return AlertDialog(
+                  titlePadding: EdgeInsets.only(top: 35, left: 10, right: 10),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(15.0))),
+                  title: const Text(
+                    'Please provid-e a valid email.',
+                    style: TextStyle(fontSize: 24),
+                    textAlign: TextAlign.center,
+                  ),
+                  actions: <Widget>[
+                    FlatButton(
+                      shape: RoundedRectangleBorder(
+                          borderRadius:
+                              BorderRadius.all(Radius.circular(20.0))),
+                      color: Colors.orangeAccent[700],
+                      child: Text('Ok', style: TextStyle(color: Colors.white)),
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                        setState(() {
+                          _loading = false;
+                        });
+                      },
+                    ),
+                  ],
+                );
+              });
+        }
       }
-    } else if (passCtrl.text.length < 6 || passCtrl2.text.length < 6) {
+    }
+    else if (!(userCtrl.text.contains('@')) || !(userCtrl2.text.contains('@')) || !validemail){
+      print("email/password invalid");
+      return showDialog<void>(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            titlePadding: EdgeInsets.only(top: 35, left: 10, right: 10),
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(15.0))),
+            title: const Text(
+              'Please provide a valid email.',
+              style: TextStyle(fontSize: 24),
+              textAlign: TextAlign.center,
+            ),
+            actions: <Widget>[
+              FlatButton(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                color: Colors.orangeAccent[700],
+                child: Text('Ok', style: TextStyle(color: Colors.white)),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              ),
+            ],
+          );
+        },
+      );
+    }
+    else if ((userCtrl.text != userCtrl2.text) || (passCtrl.text != passCtrl2.text)){
+      print("email/password invalid");
+      return showDialog<void>(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            titlePadding: EdgeInsets.only(top: 35, left: 10, right: 10),
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(15.0))),
+            title: const Text(
+              'Email/Password does not match.',
+              style: TextStyle(fontSize: 24),
+              textAlign: TextAlign.center,
+            ),
+            actions: <Widget>[
+              FlatButton(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                color: Colors.orangeAccent[700],
+                child: Text('Ok', style: TextStyle(color: Colors.white)),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              ),
+            ],
+          );
+        },
+      );
+    }
+     else if (passCtrl.text.length < 6 || passCtrl2.text.length < 6) {
       print("password too short");
       return showDialog<void>(
         context: context,
@@ -143,35 +240,7 @@ class _MySignUpPage extends State<MySignUpPage> {
           );
         },
       );
-    } else {
-      print("email/password invalid");
-      return showDialog<void>(
-        context: context,
-        builder: (BuildContext context) {
-          return AlertDialog(
-            titlePadding: EdgeInsets.only(top: 35, left: 10, right: 10),
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(15.0))),
-            title: const Text(
-              'Email/Password Does Not Match.',
-              style: TextStyle(fontSize: 24),
-              textAlign: TextAlign.center,
-            ),
-            actions: <Widget>[
-              FlatButton(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(20.0))),
-                color: Colors.orangeAccent[700],
-                child: Text('Ok', style: TextStyle(color: Colors.white)),
-                onPressed: () {
-                  Navigator.of(context).pop();
-                },
-              ),
-            ],
-          );
-        },
-      );
-    }
+    } 
   }
 
   FocusNode textSecondFocusNode = FocusNode();
