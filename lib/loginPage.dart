@@ -179,10 +179,8 @@ class _MyLoginPage extends State<MyLoginPage> {
     TwitterLoginResult result = await twitterLogin.authorize();
     TwitterSession currentSession = result.session;
     TwitterLoginStatus status = result.status;
-
     final AuthCredential credential = TwitterAuthProvider.getCredential(
         authToken: currentSession.token, authTokenSecret: currentSession.secret);
-
     
     switch (result.status) {
       case TwitterLoginStatus.loggedIn:
