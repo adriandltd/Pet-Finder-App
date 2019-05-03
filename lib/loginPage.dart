@@ -11,6 +11,9 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'dart:async';
 import 'package:modal_progress_hud/modal_progress_hud.dart';
 
+
+bool isUserSignedIn = false;
+
 class MyLoginPage extends StatefulWidget {
   MyLoginPage();
   @override
@@ -18,7 +21,6 @@ class MyLoginPage extends StatefulWidget {
     return new _MyLoginPage();
   }
 }
-bool isUserSignedIn = false;
 bool emailVerified = false;
 class _MyLoginPage extends State<MyLoginPage> {
   

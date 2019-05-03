@@ -1,13 +1,21 @@
+import 'package:findmax/SwipeAnimation/index.dart';
 import 'package:findmax/loginPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/scheduler.dart' show timeDilation;
-import 'package:preferences/preferences.dart';
 
 Future main() async {
-  await PrefService.init(prefix: 'pref_');
   timeDilation = 1.5;
   runApp(new MyApp());
+}
+
+checkifUserLoggedIn(){
+  if (!isUserSignedIn){
+    return new MyLoginPage();
+  }
+  else{
+    return new HomeScreen();
+  }
 }
 
 class MyApp extends StatelessWidget {
@@ -25,7 +33,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       // showPerformanceOverlay: true,
       theme: new ThemeData(primarySwatch: Colors.blue, fontFamily: 'Myriad'),
-      home: new MyLoginPage(),
+      home: checkifUserLoggedIn(),
     );
   }
 }

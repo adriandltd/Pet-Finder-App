@@ -2,7 +2,6 @@ import 'package:findmax/loginPage.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:modal_progress_hud/modal_progress_hud.dart';
 
 class SettingsPage extends StatefulWidget {
   SettingsPage();
@@ -64,12 +63,13 @@ class _SettingsPage extends State<SettingsPage> {
                   minWidth: 275.0,
                   height: 35.0,
                   child: RaisedButton(
+                    textColor: Colors.white,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(20.0))),
                     color: Colors.red,
                     child: Text("Sign Out",
                         style: TextStyle(
-                            color: Colors.blueGrey[900],
+                            color: Colors.white,
                             fontSize: 18,
                             fontWeight: FontWeight.w700)),
                     onPressed: () {

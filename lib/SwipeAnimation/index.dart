@@ -131,7 +131,9 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     var dataLength = data.length;
     double backCardPosition = initialBottom + (dataLength - 1) * 10 + 10;
     double backCardWidth = -10.0;
-    return Container(
+    return new WillPopScope(
+    onWillPop: () async => false,
+    child: Container(
         decoration: BoxDecoration(
           gradient: RadialGradient(
             radius: 0.80,
@@ -152,9 +154,9 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             bottom: TabBar(
               controller: tabcontroller,
               tabs: <Widget>[
-                Tab(icon: Icon(Icons.settings)),
                 Tab(icon: Icon(Icons.home)),
-                Tab(icon: Icon(Icons.chat_bubble)),
+                Tab(icon: Icon(Icons.chat)),
+                Tab(icon: Icon(Icons.settings)),
               ],
             ),
             backgroundColor: Color.fromRGBO(255, 128, 43, 1),
@@ -173,7 +175,6 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           body: TabBarView(
             controller: tabcontroller,
             children: <Widget>[
-              first.SettingsPage(),
               Container(
                 decoration: BoxDecoration(
                   gradient: RadialGradient(
@@ -223,8 +224,9 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                             new TextStyle(color: Colors.white, fontSize: 50.0)),
               ),
               third.ChatPage(),
+              first.SettingsPage(),
             ],
           ),
-        )));
-  }
+        )))
+ ); }
 }
