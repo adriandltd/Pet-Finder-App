@@ -30,10 +30,15 @@ class _SettingsPage extends State<SettingsPage> {
   }
 
   signout() async{
+    
     final GoogleSignIn _googleSignIn = GoogleSignIn();
     final FirebaseAuth _auth = FirebaseAuth.instance;
     _auth.signOut();
+    _googleSignIn.signOut();
+    
     print("current user: ${_googleSignIn.currentUser}");
+    isUserSignedIn=false;
+    
     
   }
 

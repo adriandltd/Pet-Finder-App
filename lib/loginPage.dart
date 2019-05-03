@@ -11,7 +11,6 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'dart:async';
 import 'package:modal_progress_hud/modal_progress_hud.dart';
 
-
 bool isUserSignedIn = false;
 
 class MyLoginPage extends StatefulWidget {
@@ -21,9 +20,10 @@ class MyLoginPage extends StatefulWidget {
     return new _MyLoginPage();
   }
 }
+
 bool emailVerified = false;
+
 class _MyLoginPage extends State<MyLoginPage> {
-  
   bool _loading = false;
 
   var userCtrl = TextEditingController();
@@ -40,9 +40,9 @@ class _MyLoginPage extends State<MyLoginPage> {
     }
   }
 
-  void checkCredentials()async{
+  void checkCredentials() async {
     FirebaseUser user = await FirebaseAuth.instance.currentUser();
-    if(user.displayName == null){
+    if (user.displayName == null) {
       print("Please update display name.");
     }
   }
@@ -65,8 +65,7 @@ class _MyLoginPage extends State<MyLoginPage> {
           });
         });
         pushtoHomePage(context);
-      } 
-      else if (!user.isEmailVerified){
+      } else if (!user.isEmailVerified) {
         // sign in unsuccessful
         // ex: prompt the user to try again
         user.sendEmailVerification();
@@ -98,8 +97,7 @@ class _MyLoginPage extends State<MyLoginPage> {
                 ],
               );
             });
-      }
-      else {
+      } else {
         // sign in unsuccessful
         // ex: prompt the user to try again
         setState(() {
@@ -149,6 +147,9 @@ class _MyLoginPage extends State<MyLoginPage> {
       isUserSignedIn = true;
       pushtoHomePage(context);
     });
+    setState(() {
+            _loading = true;
+          });
     print("signed in " + user.email);
     return user;
   }
@@ -156,15 +157,21 @@ class _MyLoginPage extends State<MyLoginPage> {
   //Facebook Sign in and FireBase Authentication
   Future<FirebaseUser> _handleFacebookAccountSignIn() async {
     var facebookLogin = new FacebookLogin();
-    var result = await facebookLogin.logInWithReadPermissions(['email', 'public_profile']);
+    var result = await facebookLogin
+        .logInWithReadPermissions(['email', 'public_profile']);
     FacebookAccessToken myToken = result.accessToken;
 
-    AuthCredential credential= FacebookAuthProvider.getCredential(accessToken: myToken.token);
+    AuthCredential credential =
+        FacebookAuthProvider.getCredential(accessToken: myToken.token);
     debugPrint(result.status.toString());
 
     if (result.status == FacebookLoginStatus.loggedIn) {
-      FirebaseUser firebaseUser = await FirebaseAuth.instance.signInWithCredential(credential);
-      pushtoHomePage(context);
+      FirebaseUser firebaseUser = await FirebaseAuth.instance
+          .signInWithCredential(credential)
+          .whenComplete(() {
+        isUserSignedIn = true;
+        pushtoHomePage(context);
+      });
       return firebaseUser;
     }
     return null;
@@ -182,11 +189,17 @@ class _MyLoginPage extends State<MyLoginPage> {
     TwitterSession currentSession = result.session;
     TwitterLoginStatus status = result.status;
     final AuthCredential credential = TwitterAuthProvider.getCredential(
-        authToken: currentSession.token, authTokenSecret: currentSession.secret);
-    
+        authToken: currentSession.token,
+        authTokenSecret: currentSession.secret);
+
     switch (result.status) {
       case TwitterLoginStatus.loggedIn:
-        FirebaseUser user = await FirebaseAuth.instance.signInWithCredential(credential);
+        FirebaseUser user = await FirebaseAuth.instance
+            .signInWithCredential(credential)
+            .whenComplete(() {
+          isUserSignedIn = true;
+          pushtoHomePage(context);
+        });
         return user;
         break;
       case TwitterLoginStatus.cancelledByUser:
@@ -201,17 +214,27 @@ class _MyLoginPage extends State<MyLoginPage> {
     return null;
   }
 
+  determineifLoading(){
+    if (isUserSignedIn){
+      _loading=true;
+    }
+    else{
+      _loading=false;
+    }
+    return _loading;
+  }
+
   Widget _buildWidget() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Column(
           children: <Widget>[
-             Padding(padding: const EdgeInsets.only(top: 85.0)),
+            Padding(padding: const EdgeInsets.only(top: 85.0)),
             SizedBox(
                 height: 130,
                 child: Image.asset('assets/findmaxcatchphrase.png', scale: 1)),
-                 Padding(padding: const EdgeInsets.only(top: 35.0)),
+            Padding(padding: const EdgeInsets.only(top: 35.0)),
             Container(
                 width: 325,
                 child: TextField(
@@ -285,11 +308,12 @@ class _MyLoginPage extends State<MyLoginPage> {
                           Navigator.of(context, rootNavigator: true).push(
                             CupertinoPageRoute<bool>(
                               fullscreenDialog: true,
-                              builder: (BuildContext context) => ForgotPasswordPage(),
+                              builder: (BuildContext context) =>
+                                  ForgotPasswordPage(),
                             ),
                           );
                         })),
-                        Padding(padding: const EdgeInsets.only(left: 20.0)),
+                Padding(padding: const EdgeInsets.only(left: 20.0)),
                 ButtonTheme(
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(20.0))),
@@ -330,7 +354,6 @@ class _MyLoginPage extends State<MyLoginPage> {
                 child: FacebookSignInButton(
                   onPressed: () {
                     _handleFacebookAccountSignIn();
-                    pushtoHomePage(context);
                   },
                 ),
               ),
@@ -343,7 +366,6 @@ class _MyLoginPage extends State<MyLoginPage> {
                   _handleTwitterAccountSignIn()
                       .then((FirebaseUser user) => print(user))
                       .catchError((e) => print(e));
-                  pushtoHomePage(context);
                 },
               ),
             ),
@@ -376,7 +398,7 @@ class _MyLoginPage extends State<MyLoginPage> {
           resizeToAvoidBottomPadding: false,
           body: ModalProgressHUD(
             child: _buildWidget(),
-            inAsyncCall: _loading,
+            inAsyncCall: determineifLoading(),
             color: Colors.orangeAccent,
             dismissible: true,
             progressIndicator: CircularProgressIndicator(
