@@ -162,8 +162,7 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             backgroundColor: Color.fromRGBO(255, 128, 43, 1),
             leading: Container(),
             centerTitle: true,
-            title: Center(
-              child: SizedBox(
+            title: SizedBox(
                   height: 130,
                   child: Image.asset(
                     'assets/findmaxcatchphrase.png',
@@ -171,7 +170,7 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     alignment: Alignment.center,
                   )),
             ),
-          ),
+          
           body: TabBarView(
             controller: tabcontroller,
             children: <Widget>[

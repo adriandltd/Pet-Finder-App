@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter/scheduler.dart' show timeDilation;
 
 Future main() async {
-  timeDilation = 1.5;
+  timeDilation = 1.7;
   runApp(new MyApp());
 }
 

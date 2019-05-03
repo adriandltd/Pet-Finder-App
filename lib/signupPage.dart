@@ -17,6 +17,7 @@ class _MySignUpPage extends State<MySignUpPage> {
   var passCtrl = TextEditingController();
   var userCtrl2 = TextEditingController();
   var passCtrl2 = TextEditingController();
+  var nameCtrl = TextEditingController();
 
   bool _loading = false;
 
@@ -45,12 +46,19 @@ class _MySignUpPage extends State<MySignUpPage> {
         if (e.toString().contains("ERROR_EMAIL_ALREADY_IN_USE")) {
           accountexists = true;
         }
-        if (e.toString().contains("ERROR_INVALID_EMAIL") || e.toString().contains("Given String is empty or null")) {
+        if (e.toString().contains("ERROR_INVALID_EMAIL") ||
+            e.toString().contains("Given String is empty or null")) {
           validemail = false;
         }
         print(e.toString());
       } finally {
-        if ((accountexists == false) && (validemail == true)) {
+        if ((accountexists == false) && (validemail == true) && (nameCtrl.text.isNotEmpty)) {
+          FirebaseAuth.instance.currentUser().then((val) {
+            UserUpdateInfo updateUser = UserUpdateInfo();
+            updateUser.displayName = nameCtrl.text;
+            //updateUser.photoUrl = picURL;
+            val.updateProfile(updateUser);
+          });
           setState(() {
             _loading = true;
           });
@@ -84,7 +92,7 @@ class _MySignUpPage extends State<MySignUpPage> {
                   ],
                 );
               });
-        } else if (accountexists == true){
+        } else if (accountexists == true) {
           setState(() {
             _loading = true;
           });
@@ -117,8 +125,10 @@ class _MySignUpPage extends State<MySignUpPage> {
                   ],
                 );
               });
-        }
-        else if (!(userCtrl.text.contains('@')) || !(userCtrl2.text.contains('@')) || !validemail || userCtrl.text.isEmpty){
+        } else if (!(userCtrl.text.contains('@')) ||
+            !(userCtrl2.text.contains('@')) ||
+            !validemail ||
+            userCtrl.text.isEmpty) {
           setState(() {
             _loading = true;
           });
@@ -153,8 +163,9 @@ class _MySignUpPage extends State<MySignUpPage> {
               });
         }
       }
-    }
-    else if (!(userCtrl.text.contains('@')) || !(userCtrl2.text.contains('@')) || !validemail){
+    } else if (!(userCtrl.text.contains('@')) ||
+        !(userCtrl2.text.contains('@')) ||
+        !validemail) {
       print("email/password invalid");
       return showDialog<void>(
         context: context,
@@ -182,8 +193,8 @@ class _MySignUpPage extends State<MySignUpPage> {
           );
         },
       );
-    }
-    else if ((userCtrl.text != userCtrl2.text) || (passCtrl.text != passCtrl2.text)){
+    } else if ((userCtrl.text != userCtrl2.text) ||
+        (passCtrl.text != passCtrl2.text)) {
       print("email/password invalid");
       return showDialog<void>(
         context: context,
@@ -211,8 +222,7 @@ class _MySignUpPage extends State<MySignUpPage> {
           );
         },
       );
-    }
-     else if (passCtrl.text.length < 6 || passCtrl2.text.length < 6) {
+    } else if (passCtrl.text.length < 6 || passCtrl2.text.length < 6) {
       print("password too short");
       return showDialog<void>(
         context: context,
@@ -240,19 +250,20 @@ class _MySignUpPage extends State<MySignUpPage> {
           );
         },
       );
-    } 
+    }
   }
 
   FocusNode textSecondFocusNode = FocusNode();
   FocusNode textThirdFocusNode = FocusNode();
   FocusNode textFourthFocusNode = FocusNode();
+  FocusNode textFifthFocusNode = FocusNode();
 
   final ScrollController _scrollController = ScrollController();
 
   Widget _buildWidget() {
-    return  KeyboardAvoider(
+    return KeyboardAvoider(
       autoScroll: true,
-      child:  Row(
+      child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Column(
@@ -261,7 +272,30 @@ class _MySignUpPage extends State<MySignUpPage> {
                   height: 130,
                   child:
                       Image.asset('assets/findmaxcatchphrase.png', scale: 1)),
-              Padding(padding: const EdgeInsets.only(bottom: 60.0)),
+              Padding(padding: const EdgeInsets.only(bottom: 35.0)),
+              Container(
+                  width: 325,
+                  child: TextFormField(
+                    autofocus: false,
+                    keyboardType: TextInputType.emailAddress,
+                    textInputAction: TextInputAction.next,
+                    controller: nameCtrl,
+                    decoration: InputDecoration(
+                        filled: true,
+                        fillColor: Colors.white,
+                        hintText: "Full Name",
+                        contentPadding: EdgeInsets.all(15),
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(40)),
+                        focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(40))),
+                    textCapitalization: TextCapitalization.none,
+                    autocorrect: false,
+                    onFieldSubmitted: (nameCtrl) {
+                      FocusScope.of(context).requestFocus(textSecondFocusNode);
+                    },
+                  )),
+              Padding(padding: const EdgeInsets.only(top: 20.0)),
               Container(
                   width: 325,
                   child: TextFormField(
@@ -281,8 +315,9 @@ class _MySignUpPage extends State<MySignUpPage> {
                     textCapitalization: TextCapitalization.none,
                     autocorrect: false,
                     onFieldSubmitted: (userCtrl) {
-                      FocusScope.of(context).requestFocus(textSecondFocusNode);
+                      FocusScope.of(context).requestFocus(textThirdFocusNode);
                     },
+                    focusNode: textSecondFocusNode,
                   )),
               Padding(padding: const EdgeInsets.only(top: 20.0)),
               Container(
@@ -304,9 +339,9 @@ class _MySignUpPage extends State<MySignUpPage> {
                     textCapitalization: TextCapitalization.none,
                     autocorrect: false,
                     onFieldSubmitted: (userCtrl2) {
-                      FocusScope.of(context).requestFocus(textThirdFocusNode);
+                      FocusScope.of(context).requestFocus(textFourthFocusNode);
                     },
-                    focusNode: textSecondFocusNode,
+                    focusNode: textThirdFocusNode,
                   )),
               Padding(padding: const EdgeInsets.only(top: 20.0)),
               Container(
@@ -325,9 +360,9 @@ class _MySignUpPage extends State<MySignUpPage> {
                         focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(40))),
                     onFieldSubmitted: (passCtrl) {
-                      FocusScope.of(context).requestFocus(textFourthFocusNode);
+                      FocusScope.of(context).requestFocus(textFifthFocusNode);
                     },
-                    focusNode: textThirdFocusNode,
+                    focusNode: textFourthFocusNode,
                   )),
               Padding(padding: const EdgeInsets.only(top: 20.0)),
               Container(
@@ -345,7 +380,7 @@ class _MySignUpPage extends State<MySignUpPage> {
                             borderRadius: BorderRadius.circular(40)),
                         focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(40))),
-                    focusNode: textFourthFocusNode,
+                    focusNode: textFifthFocusNode,
                   )),
               Padding(padding: const EdgeInsets.only(top: 40.0)),
               ButtonTheme(
@@ -386,19 +421,28 @@ class _MySignUpPage extends State<MySignUpPage> {
           ),
         ),
         child: Scaffold(
-          appBar: AppBar(leading: IconButton(icon: Icon(Icons.arrow_back_ios), onPressed:(){Navigator.pop(context);}), elevation: 3, centerTitle: true,backgroundColor: Color.fromRGBO(255, 128, 43, 1), title:Text("Account Creation",
-                      style: TextStyle(
-                          shadows: <Shadow>[
-                            Shadow(
-                              offset: Offset(0.25, 0.25),
-                              blurRadius: 12.0,
-                              color: Color.fromARGB(185, 0, 0, 0),
-                            ),
-                          ],
-                          color: Colors.white,
-                          fontSize: 35,
-                          fontWeight: FontWeight.w600,
-                          fontFamily: 'Myriad'))),
+          appBar: AppBar(
+              leading: IconButton(
+                  icon: Icon(Icons.arrow_back_ios),
+                  onPressed: () {
+                    Navigator.pop(context);
+                  }),
+              elevation: 3,
+              centerTitle: true,
+              backgroundColor: Color.fromRGBO(255, 128, 43, 1),
+              title: Text("Account Creation",
+                  style: TextStyle(
+                      shadows: <Shadow>[
+                        Shadow(
+                          offset: Offset(0.25, 0.25),
+                          blurRadius: 12.0,
+                          color: Color.fromARGB(185, 0, 0, 0),
+                        ),
+                      ],
+                      color: Colors.white,
+                      fontSize: 35,
+                      fontWeight: FontWeight.w600,
+                      fontFamily: 'Myriad'))),
           backgroundColor: Color(0x00000000),
           resizeToAvoidBottomPadding: false,
           body: ModalProgressHUD(

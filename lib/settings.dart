@@ -29,17 +29,14 @@ class _SettingsPage extends State<SettingsPage> {
     }
   }
 
-  signout() async{
-    
+  signout() async {
     final GoogleSignIn _googleSignIn = GoogleSignIn();
     final FirebaseAuth _auth = FirebaseAuth.instance;
     _auth.signOut();
     _googleSignIn.signOut();
-    
+
     print("current user: ${_googleSignIn.currentUser}");
-    isUserSignedIn=false;
-    
-    
+    isUserSignedIn = false;
   }
 
   String profileurl;
@@ -48,42 +45,49 @@ class _SettingsPage extends State<SettingsPage> {
 
   Widget _buildWidget() {
     checkCredentials();
-    return Column(children: <Widget>[
-      Center(
-          child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-            Container(
-                width: 120.0,
-                height: 120.0,
-                decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    image: DecorationImage(
-                        fit: BoxFit.fill, image: checkforprofilepic())))
-          ])),
-          Padding(padding: const EdgeInsets.only(top: 20.0)),
-            Container(
-              child: ButtonTheme(
-                  minWidth: 275.0,
-                  height: 35.0,
-                  child: RaisedButton(
-                    textColor: Colors.white,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(20.0))),
-                    color: Colors.red,
-                    child: Text("Sign Out",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w700)),
-                    onPressed: () {
-                      signout();
-                      Navigator.pop(context);
-                    },
-                  )),
-            ),
-      
+    return ListView(children: <Widget>[
+      Column(children: <Widget>[
+        Padding(padding: const EdgeInsets.only(top: 20.0)),
+        Center(
+            child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+              Container(
+                  width: 120.0,
+                  height: 120.0,
+                  decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      image: DecorationImage(
+                          fit: BoxFit.fill, image: checkforprofilepic())))
+            ])),
+        Padding(padding: const EdgeInsets.only(top: 20.0)),
+        Text(
+          user.displayName,
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+        ),
+        Padding(padding: const EdgeInsets.only(top: 20.0)),
+        Container(
+          child: ButtonTheme(
+              minWidth: 275.0,
+              height: 35.0,
+              child: RaisedButton(
+                textColor: Colors.white,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                color: Colors.red,
+                child: Text("Sign Out",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w700)),
+                onPressed: () {
+                  signout();
+                  Navigator.pop(context);
+                },
+              )),
+        ),
+      ]),
     ]);
   }
 

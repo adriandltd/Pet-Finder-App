@@ -194,6 +194,7 @@ class _MyLoginPage extends State<MyLoginPage> {
 
     switch (result.status) {
       case TwitterLoginStatus.loggedIn:
+        
         FirebaseUser user = await FirebaseAuth.instance
             .signInWithCredential(credential)
             .whenComplete(() {
