@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'package:findmax/SwipeAnimation/chat.dart' as third;
+import 'package:findmax/chat.dart' as third;
 import 'package:findmax/SwipeAnimation/data.dart';
 import 'package:findmax/SwipeAnimation/dummyCard.dart';
 import 'package:findmax/SwipeAnimation/activeCard.dart';

@@ -1,4 +1,6 @@
+import 'package:findmax/editprofile.dart';
 import 'package:findmax/loginPage.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -57,7 +59,13 @@ class _SettingsPage extends State<SettingsPage> {
                           fontSize: 18,
                           fontWeight: FontWeight.w700)),
                   onPressed: () {
-                    
+                    Navigator.of(context, rootNavigator: true).push(
+                            CupertinoPageRoute<bool>(
+                              fullscreenDialog: true,
+                              builder: (BuildContext context) =>
+                                  EditProfilePage(),
+                            ),
+                          );
                   },
                 )),
           );
