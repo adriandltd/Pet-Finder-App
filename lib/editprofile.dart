@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -14,6 +15,7 @@ class _EditProfilePage extends State<EditProfilePage> {
     user = await FirebaseAuth.instance.currentUser();
   }
 
+  var nameCtrl = TextEditingController();
   FirebaseUser user;
 
   Widget _buildWidget() {
@@ -45,6 +47,112 @@ class _EditProfilePage extends State<EditProfilePage> {
             size: 40,
             color: Colors.black87,
           ),
+          onTap: () {
+            showDialog<bool>(
+              context: context,
+              builder: (context) {
+                return CupertinoAlertDialog(
+                  title: Text('Please Enter New Name'),
+                  content: Card(
+                    color: Colors.transparent,
+                    elevation: 0.0,
+                    child: Column(
+                      children: <Widget>[
+                        TextField(
+                          controller: nameCtrl,
+                          decoration: InputDecoration(
+                              labelText: "Name",
+                              filled: true,
+                              fillColor: Colors.grey.shade50),
+                        ),
+                        Padding(padding: const EdgeInsets.only(top: 15.0)),
+                        FlatButton(
+                          shape: RoundedRectangleBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(20.0))),
+                          color: Colors.orangeAccent[700],
+                          child: Text('Submit',
+                              style: TextStyle(color: Colors.white)),
+                          onPressed: () {
+                            FirebaseAuth.instance.currentUser().then((val) {
+                              UserUpdateInfo updateUser = UserUpdateInfo();
+                              if (nameCtrl.text.isNotEmpty) {
+                                updateUser.displayName = nameCtrl.text;
+                                //updateUser.photoUrl = picURL;
+                                val.updateProfile(updateUser);
+
+                                showDialog<void>(
+                                    context: context,
+                                    builder: (BuildContext context) {
+                                      return AlertDialog(
+                                        titlePadding: EdgeInsets.only(
+                                            top: 35, left: 10, right: 10),
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.all(
+                                                Radius.circular(15.0))),
+                                        title: const Text(
+                                          "Name successfully update!",
+                                          style: TextStyle(fontSize: 24),
+                                          textAlign: TextAlign.center,
+                                        ),
+                                        actions: <Widget>[
+                                          FlatButton(
+                                            shape: RoundedRectangleBorder(
+                                                borderRadius: BorderRadius.all(
+                                                    Radius.circular(20.0))),
+                                            color: Colors.orangeAccent[700],
+                                            child: Text('Ok',
+                                                style: TextStyle(
+                                                    color: Colors.white)),
+                                            onPressed: () {
+                                              Navigator.of(context).pop();
+                                            },
+                                          ),
+                                        ],
+                                      );
+                                    });
+                              } else {
+                                showDialog<void>(
+                                    context: context,
+                                    builder: (BuildContext context) {
+                                      return AlertDialog(
+                                        titlePadding: EdgeInsets.only(
+                                            top: 35, left: 10, right: 10),
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.all(
+                                                Radius.circular(15.0))),
+                                        title: const Text(
+                                          "Name can't be empty.",
+                                          style: TextStyle(fontSize: 24),
+                                          textAlign: TextAlign.center,
+                                        ),
+                                        actions: <Widget>[
+                                          FlatButton(
+                                            shape: RoundedRectangleBorder(
+                                                borderRadius: BorderRadius.all(
+                                                    Radius.circular(20.0))),
+                                            color: Colors.orangeAccent[700],
+                                            child: Text('Ok',
+                                                style: TextStyle(
+                                                    color: Colors.white)),
+                                            onPressed: () {
+                                              Navigator.of(context).pop();
+                                            },
+                                          ),
+                                        ],
+                                      );
+                                    });
+                              }
+                            });
+                          },
+                        ),
+                      ],
+                    ),
+                  ),
+                );
+              },
+            );
+          },
         ),
         Padding(padding: const EdgeInsets.only(top: 30.0)),
         ListTile(

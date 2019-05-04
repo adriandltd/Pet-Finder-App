@@ -65,7 +65,38 @@ class _MyLoginPage extends State<MyLoginPage> {
           });
         });
         pushtoHomePage(context);
-      } else if (!user.isEmailVerified) {
+      } else if (user == null || userCtrl.text.isEmpty || passCtrl.text.isEmpty){
+        // sign in unsuccessful
+        // ex: prompt the user to try again
+        setState(() {
+          _loading = false;
+        });
+        showDialog<void>(
+            context: context,
+            builder: (BuildContext context) {
+              return AlertDialog(
+                titlePadding: EdgeInsets.only(top: 35, left: 10, right: 10),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(15.0))),
+                title: const Text(
+                  'Incorrect Credentials.',
+                  style: TextStyle(fontSize: 24),
+                  textAlign: TextAlign.center,
+                ),
+                actions: <Widget>[
+                  FlatButton(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                    color: Colors.orangeAccent[700],
+                    child: Text('Ok', style: TextStyle(color: Colors.white)),
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    },
+                  ),
+                ],
+              );
+            });
+      }else if (!user.isEmailVerified) {
         // sign in unsuccessful
         // ex: prompt the user to try again
         user.sendEmailVerification();
@@ -97,38 +128,7 @@ class _MyLoginPage extends State<MyLoginPage> {
                 ],
               );
             });
-      } else {
-        // sign in unsuccessful
-        // ex: prompt the user to try again
-        setState(() {
-          _loading = false;
-        });
-        showDialog<void>(
-            context: context,
-            builder: (BuildContext context) {
-              return AlertDialog(
-                titlePadding: EdgeInsets.only(top: 35, left: 10, right: 10),
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(15.0))),
-                title: const Text(
-                  'Incorrect Credentials.',
-                  style: TextStyle(fontSize: 24),
-                  textAlign: TextAlign.center,
-                ),
-                actions: <Widget>[
-                  FlatButton(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(20.0))),
-                    color: Colors.orangeAccent[700],
-                    child: Text('Ok', style: TextStyle(color: Colors.white)),
-                    onPressed: () {
-                      Navigator.of(context).pop();
-                    },
-                  ),
-                ],
-              );
-            });
-      }
+      } 
     }
   }
 
