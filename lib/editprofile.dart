@@ -1,6 +1,8 @@
+import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:image_picker/image_picker.dart';
 
 class EditProfilePage extends StatefulWidget {
   EditProfilePage();
@@ -11,10 +13,18 @@ class EditProfilePage extends StatefulWidget {
 }
 
 class _EditProfilePage extends State<EditProfilePage> {
+  File _image;
   void checkCredentials() async {
     user = await FirebaseAuth.instance.currentUser();
   }
 
+  Future getImage() async {
+    var image = await ImagePicker.pickImage(source: ImageSource.gallery);
+
+    setState(() {
+      _image = image;
+    });
+  }
   var nameCtrl = TextEditingController();
   var emailCtrl = TextEditingController();
   var passCtrl = TextEditingController();
@@ -51,6 +61,8 @@ class _EditProfilePage extends State<EditProfilePage> {
             size: 40,
             color: Colors.black87,
           ),
+          onTap: (){
+            getImage();          },
         ),
         Padding(padding: const EdgeInsets.only(top: 30.0)),
         ListTile(

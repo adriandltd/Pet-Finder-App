@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Fri May 03 19:17:47 CDT 2019
+#Fri May 03 20:12:34 CDT 2019
 5.base=C\:\\Users\\Adrian\\Documents\\GitHub\\Pet-Finder-App\\build\\app\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out
 22.path=flutter_assets/vm_snapshot_data
 32.set=NATIVE_RESOURCE

@@ -7,13 +7,13 @@ INJECTED from C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\android\app\src\ma
 MERGED from [:firebase_auth] C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:shared_preferences] C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\build\shared_preferences\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:flutter_twitter_login] C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\build\flutter_twitter_login\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:image_picker] C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-22:12
 MERGED from [:flutter_facebook_login] C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\build\flutter_facebook_login\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:google_sign_in] C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\build\google_sign_in\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:firebase_core] C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.firebase:firebase-core:16.0.4] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\firebase-core-16.0.4.aar\7cd07f08e5cc920d68f4433c2a6435b3\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-auth:16.2.1] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\jetified-firebase-auth-16.2.1.aar\bad7bc686391fca4a2b55601ebe28019\AndroidManifest.xml:17:1-42:12
 MERGED from [com.twitter.sdk.android:twitter-core:3.1.1] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\twitter-core-3.1.1.aar\8ae057f5dd5bd606bec63718df30bcc9\AndroidManifest.xml:18:1-35:12
-MERGED from [com.facebook.android:facebook-login:4.39.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\jetified-facebook-login-4.39.0.aar\d37edfa70854817697c5ef92223a77f0\AndroidManifest.xml:21:1-31:12
 MERGED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\jetified-play-services-auth-16.0.1.aar\413a0193c3e7702c3f8b9e2538c4f7b0\AndroidManifest.xml:17:1-39:12
 MERGED from [com.google.android.gms:play-services-flags:16.0.1] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\play-services-flags-16.0.1.aar\610d292878fd7dcb91b303062a5e7c32\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\jetified-firebase-auth-interop-16.0.1.aar\70d35e620baea06094676b34d66b0f62\AndroidManifest.xml:2:1-10:12
@@ -32,18 +32,17 @@ MERGED from [com.google.android.gms:play-services-stats:16.0.1] C:\Users\Adrian\
 MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\jetified-firebase-measurement-connector-17.0.1.aar\8c1d4f3443f49530ed679409da7e79a0\AndroidManifest.xml:17:1-25:12
 MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\jetified-play-services-ads-identifier-16.0.0.aar\3bef2695c271ffe8d9cbfb0f02fcf661\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-16.1.0.aar\10a3dff098846d9e9c9a5e949efe7628\AndroidManifest.xml:17:1-28:12
+MERGED from [com.facebook.android:facebook-login:4.39.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\jetified-facebook-login-4.39.0.aar\d37edfa70854817697c5ef92223a77f0\AndroidManifest.xml:21:1-31:12
 MERGED from [com.facebook.android:facebook-common:4.39.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\jetified-facebook-common-4.39.0.aar\61f3cf4ce8f4400be66f319cf9ee5941\AndroidManifest.xml:21:1-37:12
-MERGED from [com.facebook.android:facebook-core:4.39.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\jetified-facebook-core-4.39.0.aar\58b127221f3121dccb95fabfca439f5f\AndroidManifest.xml:21:1-53:12
-MERGED from [androidx.appcompat:appcompat:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\appcompat-1.0.0.aar\f917285c639b7732e002eaf6f6e2a95c\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\legacy-support-v4-1.0.0.aar\f0dd5e7b62c24646fa41927769ff849f\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media:media:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\media-1.0.0.aar\ac83e0910078955f9a5a3eaf719d7ede\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\appcompat-1.0.0.aar\f917285c639b7732e002eaf6f6e2a95c\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\fragment-1.0.0.aar\761b5fd6a9868f0372b3230eeca0edfe\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.browser:browser:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\browser-1.0.0.aar\69639acfa7c885b405ddb9e189af4e23\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\vectordrawable-animated-1.0.0.aar\9d619dd55c5d531eab8d281a4b20197b\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\legacy-support-core-ui-1.0.0.aar\f76bde478a7cadbdfa4fe4f7cfb33ac7\AndroidManifest.xml:17:1-22:12
+MERGED from [com.facebook.android:facebook-core:4.39.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\jetified-facebook-core-4.39.0.aar\58b127221f3121dccb95fabfca439f5f\AndroidManifest.xml:21:1-53:12
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\legacy-support-core-utils-1.0.0.aar\8ee95f28fb8b9c7a56c92404aef1722c\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\cardview-1.0.0.aar\e08088ba115f9616299c8d694e7a072b\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\vectordrawable-1.0.0.aar\c402aca85bd3e1c5524b58aec3187f7b\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.media:media:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\media-1.0.0.aar\ac83e0910078955f9a5a3eaf719d7ede\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\loader-1.0.0.aar\14313caf72898ad89fd1e7f4440dc2ce\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\viewpager-1.0.0.aar\2e759d383134323784efb4b0a546517b\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-1.0.0.aar\abf6910778a6db72aa401ebd236329c3\AndroidManifest.xml:17:1-22:12
@@ -52,15 +51,17 @@ MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Adrian
 MERGED from [androidx.customview:customview:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\customview-1.0.0.aar\ce7bbbd1b6371dec477f21db99e8cd3b\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-1.0.0.aar\3511d49065d9c990867305494317e77c\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-1.0.0.aar\8684b5c1d33eae1c5f0f98846e735b1f\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\vectordrawable-1.0.0.aar\c402aca85bd3e1c5524b58aec3187f7b\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\core-1.0.0.aar\13413edf8f6f4d03bec427b29208096a\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.0.0.aar\0b0972194696dd84f4ead22157eea764\AndroidManifest.xml:17:1-25:12
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0.aar\f3434b58fb178030feb7029bba84f5b8\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.0.0.aar\1180d17e2ecfb56ada2e5b79d7a4a19f\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\documentfile-1.0.0.aar\dc2af13aa87dd579f1a86f198de67b76\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-1.0.0.aar\6f461287b89418d1746fef62da0d16ce\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\print-1.0.0.aar\33d4d82c7c268f8ea33adef5c77a497b\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\interpolator-1.0.0.aar\9d5844b81b02f92ee571f9628c110b57\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.0.0.aar\1180d17e2ecfb56ada2e5b79d7a4a19f\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0.aar\f3434b58fb178030feb7029bba84f5b8\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-2.0.0.aar\500ee239d3d667fc94d81f5d3dd70d3a\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\cardview-1.0.0.aar\e08088ba115f9616299c8d694e7a072b\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-2.0.0.aar\3d8f2268692fec6ea909fe730bc9b73a\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-core-2.0.0.aar\4864eb76337c08bf8164a73d70a42f24\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\core-runtime-2.0.0.aar\16af808fa201124a52445ffa3b5e3dc3\AndroidManifest.xml:17:1-22:12
@@ -100,14 +101,14 @@ MERGED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\Adrian\.gradle\ca
 		ADDED from C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:8:22-64
 application
 ADDED from C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml:15:5-56:19
+MERGED from [:image_picker] C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:10:5-20:19
+MERGED from [:image_picker] C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:10:5-20:19
 MERGED from [com.google.firebase:firebase-core:16.0.4] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\firebase-core-16.0.4.aar\7cd07f08e5cc920d68f4433c2a6435b3\AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-core:16.0.4] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\firebase-core-16.0.4.aar\7cd07f08e5cc920d68f4433c2a6435b3\AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-auth:16.2.1] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\jetified-firebase-auth-16.2.1.aar\bad7bc686391fca4a2b55601ebe28019\AndroidManifest.xml:23:5-40:19
 MERGED from [com.google.firebase:firebase-auth:16.2.1] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\jetified-firebase-auth-16.2.1.aar\bad7bc686391fca4a2b55601ebe28019\AndroidManifest.xml:23:5-40:19
 MERGED from [com.twitter.sdk.android:twitter-core:3.1.1] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\twitter-core-3.1.1.aar\8ae057f5dd5bd606bec63718df30bcc9\AndroidManifest.xml:27:5-33:19
 MERGED from [com.twitter.sdk.android:twitter-core:3.1.1] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\twitter-core-3.1.1.aar\8ae057f5dd5bd606bec63718df30bcc9\AndroidManifest.xml:27:5-33:19
-MERGED from [com.facebook.android:facebook-login:4.39.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\jetified-facebook-login-4.39.0.aar\d37edfa70854817697c5ef92223a77f0\AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-login:4.39.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\jetified-facebook-login-4.39.0.aar\d37edfa70854817697c5ef92223a77f0\AndroidManifest.xml:28:5-29:19
 MERGED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\jetified-play-services-auth-16.0.1.aar\413a0193c3e7702c3f8b9e2538c4f7b0\AndroidManifest.xml:22:5-37:19
 MERGED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\jetified-play-services-auth-16.0.1.aar\413a0193c3e7702c3f8b9e2538c4f7b0\AndroidManifest.xml:22:5-37:19
 MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\jetified-firebase-auth-interop-16.0.1.aar\70d35e620baea06094676b34d66b0f62\AndroidManifest.xml:7:5-8:19
@@ -138,6 +139,8 @@ MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] C:\User
 MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\jetified-play-services-ads-identifier-16.0.0.aar\3bef2695c271ffe8d9cbfb0f02fcf661\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-16.1.0.aar\10a3dff098846d9e9c9a5e949efe7628\AndroidManifest.xml:22:5-26:19
 MERGED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-16.1.0.aar\10a3dff098846d9e9c9a5e949efe7628\AndroidManifest.xml:22:5-26:19
+MERGED from [com.facebook.android:facebook-login:4.39.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\jetified-facebook-login-4.39.0.aar\d37edfa70854817697c5ef92223a77f0\AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-login:4.39.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\jetified-facebook-login-4.39.0.aar\d37edfa70854817697c5ef92223a77f0\AndroidManifest.xml:28:5-29:19
 MERGED from [com.facebook.android:facebook-common:4.39.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\jetified-facebook-common-4.39.0.aar\61f3cf4ce8f4400be66f319cf9ee5941\AndroidManifest.xml:28:5-35:19
 MERGED from [com.facebook.android:facebook-common:4.39.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\jetified-facebook-common-4.39.0.aar\61f3cf4ce8f4400be66f319cf9ee5941\AndroidManifest.xml:28:5-35:19
 MERGED from [com.facebook.android:facebook-core:4.39.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\jetified-facebook-core-4.39.0.aar\58b127221f3121dccb95fabfca439f5f\AndroidManifest.xml:28:5-51:19
@@ -242,6 +245,8 @@ MERGED from [:shared_preferences] C:\Users\Adrian\Documents\GitHub\Pet-Finder-Ap
 MERGED from [:shared_preferences] C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\build\shared_preferences\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:flutter_twitter_login] C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\build\flutter_twitter_login\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:flutter_twitter_login] C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\build\flutter_twitter_login\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:image_picker] C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:image_picker] C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:flutter_facebook_login] C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\build\flutter_facebook_login\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:flutter_facebook_login] C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\build\flutter_facebook_login\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:google_sign_in] C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\build\google_sign_in\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
@@ -254,8 +259,6 @@ MERGED from [com.google.firebase:firebase-auth:16.2.1] C:\Users\Adrian\.gradle\c
 MERGED from [com.google.firebase:firebase-auth:16.2.1] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\jetified-firebase-auth-16.2.1.aar\bad7bc686391fca4a2b55601ebe28019\AndroidManifest.xml:21:5-44
 MERGED from [com.twitter.sdk.android:twitter-core:3.1.1] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\twitter-core-3.1.1.aar\8ae057f5dd5bd606bec63718df30bcc9\AndroidManifest.xml:23:5-44
 MERGED from [com.twitter.sdk.android:twitter-core:3.1.1] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\twitter-core-3.1.1.aar\8ae057f5dd5bd606bec63718df30bcc9\AndroidManifest.xml:23:5-44
-MERGED from [com.facebook.android:facebook-login:4.39.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\jetified-facebook-login-4.39.0.aar\d37edfa70854817697c5ef92223a77f0\AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-login:4.39.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\jetified-facebook-login-4.39.0.aar\d37edfa70854817697c5ef92223a77f0\AndroidManifest.xml:24:5-26:41
 MERGED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\jetified-play-services-auth-16.0.1.aar\413a0193c3e7702c3f8b9e2538c4f7b0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\jetified-play-services-auth-16.0.1.aar\413a0193c3e7702c3f8b9e2538c4f7b0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-flags:16.0.1] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\play-services-flags-16.0.1.aar\610d292878fd7dcb91b303062a5e7c32\AndroidManifest.xml:20:5-44
@@ -292,14 +295,16 @@ MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] C:\User
 MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\jetified-play-services-ads-identifier-16.0.0.aar\3bef2695c271ffe8d9cbfb0f02fcf661\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-16.1.0.aar\10a3dff098846d9e9c9a5e949efe7628\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-16.1.0.aar\10a3dff098846d9e9c9a5e949efe7628\AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.android:facebook-login:4.39.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\jetified-facebook-login-4.39.0.aar\d37edfa70854817697c5ef92223a77f0\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-login:4.39.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\jetified-facebook-login-4.39.0.aar\d37edfa70854817697c5ef92223a77f0\AndroidManifest.xml:24:5-26:41
 MERGED from [com.facebook.android:facebook-common:4.39.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\jetified-facebook-common-4.39.0.aar\61f3cf4ce8f4400be66f319cf9ee5941\AndroidManifest.xml:24:5-26:41
 MERGED from [com.facebook.android:facebook-common:4.39.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\jetified-facebook-common-4.39.0.aar\61f3cf4ce8f4400be66f319cf9ee5941\AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-core:4.39.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\jetified-facebook-core-4.39.0.aar\58b127221f3121dccb95fabfca439f5f\AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-core:4.39.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\jetified-facebook-core-4.39.0.aar\58b127221f3121dccb95fabfca439f5f\AndroidManifest.xml:24:5-26:41
-MERGED from [androidx.appcompat:appcompat:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\appcompat-1.0.0.aar\f917285c639b7732e002eaf6f6e2a95c\AndroidManifest.xml:20:5-44
-MERGED from [androidx.appcompat:appcompat:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\appcompat-1.0.0.aar\f917285c639b7732e002eaf6f6e2a95c\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\legacy-support-v4-1.0.0.aar\f0dd5e7b62c24646fa41927769ff849f\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\legacy-support-v4-1.0.0.aar\f0dd5e7b62c24646fa41927769ff849f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\media-1.0.0.aar\ac83e0910078955f9a5a3eaf719d7ede\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\media-1.0.0.aar\ac83e0910078955f9a5a3eaf719d7ede\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\appcompat-1.0.0.aar\f917285c639b7732e002eaf6f6e2a95c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\appcompat-1.0.0.aar\f917285c639b7732e002eaf6f6e2a95c\AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\fragment-1.0.0.aar\761b5fd6a9868f0372b3230eeca0edfe\AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\fragment-1.0.0.aar\761b5fd6a9868f0372b3230eeca0edfe\AndroidManifest.xml:20:5-44
 MERGED from [androidx.browser:browser:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\browser-1.0.0.aar\69639acfa7c885b405ddb9e189af4e23\AndroidManifest.xml:20:5-44
@@ -308,14 +313,10 @@ MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\Adr
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\vectordrawable-animated-1.0.0.aar\9d619dd55c5d531eab8d281a4b20197b\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\legacy-support-core-ui-1.0.0.aar\f76bde478a7cadbdfa4fe4f7cfb33ac7\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\legacy-support-core-ui-1.0.0.aar\f76bde478a7cadbdfa4fe4f7cfb33ac7\AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.android:facebook-core:4.39.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\jetified-facebook-core-4.39.0.aar\58b127221f3121dccb95fabfca439f5f\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-core:4.39.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\jetified-facebook-core-4.39.0.aar\58b127221f3121dccb95fabfca439f5f\AndroidManifest.xml:24:5-26:41
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\legacy-support-core-utils-1.0.0.aar\8ee95f28fb8b9c7a56c92404aef1722c\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\legacy-support-core-utils-1.0.0.aar\8ee95f28fb8b9c7a56c92404aef1722c\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\cardview-1.0.0.aar\e08088ba115f9616299c8d694e7a072b\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\cardview-1.0.0.aar\e08088ba115f9616299c8d694e7a072b\AndroidManifest.xml:20:5-44
-MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\vectordrawable-1.0.0.aar\c402aca85bd3e1c5524b58aec3187f7b\AndroidManifest.xml:20:5-44
-MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\vectordrawable-1.0.0.aar\c402aca85bd3e1c5524b58aec3187f7b\AndroidManifest.xml:20:5-44
-MERGED from [androidx.media:media:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\media-1.0.0.aar\ac83e0910078955f9a5a3eaf719d7ede\AndroidManifest.xml:20:5-44
-MERGED from [androidx.media:media:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\media-1.0.0.aar\ac83e0910078955f9a5a3eaf719d7ede\AndroidManifest.xml:20:5-44
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\loader-1.0.0.aar\14313caf72898ad89fd1e7f4440dc2ce\AndroidManifest.xml:20:5-44
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\loader-1.0.0.aar\14313caf72898ad89fd1e7f4440dc2ce\AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\viewpager-1.0.0.aar\2e759d383134323784efb4b0a546517b\AndroidManifest.xml:20:5-44
@@ -332,12 +333,14 @@ MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Adri
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-1.0.0.aar\3511d49065d9c990867305494317e77c\AndroidManifest.xml:20:5-44
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-1.0.0.aar\8684b5c1d33eae1c5f0f98846e735b1f\AndroidManifest.xml:20:5-44
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-1.0.0.aar\8684b5c1d33eae1c5f0f98846e735b1f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\vectordrawable-1.0.0.aar\c402aca85bd3e1c5524b58aec3187f7b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\vectordrawable-1.0.0.aar\c402aca85bd3e1c5524b58aec3187f7b\AndroidManifest.xml:20:5-44
 MERGED from [androidx.core:core:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\core-1.0.0.aar\13413edf8f6f4d03bec427b29208096a\AndroidManifest.xml:20:5-44
 MERGED from [androidx.core:core:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\core-1.0.0.aar\13413edf8f6f4d03bec427b29208096a\AndroidManifest.xml:20:5-44
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.0.0.aar\0b0972194696dd84f4ead22157eea764\AndroidManifest.xml:20:5-44
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.0.0.aar\0b0972194696dd84f4ead22157eea764\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0.aar\f3434b58fb178030feb7029bba84f5b8\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0.aar\f3434b58fb178030feb7029bba84f5b8\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.0.0.aar\1180d17e2ecfb56ada2e5b79d7a4a19f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.0.0.aar\1180d17e2ecfb56ada2e5b79d7a4a19f\AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\documentfile-1.0.0.aar\dc2af13aa87dd579f1a86f198de67b76\AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\documentfile-1.0.0.aar\dc2af13aa87dd579f1a86f198de67b76\AndroidManifest.xml:20:5-44
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-1.0.0.aar\6f461287b89418d1746fef62da0d16ce\AndroidManifest.xml:20:5-44
@@ -346,10 +349,12 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\Adrian\.gradle\caches\transfor
 MERGED from [androidx.print:print:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\print-1.0.0.aar\33d4d82c7c268f8ea33adef5c77a497b\AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\interpolator-1.0.0.aar\9d5844b81b02f92ee571f9628c110b57\AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\interpolator-1.0.0.aar\9d5844b81b02f92ee571f9628c110b57\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.0.0.aar\1180d17e2ecfb56ada2e5b79d7a4a19f\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.0.0.aar\1180d17e2ecfb56ada2e5b79d7a4a19f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0.aar\f3434b58fb178030feb7029bba84f5b8\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0.aar\f3434b58fb178030feb7029bba84f5b8\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-2.0.0.aar\500ee239d3d667fc94d81f5d3dd70d3a\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-2.0.0.aar\500ee239d3d667fc94d81f5d3dd70d3a\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\cardview-1.0.0.aar\e08088ba115f9616299c8d694e7a072b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\cardview-1.0.0.aar\e08088ba115f9616299c8d694e7a072b\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-2.0.0.aar\3d8f2268692fec6ea909fe730bc9b73a\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-2.0.0.aar\3d8f2268692fec6ea909fe730bc9b73a\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-core-2.0.0.aar\4864eb76337c08bf8164a73d70a42f24\AndroidManifest.xml:20:5-44
@@ -368,6 +373,30 @@ INJECTED from C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\android\app\src\ma
 		INJECTED from C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml
 		ADDED from C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\android\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from [:image_picker] C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-80
+	android:name
+		ADDED from [:image_picker] C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:7:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from [:image_picker] C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:8:5-81
+	android:name
+		ADDED from [:image_picker] C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:8:22-78
+provider#io.flutter.plugins.imagepicker.ImagePickerFileProvider
+ADDED from [:image_picker] C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:11:9-19:20
+	android:grantUriPermissions
+		ADDED from [:image_picker] C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-47
+	android:authorities
+		ADDED from [:image_picker] C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-74
+	android:exported
+		ADDED from [:image_picker] C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-37
+	android:name
+		ADDED from [:image_picker] C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-82
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [:image_picker] C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:16:13-18:75
+	android:resource
+		ADDED from [:image_picker] C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:18:17-72
+	android:name
+		ADDED from [:image_picker] C:\Users\Adrian\Documents\GitHub\Pet-Finder-App\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:17:17-67
 activity#com.google.firebase.auth.internal.FederatedSignInActivity
 ADDED from [com.google.firebase:firebase-auth:16.2.1] C:\Users\Adrian\.gradle\caches\transforms-1\files-1.1\jetified-firebase-auth-16.2.1.aar\bad7bc686391fca4a2b55601ebe28019\AndroidManifest.xml:24:9-31:50
 	android:excludeFromRecents

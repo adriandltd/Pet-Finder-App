@@ -17,12 +17,12 @@ dependencies:
   keyboard_avoider: ^0.1.2
   gradient_app_bar:
   preferences: ^2.0.0
+  image_picker: any
   
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
 
 # For information on the generic Dart part of this file, see the
 # following page: https://www.dartlang.org/tools/pub/pubspec
