@@ -16,6 +16,10 @@ class _EditProfilePage extends State<EditProfilePage> {
   }
 
   var nameCtrl = TextEditingController();
+  var emailCtrl = TextEditingController();
+  var passCtrl = TextEditingController();
+  var passCtrl2 = TextEditingController();
+
   FirebaseUser user;
 
   Widget _buildWidget() {
@@ -39,6 +43,18 @@ class _EditProfilePage extends State<EditProfilePage> {
         Padding(padding: const EdgeInsets.only(top: 45.0)),
         ListTile(
           title: Text(
+            "Change Profile Picture",
+            style: TextStyle(fontSize: 25, color: Colors.black54),
+          ),
+          leading: Icon(
+            Icons.person_outline,
+            size: 40,
+            color: Colors.black87,
+          ),
+        ),
+        Padding(padding: const EdgeInsets.only(top: 30.0)),
+        ListTile(
+          title: Text(
             "Change Display Name",
             style: TextStyle(fontSize: 25, color: Colors.black54),
           ),
@@ -54,7 +70,7 @@ class _EditProfilePage extends State<EditProfilePage> {
                 return CupertinoAlertDialog(
                   title: Text('Please Enter New Name'),
                   content: Card(
-                    color: Colors.transparent,
+                    color: Colors.white30,
                     elevation: 0.0,
                     child: Column(
                       children: <Widget>[
@@ -105,6 +121,7 @@ class _EditProfilePage extends State<EditProfilePage> {
                                                 style: TextStyle(
                                                     color: Colors.white)),
                                             onPressed: () {
+                                              nameCtrl.clear();
                                               Navigator.of(context).pop();
                                             },
                                           ),
@@ -154,18 +171,7 @@ class _EditProfilePage extends State<EditProfilePage> {
             );
           },
         ),
-        Padding(padding: const EdgeInsets.only(top: 30.0)),
-        ListTile(
-          title: Text(
-            "Change Email",
-            style: TextStyle(fontSize: 25, color: Colors.black54),
-          ),
-          leading: Icon(
-            Icons.email,
-            size: 40,
-            color: Colors.black87,
-          ),
-        ),
+        
         Padding(padding: const EdgeInsets.only(top: 30.0)),
         ListTile(
           title: Text(
@@ -177,6 +183,117 @@ class _EditProfilePage extends State<EditProfilePage> {
             size: 40,
             color: Colors.black87,
           ),
+          onTap: () {
+            showDialog<bool>(
+              context: context,
+              builder: (context) {
+                return CupertinoAlertDialog(
+                  title: Text('Please Enter New Password'),
+                  content: Card(
+                    color: Colors.white30,
+                    elevation: 0.0,
+                    child: Column(
+                      children: <Widget>[
+                        TextField(
+                          controller: passCtrl,
+                          decoration: InputDecoration(
+                              labelText: "Password",
+                              filled: true,
+                              fillColor: Colors.grey.shade50),
+                        ),
+                        Padding(padding: const EdgeInsets.only(top: 15.0)),
+                        TextField(
+                          controller: passCtrl2,
+                          decoration: InputDecoration(
+                              labelText: "Confirm Password",
+                              filled: true,
+                              fillColor: Colors.grey.shade50),
+                        ),
+                        Padding(padding: const EdgeInsets.only(top: 15.0)),
+                        FlatButton(
+                          shape: RoundedRectangleBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(20.0))),
+                          color: Colors.orangeAccent[700],
+                          child: Text('Submit',
+                              style: TextStyle(color: Colors.white)),
+                          onPressed: () {
+                            FirebaseAuth.instance.currentUser().then((val) {
+                              if (passCtrl.text.length > 5 && passCtrl2.text.length > 5 && passCtrl.text==passCtrl2.text) {
+                                user.updatePassword(passCtrl.text);
+
+                                showDialog<void>(
+                                    context: context,
+                                    builder: (BuildContext context) {
+                                      return AlertDialog(
+                                        titlePadding: EdgeInsets.only(
+                                            top: 35, left: 10, right: 10),
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.all(
+                                                Radius.circular(15.0))),
+                                        title: const Text(
+                                          "Password successfully update!",
+                                          style: TextStyle(fontSize: 24),
+                                          textAlign: TextAlign.center,
+                                        ),
+                                        actions: <Widget>[
+                                          FlatButton(
+                                            shape: RoundedRectangleBorder(
+                                                borderRadius: BorderRadius.all(
+                                                    Radius.circular(20.0))),
+                                            color: Colors.orangeAccent[700],
+                                            child: Text('Ok',
+                                                style: TextStyle(
+                                                    color: Colors.white)),
+                                            onPressed: () {
+                                              Navigator.of(context).pop();
+                                            },
+                                          ),
+                                        ],
+                                      );
+                                    });
+                              } else {
+                                showDialog<void>(
+                                    context: context,
+                                    builder: (BuildContext context) {
+                                      return AlertDialog(
+                                        titlePadding: EdgeInsets.only(
+                                            top: 35, left: 10, right: 10),
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.all(
+                                                Radius.circular(15.0))),
+                                        title: const Text(
+                                          "Password Invalid. Make sure passwords match and are at least 6 characters long.",
+                                          style: TextStyle(fontSize: 24),
+                                          textAlign: TextAlign.center,
+                                        ),
+                                        actions: <Widget>[
+                                          FlatButton(
+                                            shape: RoundedRectangleBorder(
+                                                borderRadius: BorderRadius.all(
+                                                    Radius.circular(20.0))),
+                                            color: Colors.orangeAccent[700],
+                                            child: Text('Ok',
+                                                style: TextStyle(
+                                                    color: Colors.white)),
+                                            onPressed: () {
+                                              Navigator.of(context).pop();
+                                            },
+                                          ),
+                                        ],
+                                      );
+                                    });
+                              }
+                            });
+                          },
+                        ),
+                      ],
+                    ),
+                  ),
+                );
+              },
+            );
+          },
         ),
       ]),
     );
