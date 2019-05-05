@@ -102,12 +102,12 @@ Positioned cardDemo(
                                     width: 130.0,
                                     alignment: Alignment.center,
                                     decoration: new BoxDecoration(
-                                      color: Colors.red,
+                                      color: Colors.green,
                                       borderRadius:
                                           new BorderRadius.circular(60.0),
                                     ),
                                     child: new Text(
-                                      "DON'T",
+                                      "YOURS?",
                                       style: new TextStyle(color: Colors.white),
                                     ),
                                   )),
@@ -121,12 +121,12 @@ Positioned cardDemo(
                                     width: 130.0,
                                     alignment: Alignment.center,
                                     decoration: new BoxDecoration(
-                                      color: Colors.cyan,
+                                      color: Colors.red,
                                       borderRadius:
                                           new BorderRadius.circular(60.0),
                                     ),
                                     child: new Text(
-                                      "I'M IN",
+                                      "NOT YOURS",
                                       style: new TextStyle(color: Colors.white),
                                     ),
                                   ))

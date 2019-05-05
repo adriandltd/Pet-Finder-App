@@ -28,7 +28,7 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   List selectedData = [];
   void initState() {
     super.initState();
-    tabcontroller = TabController(length: 3, vsync: this);
+    tabcontroller = TabController(length: 3, vsync: this, initialIndex: 1);
     _buttonController = new AnimationController(
         duration: new Duration(milliseconds: 1000), vsync: this);
 
@@ -154,8 +154,8 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             bottom: TabBar(
               controller: tabcontroller,
               tabs: <Widget>[
-                Tab(icon: Icon(Icons.home)),
                 Tab(icon: Icon(Icons.chat)),
+                Tab(icon: Icon(Icons.home)),
                 Tab(icon: Icon(Icons.settings)),
               ],
             ),
@@ -174,6 +174,7 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           body: TabBarView(
             controller: tabcontroller,
             children: <Widget>[
+              third.ChatPage(),
               Container(
                 decoration: BoxDecoration(
                   gradient: RadialGradient(
@@ -222,7 +223,6 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         style:
                             new TextStyle(color: Colors.white, fontSize: 50.0)),
               ),
-              third.ChatPage(),
               first.SettingsPage(),
             ],
           ),

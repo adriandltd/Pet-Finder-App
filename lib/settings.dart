@@ -139,7 +139,7 @@ class _SettingsPage extends State<SettingsPage> {
                           fontWeight: FontWeight.w700)),
                   onPressed: () {
                     signout();
-                    Navigator.pop(context);
+                    Navigator.popUntil(context, ModalRoute.withName(Navigator.defaultRouteName));
                   },
                 )),
           ),
