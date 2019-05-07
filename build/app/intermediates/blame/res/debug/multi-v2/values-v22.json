@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\istic\\Documents\\GitHub\\Pet-Finder-App\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v22\\values-v22.xml",
+            "outputFile": "C:\\Users\\Adrian\\Documents\\GitHub\\Pet-Finder-App\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v22\\values-v22.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\istic\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\1a7e00acbcf342fd7695f1ca84242dac\\res\\values-v22\\values-v22.xml",
+                    "source": "C:\\Users\\Adrian\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\f917285c639b7732e002eaf6f6e2a95c\\res\\values-v22\\values-v22.xml",
                     "from": {
                         "startLines": "2,3,4,9",
                         "startColumns": "4,4,4,4",
