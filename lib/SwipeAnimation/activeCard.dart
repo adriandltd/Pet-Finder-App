@@ -1,5 +1,5 @@
 import 'dart:math';
-
+import 'package:findmax/chat.dart';
 import 'package:findmax/SwipeAnimation/detail.dart';
 import 'package:flutter/material.dart';
 
@@ -115,7 +115,9 @@ Positioned cardDemo(
                                   padding: new EdgeInsets.all(0.0),
                                   onPressed: () {
                                     swipeRight();
-                                  },
+                                     Navigator.push(context,
+                                      MaterialPageRoute(builder: (context) => ChatPage()));
+                                     },
                                   child: new Container(
                                     height: 60.0,
                                     width: 130.0,

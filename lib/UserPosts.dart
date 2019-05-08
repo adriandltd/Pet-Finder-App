@@ -4,66 +4,162 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:image_picker/image_picker.dart';
 
-class UserPostPage extends StatefulWidget {
-  UserPostPage();
+var proofPic;
+
+void main() => runApp(new CameraApp());
+
+class CameraApp extends StatefulWidget {
   @override
-  _UserPostPage createState() {
-    return new _UserPostPage();
-  }
+  _CameraAppState createState() => _CameraAppState();
 }
 
-class _UserPostPage extends State<UserPostPage> {
-  
-  Widget _buildWidget() {
-    return Container(
+class _CameraAppState extends State<CameraApp> {
+  File image;
 
-    );
+//  To use Gallery or File Manager to pick Image
+//  Comment Line No. 19 and uncomment Line number 20
+  picker() async {
+    print('Picker is called');
+    File img = await ImagePicker.pickImage(source: ImageSource.camera);
+    File img2 = await ImagePicker.pickImage(source: ImageSource.gallery);
+    if (img != null) {
+      image = img;
+      proofPic = img;
+      setState(() {});
+    }
+  }
+
+  var dogName = TextEditingController();
+  var dogDesc = TextEditingController();
+  var dogLocation = TextEditingController();
+  FocusNode textSecondFocusNode = FocusNode();
+  FocusNode textThirdFocusNode = FocusNode();
+  FocusNode textFourthFocusNode = FocusNode();
+  FocusNode textFifthFocusNode = FocusNode();
+
+  createPost(){
+    
   }
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        decoration: BoxDecoration(
-          gradient: RadialGradient(
-            radius: 0.9,
-            center: Alignment.center,
-            stops: [.33, .66, .99],
-            colors: [
-              // Color.fromRGBO(255, 180, 109, 1),
-              // Color.fromRGBO(255, 150, 70, 1),
-              // Color.fromRGBO(255, 128, 43, 1),
-              Color.fromRGBO(255, 212, 109, 1),
-              Color.fromRGBO(255, 200, 70, 1),
-              Color.fromRGBO(255, 194, 43, 1),
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Image Picker'),
+        ),
+        body: Center(
+          child: Row(
+            children: <Widget>[
+              Center(
+                child: Column(
+                  children: <Widget>[
+                    Padding(padding: const EdgeInsets.only(bottom: 35.0)),
+                    Container(
+                      width: 325,
+                      child: TextFormField(
+                        autofocus: false,
+                        keyboardType: TextInputType.text,
+                        textInputAction: TextInputAction.next,
+                        controller: dogName,
+                        decoration: InputDecoration(
+                            filled: true,
+                            fillColor: Colors.white,
+                            hintText: "Does the dog have a nametag?",
+                            contentPadding: EdgeInsets.all(15),
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(40)),
+                            focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(40))),
+                        textCapitalization: TextCapitalization.none,
+                        autocorrect: false,
+                        onFieldSubmitted: (nameCtrl) {
+                          FocusScope.of(context).requestFocus(textSecondFocusNode);
+                        },
+                      ),
+                    ),
+                     Padding(padding: const EdgeInsets.only(top: 20.0)),
+                  Container(
+                      width: 325,
+                      child: TextFormField(
+                        autofocus: false,
+                        keyboardType: TextInputType.text,
+                        textInputAction: TextInputAction.next,
+                        controller: dogDesc,
+                        decoration: InputDecoration(
+                            filled: true,
+                            fillColor: Colors.white,
+                            hintText: "Describe the dogs appearence",
+                            contentPadding: EdgeInsets.all(15),
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(40)),
+                            focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(40))),
+                        textCapitalization: TextCapitalization.none,
+                        autocorrect: false,
+                        onFieldSubmitted: (userCtrl) {
+                          FocusScope.of(context).requestFocus(textThirdFocusNode);
+                        },
+                        focusNode: textSecondFocusNode,
+                      )),
+                       Padding(padding: const EdgeInsets.only(top: 20.0)),
+                  Container(
+                      width: 325,
+                      child: TextFormField(
+                        textInputAction: TextInputAction.done,
+                        controller: dogLocation,
+                        decoration: InputDecoration(
+                            filled: true,
+                            fillColor: Colors.white,
+                            hintText: "Where did you find the dog?",
+                            contentPadding: EdgeInsets.all(15),
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(40)),
+                            focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(40))),
+                        onFieldSubmitted: (passCtrl) {
+                          FocusScope.of(context).requestFocus(textFourthFocusNode);
+                        },
+                        focusNode: textFifthFocusNode,
+                      )),
+                   Padding(padding: const EdgeInsets.only(top: 40.0)),
+                   Container(
+                      child: Center(
+                        child: image == null
+                            ? Text('No Image to Show ')
+                            : Image.file(
+                                image,
+                                width: 300,
+                                height: 300,
+                              ),
+                      ),
+                    ),
+                    Padding(padding: const EdgeInsets.only(top: 40.0)),
+                  ButtonTheme(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                      minWidth: 275.0,
+                      height: 45.0,
+                      child: RaisedButton(
+                          color: Color.fromRGBO(255, 128, 43, 1),
+                          child: Text("Submit",
+                              style: TextStyle(color: Colors.white, fontSize: 18)),
+                          onPressed: () {
+                            createPost();
+                            Navigator.pop(context);
+                          })),
+                    ]
+                    ,
+                ),
+              ),
             ],
           ),
         ),
-        child: Scaffold(
-          appBar: AppBar(
-              leading: IconButton(
-                  icon: Icon(Icons.arrow_back_ios),
-                  onPressed: () {
-                    Navigator.pop(context);
-                  }),
-              elevation: 3,
-              centerTitle: true,
-              backgroundColor: Color.fromRGBO(255, 128, 43, 1),
-              title: Text("Make a Post",
-                  style: TextStyle(
-                      shadows: <Shadow>[
-                        Shadow(
-                          offset: Offset(0.25, 0.25),
-                          blurRadius: 12.0,
-                          color: Color.fromARGB(185, 0, 0, 0),
-                        ),
-                      ],
-                      color: Colors.white,
-                      fontSize: 25,
-                      fontWeight: FontWeight.w600,
-                      fontFamily: 'Myriad'))),
-          backgroundColor: Colors.white,
-          resizeToAvoidBottomPadding: false,
-          body: _buildWidget(),
-        ));
+        floatingActionButton: FloatingActionButton(
+          onPressed: picker,
+          child: Icon(Icons.camera_alt),
+        ),
+      ),
+    );
   }
 }
