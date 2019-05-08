@@ -18,7 +18,6 @@ dependencies:
   gradient_app_bar:
   preferences: ^2.0.0
   image_picker: any
-  
 
 dev_dependencies:
   flutter_test:
