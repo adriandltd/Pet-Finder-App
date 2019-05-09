@@ -86,6 +86,7 @@ class _CameraAppState extends State<CameraApp> {
                     children: <Widget>[
                       Icon(
                         Icons.image,
+                        color: Color.fromRGBO(255, 128, 43, 1),
                         size: 100,
                       ),
                       ButtonTheme(
@@ -114,6 +115,7 @@ class _CameraAppState extends State<CameraApp> {
                     children: <Widget>[
                       Icon(
                         Icons.camera_alt,
+                        color: Color.fromRGBO(255, 128, 43, 1),
                         size: 100,
                       ),
                       ButtonTheme(

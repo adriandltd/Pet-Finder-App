@@ -506,7 +506,7 @@ class ChatScreenState extends State<ChatScreen> {
             child: new Container(
               margin: new EdgeInsets.symmetric(horizontal: 1.0),
               child: new IconButton(
-                icon: new Icon(Icons.image),
+                icon: new Icon(Icons.image,color: Color.fromRGBO(255, 128, 43, 1),),
                 onPressed: getImage,
                 color: primaryColor,
               ),
@@ -517,7 +517,7 @@ class ChatScreenState extends State<ChatScreen> {
             child: new Container(
               margin: new EdgeInsets.symmetric(horizontal: 1.0),
               child: new IconButton(
-                icon: new Icon(Icons.face),
+                icon: new Icon(Icons.face,color: Color.fromRGBO(255, 128, 43, 1),),
                 onPressed: getSticker,
                 color: primaryColor,
               ),
@@ -533,7 +533,7 @@ class ChatScreenState extends State<ChatScreen> {
                 controller: textEditingController,
                 decoration: InputDecoration.collapsed(
                   hintText: 'Type your message...',
-                  hintStyle: TextStyle(color: greyColor),
+                  hintStyle: TextStyle(color: Colors.orangeAccent[900]),
                 ),
                 focusNode: focusNode,
               ),
@@ -545,7 +545,7 @@ class ChatScreenState extends State<ChatScreen> {
             child: new Container(
               margin: new EdgeInsets.symmetric(horizontal: 8.0),
               child: new IconButton(
-                icon: new Icon(Icons.send),
+                icon: new Icon(Icons.send,color: Color.fromRGBO(255, 128, 43, 1),),
                 onPressed: () => onSendMessage(textEditingController.text, 0),
                 color: primaryColor,
               ),
