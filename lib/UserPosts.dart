@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:keyboard_avoider/keyboard_avoider.dart';
+import 'package:findmax/SwipeAnimation/data.dart';
 
 var proofPic;
 
@@ -23,9 +24,10 @@ class _CameraAppState extends State<CameraApp> {
     print('Camera Picker is called');
     File img = await ImagePicker.pickImage(source: ImageSource.camera);
     if (img != null) {
-      image = img;
-      proofPic = img;
-      setState(() {});
+      setState(() {
+        image = img;
+        proofPic = img;
+      });
     }
   }
 
@@ -33,9 +35,10 @@ class _CameraAppState extends State<CameraApp> {
     print('Gallery Picker is called');
     File img = await ImagePicker.pickImage(source: ImageSource.gallery);
     if (img != null) {
-      image = img;
-      proofPic = img;
-      setState(() {});
+      setState(() {
+        image = img;
+        proofPic = img;
+      });
     }
   }
 
@@ -48,11 +51,14 @@ class _CameraAppState extends State<CameraApp> {
   FocusNode textFifthFocusNode = FocusNode();
 
   createPost() {
-    
-
-
-
-
+    // DecorationImage image69 = new DecorationImage(
+    //   image: img,
+    //   fit: BoxFit.cover,
+    // );
+    //imageData.add(image);
+    dogNames.add(dogName.text);
+    dogDescription.add(dogDesc.text);
+    foundWhere.add(dogLocation.text);
   }
 
   @override
@@ -181,7 +187,10 @@ class _CameraAppState extends State<CameraApp> {
                         height: 55.0,
                         child: RaisedButton(
                             color: Color.fromRGBO(255, 128, 43, 1),
-                            child: Icon(Icons.image, color: Colors.white,),
+                            child: Icon(
+                              Icons.image,
+                              color: Colors.white,
+                            ),
                             onPressed: pickerGallery),
                       ),
                     )
