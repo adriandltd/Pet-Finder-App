@@ -24,7 +24,10 @@ class _EditProfilePage extends State<EditProfilePage> {
     setState(() {
       _image = image;
     });
+
+
   }
+
   var nameCtrl = TextEditingController();
   var emailCtrl = TextEditingController();
   var passCtrl = TextEditingController();

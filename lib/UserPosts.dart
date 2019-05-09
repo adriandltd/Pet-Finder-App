@@ -48,10 +48,11 @@ class _CameraAppState extends State<CameraApp> {
   FocusNode textFifthFocusNode = FocusNode();
 
   createPost() {
-
-
-
     
+
+
+
+
   }
 
   @override
