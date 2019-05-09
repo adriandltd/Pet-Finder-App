@@ -164,7 +164,7 @@ class _DetailPageState extends State<DetailPage> with TickerProviderStateMixin {
                                                 children: <Widget>[
                                                   new Icon(
                                                     Icons.access_time,
-                                                    color: Colors.cyan,
+                                                    color: Color.fromRGBO(255, 128, 43, 1),
                                                   ),
                                                   new Padding(
                                                     padding:
@@ -180,7 +180,7 @@ class _DetailPageState extends State<DetailPage> with TickerProviderStateMixin {
                                                 children: <Widget>[
                                                   new Icon(
                                                     Icons.map,
-                                                    color: Colors.cyan,
+                                                    color: Color.fromRGBO(255, 128, 43, 1),
                                                   ),
                                                   new Padding(
                                                     padding:
