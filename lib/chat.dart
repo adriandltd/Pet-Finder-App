@@ -8,7 +8,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
   Color primaryColor = Colors.blue;
   Color greyColor = Colors.teal;
-  Color greyColor2 = Colors.yellow;
+  Color greyColor2 = Colors.orangeAccent[900];
   Color themeColor = Colors.pinkAccent;
 
   
@@ -504,21 +504,11 @@ class ChatScreenState extends State<ChatScreen> {
           // Button send image
           Material(
             child: new Container(
+              padding: EdgeInsets.only(bottom: 20),
               margin: new EdgeInsets.symmetric(horizontal: 1.0),
               child: new IconButton(
-                icon: new Icon(Icons.image,color: Color.fromRGBO(255, 128, 43, 1),),
+                icon: new Icon(Icons.image,color: Color.fromRGBO(255, 128, 43, 1),size: 50,),
                 onPressed: getImage,
-                color: primaryColor,
-              ),
-            ),
-            color: Colors.white,
-          ),
-          Material(
-            child: new Container(
-              margin: new EdgeInsets.symmetric(horizontal: 1.0),
-              child: new IconButton(
-                icon: new Icon(Icons.face,color: Color.fromRGBO(255, 128, 43, 1),),
-                onPressed: getSticker,
                 color: primaryColor,
               ),
             ),
@@ -528,12 +518,13 @@ class ChatScreenState extends State<ChatScreen> {
           // Edit text
           Flexible(
             child: Container(
+              padding: EdgeInsets.only(left: 30,),
               child: TextField(
                 style: TextStyle(color: primaryColor, fontSize: 15.0),
                 controller: textEditingController,
                 decoration: InputDecoration.collapsed(
                   hintText: 'Type your message...',
-                  hintStyle: TextStyle(color: Colors.orangeAccent[900]),
+                  hintStyle: TextStyle(color: Colors.orangeAccent[900], fontSize: 25, fontFamily: 'Myriad'),
                 ),
                 focusNode: focusNode,
               ),
@@ -543,9 +534,10 @@ class ChatScreenState extends State<ChatScreen> {
           // Button send message
           Material(
             child: new Container(
+              padding: EdgeInsets.only(right: 20, bottom: 10),
               margin: new EdgeInsets.symmetric(horizontal: 8.0),
               child: new IconButton(
-                icon: new Icon(Icons.send,color: Color.fromRGBO(255, 128, 43, 1),),
+                icon: new Icon(Icons.send,color: Color.fromRGBO(255, 128, 43, 1),size: 40,),
                 onPressed: () => onSendMessage(textEditingController.text, 0),
                 color: primaryColor,
               ),
@@ -555,9 +547,9 @@ class ChatScreenState extends State<ChatScreen> {
         ],
       ),
       width: double.infinity,
-      height: 50.0,
+      height: 75.0,
       decoration: new BoxDecoration(
-          border: new Border(top: new BorderSide(color: greyColor2, width: 0.5)), color: Colors.white),
+          border: new Border(top: new BorderSide(color: Colors.orangeAccent, width: 2)), color: Colors.white),
     );
   }
 

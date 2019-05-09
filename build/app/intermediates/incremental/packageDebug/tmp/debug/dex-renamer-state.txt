@@ -1,4 +1,4 @@
-#Wed May 08 22:52:58 CDT 2019
-base.0=C\:\\Users\\Adrian\\Documents\\GitHub\\Pet-Finder-App\\build\\app\\intermediates\\transforms\\dexMerger\\debug\\0
+#Thu May 09 12:05:33 CDT 2019
+base.0=C\:\\Users\\istic\\Documents\\GitHub\\Pet-Finder-App\\build\\app\\intermediates\\transforms\\dexMerger\\debug\\0
 path.0=classes.dex
 renamed.0=classes.dex

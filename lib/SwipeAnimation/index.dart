@@ -16,7 +16,9 @@ class HomeScreen extends StatefulWidget {
   @override
   HomeScreenState createState() => new HomeScreenState();
 }
+
 TabController tabcontroller;
+
 class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   AnimationController _buttonController;
   Animation<double> rotate;
@@ -24,7 +26,6 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   Animation<double> bottom;
   Animation<double> width;
   int flag = 0;
-  
 
   List data = imageData;
   List selectedData = [];
@@ -152,20 +153,6 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           ),
         ),
         child: (new Scaffold(
-          floatingActionButton: FloatingActionButton(
-            child: Icon(
-              Icons.add,
-              color: Color.fromRGBO(255, 128, 43, 1),
-            ),
-            backgroundColor: Colors.white,
-            onPressed: () {
-              Navigator.of(context, rootNavigator: true).push(
-                CupertinoPageRoute<bool>(
-                  builder: (BuildContext context) => CameraApp(),
-                ),
-              );
-            },
-          ),
           appBar: new AppBar(
             bottom: TabBar(
               controller: tabcontroller,
@@ -177,6 +164,25 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             ),
             backgroundColor: Color.fromRGBO(255, 128, 43, 1),
             leading: Container(),
+            actions: <Widget>[
+              Padding(
+                padding: const EdgeInsets.only(right: 40, bottom: 10),
+                child: IconButton(
+                    icon: Icon(
+                      Icons.add,
+                      color: Colors.white,
+                    ),
+                    iconSize: 40,
+                    color: Colors.white,
+                    onPressed: (){
+                       Navigator.of(context, rootNavigator: true).push(
+                  CupertinoPageRoute<bool>(
+                    builder: (BuildContext context) => CameraApp(),
+                  ),
+                );
+                    },
+                  ),
+              ),],
             centerTitle: true,
             title: SizedBox(
                 height: 130,
@@ -189,7 +195,10 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           body: TabBarView(
             controller: tabcontroller,
             children: <Widget>[
-              third.ChatScreen(peerAvatar: null, peerId: null,),
+              third.ChatScreen(
+                peerAvatar: null,
+                peerId: null,
+              ),
               Container(
                 decoration: BoxDecoration(
                   gradient: RadialGradient(
@@ -211,7 +220,7 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     ? new Stack(
                         alignment: AlignmentDirectional.center,
                         children: data.map((item) {
-                          if (data.indexOf(item) == dataLength - 1 ) {
+                          if (data.indexOf(item) == dataLength - 1) {
                             return cardDemo(
                                 item,
                                 bottom.value,
@@ -233,10 +242,14 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                             return cardDemoDummy(item, backCardPosition, 0.0,
                                 0.0, backCardWidth, 0.0, 0.0, context);
                           }
-                        }).toList())
-                    : new Text("All pets have been found!",
+                        }).toList(),
+                      )
+                    : new Text(
+                        "All pets have been found!",
                         style:
-                            new TextStyle(color: Colors.white, fontSize: 50.0), textAlign: TextAlign.center,),
+                            new TextStyle(color: Colors.white, fontSize: 50.0),
+                        textAlign: TextAlign.center,
+                      ),
               ),
               first.SettingsPage(),
             ],

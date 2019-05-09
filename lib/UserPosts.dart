@@ -150,8 +150,9 @@ class _CameraAppState extends State<CameraApp> {
       home: Scaffold(
         backgroundColor: Color.fromRGBO(255, 194, 43, 1),
         appBar: AppBar(
+          centerTitle: true,
           backgroundColor: Color.fromRGBO(255, 128, 43, 1),
-          title: Text('Image Picker'),
+          title: Text('New Post', style: TextStyle(fontFamily: 'Myriad',fontSize: 50),),
         ),
         body: KeyboardAvoider(
           autoScroll: true,
