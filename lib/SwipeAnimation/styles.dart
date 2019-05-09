@@ -8,6 +8,7 @@ DecorationImage image2 = new DecorationImage(
   image: new ExactAssetImage('assets/img2.jpg'),
   fit: BoxFit.cover,
 );
+
 DecorationImage image3 = new DecorationImage(
   image: new ExactAssetImage('assets/img3.jpg'),
   fit: BoxFit.cover,
@@ -18,26 +19,6 @@ DecorationImage image4 = new DecorationImage(
 );
 DecorationImage image5 = new DecorationImage(
   image: new ExactAssetImage('assets/img5.jpg'),
-  fit: BoxFit.cover,
-);
-DecorationImage image6 = new DecorationImage(
-  image: new ExactAssetImage('assets/img6.jpg'),
-  fit: BoxFit.cover,
-);
-DecorationImage image7 = new DecorationImage(
-  image: new ExactAssetImage('assets/img7.jpg'),
-  fit: BoxFit.cover,
-);
-DecorationImage image8 = new DecorationImage(
-  image: new ExactAssetImage('assets/img8.jpg'),
-  fit: BoxFit.cover,
-);
-DecorationImage image9 = new DecorationImage(
-  image: new ExactAssetImage('assets/img9.jpg'),
-  fit: BoxFit.cover,
-);
-DecorationImage image10 = new DecorationImage(
-  image: new ExactAssetImage('assets/img10.jpg'),
   fit: BoxFit.cover,
 );
 

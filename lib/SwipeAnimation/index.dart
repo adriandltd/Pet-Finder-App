@@ -16,7 +16,7 @@ class HomeScreen extends StatefulWidget {
   @override
   HomeScreenState createState() => new HomeScreenState();
 }
-TabController tabcontroller;
+
 class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   AnimationController _buttonController;
   Animation<double> rotate;
@@ -24,7 +24,7 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   Animation<double> bottom;
   Animation<double> width;
   int flag = 0;
-  
+  TabController tabcontroller;
 
   List data = imageData;
   List selectedData = [];
@@ -234,9 +234,9 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                 0.0, backCardWidth, 0.0, 0.0, context);
                           }
                         }).toList())
-                    : new Text("No Other Claimed Animals Left",
+                    : new Text("No Event Left",
                         style:
-                            new TextStyle(color: Colors.white, fontSize: 50.0), textAlign: TextAlign.center,),
+                            new TextStyle(color: Colors.white, fontSize: 50.0)),
               ),
               first.SettingsPage(),
             ],

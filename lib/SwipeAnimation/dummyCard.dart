@@ -24,7 +24,7 @@ Positioned cardDemoDummy(
         width: screenSize.width / 1.2 + cardWidth,
         height: screenSize.height / 1.7,
         decoration: new BoxDecoration(
-          color:  Colors.deepOrangeAccent[200],
+          color: new Color.fromRGBO(121, 114, 173, 1.0),
           borderRadius: new BorderRadius.circular(8.0),
         ),
         child: new Column(
@@ -54,12 +54,12 @@ Positioned cardDemoDummy(
                           width: 130.0,
                           alignment: Alignment.center,
                           decoration: new BoxDecoration(
-                            color: Colors.green[100],
+                            color: Colors.green,
                             borderRadius: new BorderRadius.circular(60.0),
                           ),
                           child: new Text(
                             "YOURS?",
-                            style: new TextStyle(color: Colors.green[700], fontSize: 28),
+                            style: new TextStyle(color: Colors.white),
                           ),
                         )),
                     new FlatButton(
@@ -70,12 +70,12 @@ Positioned cardDemoDummy(
                           width: 130.0,
                           alignment: Alignment.center,
                           decoration: new BoxDecoration(
-                            color: Colors.red[100],
+                            color: Colors.red,
                             borderRadius: new BorderRadius.circular(60.0),
                           ),
                           child: new Text(
                             "NOT YOURS",
-                            style: new TextStyle(color: Colors.red[700], fontSize: 28),
+                            style: new TextStyle(color: Colors.white),
                           ),
                         ))
                   ],
