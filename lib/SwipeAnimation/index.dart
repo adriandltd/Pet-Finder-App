@@ -211,7 +211,7 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     ? new Stack(
                         alignment: AlignmentDirectional.center,
                         children: data.map((item) {
-                          if (data.indexOf(item) == dataLength - 1) {
+                          if (data.indexOf(item) == dataLength - 1 ) {
                             return cardDemo(
                                 item,
                                 bottom.value,
@@ -234,7 +234,7 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                 0.0, backCardWidth, 0.0, 0.0, context);
                           }
                         }).toList())
-                    : new Text("No Other Claimed Animals Left",
+                    : new Text("All pets have been found!",
                         style:
                             new TextStyle(color: Colors.white, fontSize: 50.0), textAlign: TextAlign.center,),
               ),
