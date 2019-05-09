@@ -51,14 +51,16 @@ class _CameraAppState extends State<CameraApp> {
   FocusNode textFifthFocusNode = FocusNode();
 
   createPost() {
-    // DecorationImage image69 = new DecorationImage(
-    //   image: img,
-    //   fit: BoxFit.cover,
-    // );
-    //imageData.add(image);
+    imageData.add(DecorationImage(
+      image: FileImage(image),
+      fit: BoxFit.cover,
+    ));
     dogNames.add(dogName.text);
     dogDescription.add(dogDesc.text);
     foundWhere.add(dogLocation.text);
+    timeFound.add(4);
+    foundWhere.add(7);
+    contactInfo.add("hjhhgu");
   }
 
   @override
