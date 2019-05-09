@@ -104,13 +104,13 @@ Positioned cardDemo(
                                     width: 130.0,
                                     alignment: Alignment.center,
                                     decoration: new BoxDecoration(
-                                      color: Colors.green[100],
+                                      color: Colors.green[700],
                                       borderRadius:
                                           new BorderRadius.circular(60.0),
                                     ),
                                     child: new Text(
                                       "YOURS?",
-                                      style: new TextStyle(color: Colors.green[600], fontSize: 28),
+                                      style: new TextStyle(color: Colors.green[100], fontSize: 28),
                                     ),
                                   )),
                               new FlatButton(
@@ -123,13 +123,13 @@ Positioned cardDemo(
                                     width: 130.0,
                                     alignment: Alignment.center,
                                     decoration: new BoxDecoration(
-                                      color: Colors.red[100],
+                                      color: Colors.red[700],
                                       borderRadius:
                                           new BorderRadius.circular(60.0),
                                     ),
                                     child: new Text(
                                       "NOT YOURS",
-                                      style: new TextStyle(color: Colors.red[600], fontSize: 28),
+                                      style: new TextStyle(color: Colors.red[100], fontSize: 28),
                                     ),
                                   ))
                             ],

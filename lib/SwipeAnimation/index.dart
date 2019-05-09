@@ -189,7 +189,7 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           body: TabBarView(
             controller: tabcontroller,
             children: <Widget>[
-              third.ChatPage(),
+              third.ChatScreen(),
               Container(
                 decoration: BoxDecoration(
                   gradient: RadialGradient(
