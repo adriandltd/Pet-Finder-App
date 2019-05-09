@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:keyboard_avoider/keyboard_avoider.dart';
-import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 
 var proofPic;
 
@@ -27,8 +26,6 @@ class _CameraAppState extends State<CameraApp> {
       image = img;
       proofPic = img;
       setState(() {});
-            Navigator.pop(context);
-
     }
   }
 
@@ -39,92 +36,22 @@ class _CameraAppState extends State<CameraApp> {
       image = img;
       proofPic = img;
       setState(() {});
-      Navigator.pop(context);
     }
   }
 
   var dogName = TextEditingController();
   var dogDesc = TextEditingController();
   var dogLocation = TextEditingController();
-  var dogReward = TextEditingController();
   FocusNode textSecondFocusNode = FocusNode();
   FocusNode textThirdFocusNode = FocusNode();
   FocusNode textFourthFocusNode = FocusNode();
   FocusNode textFifthFocusNode = FocusNode();
 
-  createPost() {}
+  createPost() {
 
-  void _showDialog() {
-    // flutter defined function
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        // return object of type Dialog
-        return AlertDialog(
-          actions: <Widget>[
-            Padding(
-              padding: const EdgeInsets.only(right: 40),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: <Widget>[
-                      Icon(
-                        Icons.image,
-                        size: 100,
-                      ),
-                      ButtonTheme(
-                          shape: RoundedRectangleBorder(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(20.0))),
-                          minWidth: 100.0,
-                          height: 40.0,
-                          child: RaisedButton(
-                              color: Color.fromRGBO(255, 128, 43, 1),
-                              child: Text("Gallery",
-                                  style: TextStyle(
-                                      color: Colors.white, fontSize: 24)),
-                              onPressed: () {
-                                pickerGallery();
-                              })),
-                    ],
-                  ),
-                  Divider(height: 10,indent: 10,),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: <Widget>[
-                      Icon(
-                        Icons.camera_alt,
-                        size: 100,
-                      ),
-                      ButtonTheme(
-                          shape: RoundedRectangleBorder(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(20.0))),
-                          minWidth: 100.0,
-                          height: 40.0,
-                          child: RaisedButton(
-                              color: Color.fromRGBO(255, 128, 43, 1),
-                              child: Text("Camera",
-                                  style: TextStyle(
-                                      color: Colors.white, fontSize: 24)),
-                              onPressed: () {
-                                pickerCamera();
-                              })),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-            // usually buttons at the bottom of the dialog
-          ],
-        );
-      },
-    );
+
+
+    
   }
 
   @override
@@ -134,7 +61,7 @@ class _CameraAppState extends State<CameraApp> {
         backgroundColor: Color.fromRGBO(255, 194, 43, 1),
         appBar: AppBar(
           backgroundColor: Color.fromRGBO(255, 128, 43, 1),
-          title: Text('New Post'),
+          title: Text('Image Picker'),
         ),
         body: KeyboardAvoider(
           autoScroll: true,
@@ -164,7 +91,7 @@ class _CameraAppState extends State<CameraApp> {
                                 borderRadius: BorderRadius.circular(40))),
                         textCapitalization: TextCapitalization.none,
                         autocorrect: false,
-                        onFieldSubmitted: (dogName) {
+                        onFieldSubmitted: (nameCtrl) {
                           FocusScope.of(context)
                               .requestFocus(textSecondFocusNode);
                         },
@@ -189,7 +116,7 @@ class _CameraAppState extends State<CameraApp> {
                                   borderRadius: BorderRadius.circular(40))),
                           textCapitalization: TextCapitalization.none,
                           autocorrect: false,
-                          onFieldSubmitted: (dogDesc) {
+                          onFieldSubmitted: (userCtrl) {
                             FocusScope.of(context)
                                 .requestFocus(textThirdFocusNode);
                           },
@@ -199,7 +126,7 @@ class _CameraAppState extends State<CameraApp> {
                     Container(
                         width: 325,
                         child: TextFormField(
-                          textInputAction: TextInputAction.next,
+                          textInputAction: TextInputAction.done,
                           controller: dogLocation,
                           decoration: InputDecoration(
                               filled: true,
@@ -210,30 +137,11 @@ class _CameraAppState extends State<CameraApp> {
                                   borderRadius: BorderRadius.circular(40)),
                               focusedBorder: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(40))),
-                          onFieldSubmitted: (dogLocation) {
+                          onFieldSubmitted: (passCtrl) {
                             FocusScope.of(context)
                                 .requestFocus(textFourthFocusNode);
                           },
-                          focusNode: textThirdFocusNode,
-                        )),
-                    Padding(padding: const EdgeInsets.only(top: 20.0)),
-                    Container(
-                        width: 325,
-                        child: TextFormField(
-                          keyboardType:
-                              TextInputType.numberWithOptions(decimal: true),
-                          textInputAction: TextInputAction.done,
-                          controller: dogReward,
-                          decoration: InputDecoration(
-                              filled: true,
-                              fillColor: Colors.white,
-                              hintText: "Is there a monetary reward?",
-                              contentPadding: EdgeInsets.all(15),
-                              border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(40)),
-                              focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(40))),
-                          focusNode: textFourthFocusNode,
+                          focusNode: textFifthFocusNode,
                         )),
                     Padding(padding: const EdgeInsets.only(top: 40.0)),
                     Container(
@@ -242,29 +150,12 @@ class _CameraAppState extends State<CameraApp> {
                             ? Text('No Image to Show ')
                             : Image.file(
                                 image,
-                                width: 250,
-                                height: 250,
+                                width: 300,
+                                height: 300,
                               ),
                       ),
                     ),
-                    ButtonTheme(
-                        shape: RoundedRectangleBorder(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(20.0))),
-                        minWidth: 30.0,
-                        height: 20.0,
-                        child: RaisedButton(
-                            color: Color.fromRGBO(255, 128, 43, 1),
-                            child: Text("Add Image",
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 10)),
-                            onPressed: () {
-                              _showDialog();
-                            })),
-                    Padding(
-                        padding: const EdgeInsets.only(
-                      top: 5.0,
-                    )),
+                    Padding(padding: const EdgeInsets.only(top: 40.0)),
                     ButtonTheme(
                         shape: RoundedRectangleBorder(
                             borderRadius:
@@ -280,19 +171,31 @@ class _CameraAppState extends State<CameraApp> {
                               createPost();
                               Navigator.pop(context);
                             })),
+                    Padding(padding: const EdgeInsets.only(top: 237.0)),
+                    Container(
+                      alignment: Alignment.bottomLeft,
+                      child: ButtonTheme(
+                        shape: CircleBorder(),
+                        minWidth: 55.0,
+                        height: 55.0,
+                        child: RaisedButton(
+                            color: Color.fromRGBO(255, 128, 43, 1),
+                            child: Icon(Icons.image, color: Colors.white,),
+                            onPressed: pickerGallery),
+                      ),
+                    )
                   ],
                 ),
               ),
             ],
           ),
         ),
-
-        // floatingActionButtonAnimator: FloatingActionButtonAnimator.scaling,
-        // floatingActionButton: FloatingActionButton(
-        //   backgroundColor: Color.fromRGBO(255, 128, 43, 1),
-        //   onPressed: pickerCamera,
-        //   child: Icon(Icons.camera_alt),
-        // ),
+        floatingActionButtonAnimator: FloatingActionButtonAnimator.scaling,
+        floatingActionButton: FloatingActionButton(
+          backgroundColor: Color.fromRGBO(255, 128, 43, 1),
+          onPressed: pickerCamera,
+          child: Icon(Icons.camera_alt),
+        ),
       ),
     );
   }

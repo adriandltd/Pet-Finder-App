@@ -73,7 +73,7 @@ class _DetailPageState extends State<DetailPage> with TickerProviderStateMixin {
       child: new Container(
         width: width.value,
         height: heigth.value,
-                    color: Color.fromRGBO(255, 194, 30, 1),
+        color: const Color.fromRGBO(106, 94, 175, 1.0),
         child: new Hero(
           tag: "img",
           child: new Card(
@@ -240,7 +240,7 @@ class _DetailPageState extends State<DetailPage> with TickerProviderStateMixin {
                       width: 600.0,
                       height: 80.0,
                       decoration: new BoxDecoration(
-                    color: Color.fromRGBO(255, 194, 30, 1),
+                        color: new Color.fromRGBO(121, 114, 173, 1.0),
                       ),
                       alignment: Alignment.center,
                       child: new Row(

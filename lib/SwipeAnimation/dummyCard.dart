@@ -24,7 +24,7 @@ Positioned cardDemoDummy(
         width: screenSize.width / 1.2 + cardWidth,
         height: screenSize.height / 1.7,
         decoration: new BoxDecoration(
-                    color: Color.fromRGBO(255, 194, 30, 1),
+          color: new Color.fromRGBO(121, 114, 173, 1.0),
           borderRadius: new BorderRadius.circular(8.0),
         ),
         child: new Column(
